@@ -57,8 +57,7 @@ export default function BottomPortion() {
         </SubContentWrapper>
 
         <StyledButton
-          onClick={(e) => {
-            e.preventDefault();
+          onClick={() => {
             window.location.href = "/signup";
           }}
         >

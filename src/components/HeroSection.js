@@ -23,10 +23,8 @@ export default function HeroSection() {
           We’ll let you in as soon as we can.
         </SubSubHead>
         <StyledButton
-          onClick={(e) => {
-            e.preventDefault();
-            window.location.href =
-              "https://ql18793yg9i.typeform.com/to/exQERHxo";
+          onClick={() => {
+            window.location.href = "/signup";
           }}
         >
           Try Sandbox

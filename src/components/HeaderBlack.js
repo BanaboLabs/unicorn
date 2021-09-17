@@ -42,8 +42,7 @@ export default function HeaderBlack() {
               </StyledLink>
             </MobileHidden>
             <Button
-              onClick={(e) => {
-                e.preventDefault();
+              onClick={() => {
                 window.location.href = "/signup";
               }}
             >
