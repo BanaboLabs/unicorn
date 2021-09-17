@@ -11,7 +11,7 @@ export default function HeaderBlack() {
           <ParentGroup>
             <SubGroup1>
               <StyledLink to="/">
-                <img src={logo} />
+                <img src={logo} alt="growth" />
               </StyledLink>
               <StyledLink to="/">
                 <Title>Sandbox</Title>

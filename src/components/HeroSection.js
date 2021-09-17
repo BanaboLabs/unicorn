@@ -31,8 +31,8 @@ export default function HeroSection() {
         >
           Try Sandbox
         </StyledButton>
-        <CenteredImgRelative src={blackbackground} />
-        <CenteredImgAbsolute src={visualization1} />
+        <CenteredImgRelative src={blackbackground} alt="growth" />
+        <CenteredImgAbsolute src={visualization1} alt="growth" />
       </ContentWrapper>
     </Wrapper>
   );

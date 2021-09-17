@@ -11,7 +11,7 @@ export default function HeaderWhite() {
           <ParentGroup>
             <SubGroup1>
               <StyledLink to="/">
-                <img src={logo} />
+                <img src={logo} alt="growth" />
               </StyledLink>
               <StyledLink to="/">
                 <Title>Sandbox</Title>

@@ -3,7 +3,6 @@ import styled, { keyframes } from "styled-components";
 import computer from "../images/computer.svg";
 
 export default function BottomPortion() {
-  const [initial, setIntial] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [opacity, setOpacity] = useState(true);
   const [opacityExtra, setOpacityExtra] = useState(0);
@@ -53,7 +52,7 @@ export default function BottomPortion() {
             scrollposition={scrollPosition}
             opacityExtra={opacityExtra}
           >
-            <CenteredImg src={computer} />
+            <CenteredImg src={computer} alt="growth" />
           </Group2>
         </SubContentWrapper>
 

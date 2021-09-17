@@ -15,12 +15,13 @@ export default function FullIndexPage() {
       <Spacer />
       <Wrapper>
         <ContentWrapper>
-          <CenteredImgLarge src={GroupIllustration} />
-          <CenteredImgSmall src={GroupIllustrationsSmall} />
+          <CenteredImgLarge src={GroupIllustration} alt="growth" />
+          <CenteredImgSmall src={GroupIllustrationsSmall} alt="growth" />
           <Spacer3 />
           {showSandbox ? (
             <CenteredImgLarge
               src={WithSandbox}
+              alt="growth"
               onClick={() => {
                 setShowSandbox(!showSandbox);
               }}
@@ -28,6 +29,7 @@ export default function FullIndexPage() {
           ) : (
             <CenteredImgLarge
               src={WithoutSandbox}
+              alt="growth"
               onClick={() => {
                 setShowSandbox(!showSandbox);
               }}
