@@ -41,13 +41,9 @@ export default function HeaderWhite() {
                 <TabItem>Login</TabItem>
               </StyledLink>
             </MobileHidden>
-            <Button
-              onClick={() => {
-                window.location.href = "/signup";
-              }}
-            >
-              Sign Up
-            </Button>
+            <StyledLink to="/signup">
+              <Button>Sign Up</Button>
+            </StyledLink>
           </SubGroup2>
         </NavWrapper>
       </SubWrapper>

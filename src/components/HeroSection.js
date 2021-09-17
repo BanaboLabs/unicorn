@@ -4,6 +4,7 @@ import HeaderBlack from "./HeaderBlack";
 import visualization1 from "../images/visualization1.svg";
 import TheWrapper from "../images/Wrapper.svg";
 import blackbackground from "../images/blackbackground.svg";
+import { Link } from "gatsby";
 
 export default function HeroSection() {
   return (
@@ -22,13 +23,9 @@ export default function HeroSection() {
           <br />
           We’ll let you in as soon as we can.
         </SubSubHead>
-        <StyledButton
-          onClick={() => {
-            window.location.href = "/signup";
-          }}
-        >
-          Try Sandbox
-        </StyledButton>
+        <StyledLink to="/signup">
+          <StyledButton>Try Sandbox</StyledButton>
+        </StyledLink>
         <CenteredImgRelative src={blackbackground} alt="growth" />
         <CenteredImgAbsolute src={visualization1} alt="growth" />
       </ContentWrapper>
@@ -133,4 +130,8 @@ const CenteredImgAbsolute = styled.img`
     padding-right: 20px;
     padding-left: 20px;
   }
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
 `;

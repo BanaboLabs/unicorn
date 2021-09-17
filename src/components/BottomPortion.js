@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import computer from "../images/computer.svg";
+import { Link } from "gatsby";
 
 export default function BottomPortion() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -55,14 +56,9 @@ export default function BottomPortion() {
             <CenteredImg src={computer} alt="growth" />
           </Group2>
         </SubContentWrapper>
-
-        <StyledButton
-          onClick={() => {
-            window.location.href = "/signup";
-          }}
-        >
-          Try Sandbox
-        </StyledButton>
+        <StyledLink to="/signup">
+          <StyledButton>Try Sandbox</StyledButton>
+        </StyledLink>
       </ContentWrapper>
     </Wrapper>
   );
@@ -181,4 +177,6 @@ const StyledButton = styled.button`
   }
 `;
 
-//  transform: ${(props) => (props.highlighted ? "scale(3)" : "scale(1)")};
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
