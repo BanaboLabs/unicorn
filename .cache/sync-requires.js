@@ -9,6 +9,7 @@ exports.components = {
   "component---src-pages-404-js": hot(preferDefault(require("/Users/colinsnyder/Desktop/www/src/pages/404.js"))),
   "component---src-pages-contact-js": hot(preferDefault(require("/Users/colinsnyder/Desktop/www/src/pages/contact.js"))),
   "component---src-pages-index-js": hot(preferDefault(require("/Users/colinsnyder/Desktop/www/src/pages/index.js"))),
-  "component---src-pages-pricing-js": hot(preferDefault(require("/Users/colinsnyder/Desktop/www/src/pages/pricing.js")))
+  "component---src-pages-pricing-js": hot(preferDefault(require("/Users/colinsnyder/Desktop/www/src/pages/pricing.js"))),
+  "component---src-pages-signup-js": hot(preferDefault(require("/Users/colinsnyder/Desktop/www/src/pages/signup.js")))
 }
 

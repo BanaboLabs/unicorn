@@ -59,8 +59,7 @@ export default function BottomPortion() {
         <StyledButton
           onClick={(e) => {
             e.preventDefault();
-            window.location.href =
-              "https://ql18793yg9i.typeform.com/to/exQERHxo";
+            window.location.href = "/signup";
           }}
         >
           Try Sandbox

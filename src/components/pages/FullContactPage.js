@@ -15,44 +15,51 @@ export default function FullContactPage() {
   };
 
   return (
-    <Wrapper>
-      <HeaderWhite />
-      <ContentWrapper>
-        <StyledDiv>
-          <Form onSubmit={noRefresh}>
-            <InputWrapper>
-              <Text>Contact Us</Text>
-              <SubTextWrapper>
-                <SubText>We’re always ready to answer questions</SubText>
-                <SubText>You’ll hear back within 24 hours</SubText>{" "}
-              </SubTextWrapper>
+    <ParentWrapper>
+      <Wrapper>
+        <HeaderWhite />
+        <ContentWrapper>
+          <StyledDiv>
+            <Form onSubmit={noRefresh}>
+              <InputWrapper>
+                <Text>Contact Us</Text>
+                <SubTextWrapper>
+                  <SubText>We’re always ready to answer questions</SubText>
+                  <SubText>You’ll hear back within 24 hours</SubText>{" "}
+                </SubTextWrapper>
 
-              <Input1
-                type="text"
-                placeholder="Your Name"
-                value={yourName.value}
-                onChange={yourName.onChange}
-              />
-              <Input1
-                type="email"
-                placeholder="Email Address"
-                value={emailAddress.value}
-                onChange={emailAddress.onChange}
-              />
-              <TextArea
-                placeholder="Write your message here..."
-                value={yourMessage.value}
-                onChange={yourMessage.onChange}
-              ></TextArea>
-              <StyledButton type="submit"> Send Message </StyledButton>
-            </InputWrapper>
-          </Form>
-        </StyledDiv>
-        <StyledImg src={chatIcon} />
-      </ContentWrapper>
-    </Wrapper>
+                <Input1
+                  type="text"
+                  placeholder="Your Name"
+                  value={yourName.value}
+                  onChange={yourName.onChange}
+                />
+                <Input1
+                  type="email"
+                  placeholder="Email Address"
+                  value={emailAddress.value}
+                  onChange={emailAddress.onChange}
+                />
+                <TextArea
+                  placeholder="Write your message here..."
+                  value={yourMessage.value}
+                  onChange={yourMessage.onChange}
+                ></TextArea>
+                <StyledButton type="submit"> Send Message </StyledButton>
+              </InputWrapper>
+            </Form>
+          </StyledDiv>
+          <StyledImg src={chatIcon} />
+        </ContentWrapper>
+      </Wrapper>
+    </ParentWrapper>
   );
 }
+
+const ParentWrapper = styled.div`
+  overflow-y: auto;
+  overflow-x: hidden;
+`;
 
 const Wrapper = styled.div`
   min-height: 100vh;
@@ -154,6 +161,9 @@ const StyledButton = styled.button`
 
 const StyledImg = styled.img`
   margin-bottom: 800px;
+  @media (max-width: 1040px) {
+    display: none;
+  }
 `;
 
 const StyledDiv = styled.div`

@@ -6,6 +6,7 @@ exports.components = {
   "component---src-pages-404-js": () => import("./../../../src/pages/404.js" /* webpackChunkName: "component---src-pages-404-js" */),
   "component---src-pages-contact-js": () => import("./../../../src/pages/contact.js" /* webpackChunkName: "component---src-pages-contact-js" */),
   "component---src-pages-index-js": () => import("./../../../src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */),
-  "component---src-pages-pricing-js": () => import("./../../../src/pages/pricing.js" /* webpackChunkName: "component---src-pages-pricing-js" */)
+  "component---src-pages-pricing-js": () => import("./../../../src/pages/pricing.js" /* webpackChunkName: "component---src-pages-pricing-js" */),
+  "component---src-pages-signup-js": () => import("./../../../src/pages/signup.js" /* webpackChunkName: "component---src-pages-signup-js" */)
 }
 

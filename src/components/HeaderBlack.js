@@ -44,8 +44,7 @@ export default function HeaderBlack() {
             <Button
               onClick={(e) => {
                 e.preventDefault();
-                window.location.href =
-                  "https://ql18793yg9i.typeform.com/to/exQERHxo";
+                window.location.href = "/signup";
               }}
             >
               Sign Up
