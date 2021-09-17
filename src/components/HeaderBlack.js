@@ -29,7 +29,7 @@ export default function HeaderBlack() {
                 </StyledLink>
               </MobileHidden>
               <MobileHidden>
-                <StyledLink to="https://ql18793yg9i.typeform.com/to/MVLyh1ce">
+                <StyledLink to="/contact">
                   <TabItem>Contact</TabItem>
                 </StyledLink>
               </MobileHidden>
