@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import HeroSection from "../HeroSection";
-import BottomPortion from "../BottomPortion";
+import HeroSection from "../individual/HeroSection";
+import BottomPortion from "../individual/BottomPortion";
 import GroupIllustrationsSmall from "../../images/groupillustrationssmall.svg";
 import WithSandbox from "../../images/withsandbox.svg";
 import WithoutSandbox from "../../images/withoutsandbox.svg";

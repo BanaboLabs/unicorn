@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
-import computer from "../images/computer.svg";
+import computer from "../../images/computer.svg";
 import { Link } from "gatsby";
 
 export default function BottomPortion() {

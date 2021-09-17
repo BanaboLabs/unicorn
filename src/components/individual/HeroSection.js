@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import HeaderBlack from "./HeaderBlack";
-import visualization1 from "../images/visualization1.svg";
-import TheWrapper from "../images/Wrapper.svg";
-import blackbackground from "../images/blackbackground.svg";
+import visualization1 from "../../images/visualization1.svg";
+import TheWrapper from "../../images/Wrapper.svg";
+import blackbackground from "../../images/blackbackground.svg";
 import { Link } from "gatsby";
 
 export default function HeroSection() {

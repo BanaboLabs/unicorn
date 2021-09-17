@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import HeaderWhite from "../HeaderWhite";
+import HeaderWhite from "../individual/HeaderWhite";
 
 export default function FullPricingPage() {
   return (

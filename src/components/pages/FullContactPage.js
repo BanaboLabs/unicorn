@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import useInput from "../customhooks/useInput";
 import chatIcon from "../../images/chaticon.svg";
-import HeaderWhite from "../HeaderWhite";
+import HeaderWhite from "../individual/HeaderWhite";
 
 export default function FullContactPage() {
   const yourName = useInput("");
