@@ -1,5 +1,5 @@
 import React from "react";
-import FullPricingPage from "../components/FullPricingPage";
+import FullPricingPage from "../components/pages/FullPricingPage";
 import Layout from "../components/layout/layout";
 import SEO from "../components/layout/seo";
 

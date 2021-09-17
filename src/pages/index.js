@@ -1,5 +1,5 @@
 import React from "react";
-import FullIndexPage from "../components/FullIndexPage";
+import FullIndexPage from "../components/pages/FullIndexPage";
 import Layout from "../components/layout/layout";
 import SEO from "../components/layout/seo";
 
