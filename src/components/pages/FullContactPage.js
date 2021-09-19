@@ -176,3 +176,5 @@ const SubTextWrapper = styled.div`
   grid-gap: 5px;
   text-align: left;
 `;
+
+////
