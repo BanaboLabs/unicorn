@@ -1,18 +1,16 @@
 import { createGlobalStyle } from "styled-components";
 
-import NameOfYourFontEot from "../fonts/ProximaNovaRegular.eot";
-import NameOfYourFontTtf from "../fonts/ProximaNovaRegular.ttf";
-import NameOfYourFontWoff from "../fonts/ProximaNovaRegular.woff";
-import NameOfYourFontOtf from "../fonts/Proxima_Nova_Regular.otf";
-
 export default createGlobalStyle`
     @font-face {
-	font-family: 'ProximaNovaRegular';
-        src: local('ProximaNovaRegular'), local('ProximaNovaRegular'),
-        url(${NameOfYourFontOtf}) format('otf'),
-        url(${NameOfYourFontEot}) format('eot'),
-        url(${NameOfYourFontWoff}) format('woff'),
-        url(${NameOfYourFontTtf}) format('truetype');
-        
+    font-family: 'Proxima Nova';
+    src: url('../fonts/Mark Simonson - Proxima Nova Alt Regular-webfont.eot');
+    src: url('../fonts/Mark Simonson - Proxima Nova Alt Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Mark Simonson - Proxima Nova Alt Regular-webfont.woff2') format('woff2'),
+         url('../fonts/Mark Simonson - Proxima Nova Alt Regular-webfont.woff') format('woff'),
+         url('../fonts/Mark Simonson - Proxima Nova Alt Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Mark Simonson - Proxima Nova Alt Regular-webfont.svg#proxima_nova_altregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 `;

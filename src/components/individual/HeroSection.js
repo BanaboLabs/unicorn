@@ -55,7 +55,7 @@ const Title = styled.div`
   font-size: 80px;
   background: linear-gradient(90deg, #265de3, #af71ff);
   -webkit-background-clip: text;
-  font-family: "ProximaNovaRegular";
+  font-family: "Proxima Nova";
   font-style: normal;
   font-weight: 800;
   text-align: center;
