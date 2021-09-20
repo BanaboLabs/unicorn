@@ -53,7 +53,7 @@ export default function HeaderBlack() {
 
 const Wrapper = styled.div`
   min-height: 10vh;
-  min-width: 100%;
+  min-width: 100vh;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -68,7 +68,7 @@ const SubWrapper = styled.div`
 `;
 
 const NavWrapper = styled.div`
-  display: flex;
+  display: inline-block;
   justify-content: space-between;
   align-items: center;
 `;
