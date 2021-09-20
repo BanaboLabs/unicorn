@@ -55,7 +55,7 @@ const Title = styled.div`
   font-size: 80px;
   background: linear-gradient(90deg, #265de3, #af71ff);
   -webkit-background-clip: text;
-  font-family: "Proxima Nova";
+  font-family: "Proxima Nova", "Palatino", "Thonburi";
   font-style: normal;
   font-weight: 800;
   text-align: center;
@@ -73,7 +73,7 @@ const Title = styled.div`
 `;
 
 const SubHead = styled.div`
-  font-family: "Proxima Nova";
+  font-family: "Proxima Nova", "Palatino", "Thonburi";
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -82,20 +82,20 @@ const SubHead = styled.div`
 `;
 
 const SubSubHead = styled.div`
-  font-family: "Proxima Nova";
+  font-family: "Proxima Nova", "Palatino", "Thonburi";
   font-size: 16px;
   text-align: center;
   line-height: 24px;
 `;
 
 const SemiBold = styled.span`
-  font-family: "Proxima Nova";
+  font-family: "Proxima Nova", "Palatino", "Thonburi";
   font-style: normal;
   font-weight: 600;
 `;
 
 const StyledButton = styled.button`
-  font-family: "Proxima Nova";
+  font-family: "Proxima Nova", "Palatino", "Thonburi";
   font-style: normal;
   font-weight: 700;
   font-size: 19px;
