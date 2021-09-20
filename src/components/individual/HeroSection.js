@@ -61,6 +61,8 @@ const Title = styled.div`
   text-align: center;
   line-height: 100px;
   color: transparent;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
   @media (max-width: 780px) {
     width: 80%;
   }
@@ -79,6 +81,8 @@ const SubHead = styled.div`
   font-size: 20px;
   text-align: center;
   line-height: 24px;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
 `;
 
 const SubSubHead = styled.div`
@@ -86,12 +90,16 @@ const SubSubHead = styled.div`
   font-size: 16px;
   text-align: center;
   line-height: 24px;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
 `;
 
 const SemiBold = styled.span`
   font-family: "Proxima Nova", "Palatino", "Thonburi";
   font-style: normal;
   font-weight: 600;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
 `;
 
 const StyledButton = styled.button`
