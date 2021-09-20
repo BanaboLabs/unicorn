@@ -111,6 +111,9 @@ const Button = styled.button`
 `;
 
 const ParentGroup = styled.div`
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -118,7 +121,7 @@ const ParentGroup = styled.div`
 `;
 
 const SubGroup1 = styled.div`
-  display: flex;
+  display: --webkit-flex;
   align-items: center;
   flex-direction: row;
   gap: 25px;
