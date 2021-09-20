@@ -95,7 +95,9 @@ const SemiBold = styled.span`
 `;
 
 const StyledButton = styled.button`
-  font-family: "ProximaSoft-Bold";
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 700;
   font-size: 19px;
   color: #ffffff;
   border: none;
@@ -140,4 +142,4 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
-// text-rendering: optimizeLegibility;
+// Semibold is 600, bold is 700, sextrabold is 800
