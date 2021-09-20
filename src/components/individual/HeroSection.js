@@ -45,6 +45,12 @@ const Wrapper = styled.div`
 
 const ContentWrapper = styled.div`
   display: flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
   align-items: center;
   flex-direction: column;
   gap: 2.5vh;
