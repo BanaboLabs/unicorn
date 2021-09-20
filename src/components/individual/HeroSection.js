@@ -44,13 +44,10 @@ const Wrapper = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-  display: flex;
-  display: -moz-flex;
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
   display: -webkit-flex;
-  display: -ms-flex;
-  -moz-align-items: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
   align-items: center;
   flex-direction: column;
   gap: 2.5vh;
