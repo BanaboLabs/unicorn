@@ -34,22 +34,20 @@ export default function HeroSection() {
 }
 
 const Wrapper = styled.div`
-  min-height: 100vh;
-  min-width: 100vh;
+  min-height: 100%;
+  min-width: 100%;
   background-size: cover;
   background-position: center;
   position: relative;
   background: url(${TheWrapper});
+  background-size: 100% 100%;
 `;
 
 const ContentWrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 30px;
-  min-height: 40vh;
-  justify-content: center;
-  text-align: center;
+  gap: 2.5vh;
 `;
 
 const Title = styled.div`
@@ -145,28 +143,3 @@ const StyledLink = styled(Link)`
 `;
 
 // Semibold is 600, bold is 700, sextrabold is 800
-
-/*
-const ParentWrapper = styled.div`
-  overflow-y: auto;
-  overflow-x: hidden;
-`;
-
-const Wrapper = styled.div`
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  background-image: url(${Blur});
-  min-width: 100vh;
-  min-height: 100vh;
-`;
-
-const ContentWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  min-height: 90vh;
-  gap: 35px;
-`; */
