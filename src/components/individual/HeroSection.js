@@ -5,7 +5,6 @@ import visualization1 from "../../images/visualization1.svg";
 import TheWrapper from "../../images/Wrapper.svg";
 import blackbackground from "../../images/blackbackground.svg";
 import { Link } from "gatsby";
-import { Proxima_Nova_Regular } from "../../fonts/Proxima_Nova";
 
 export default function HeroSection() {
   return (
@@ -56,13 +55,12 @@ const Title = styled.div`
   font-size: 80px;
   background: linear-gradient(90deg, #265de3, #af71ff);
   -webkit-background-clip: text;
-  font-family: Proxima Nova;
+  font-family: "ProximaNovaRegular";
   font-style: normal;
   font-weight: 800;
   text-align: center;
   line-height: 100px;
   color: transparent;
-  text-rendering: optimizeLegibility;
   @media (max-width: 780px) {
     width: 80%;
   }
