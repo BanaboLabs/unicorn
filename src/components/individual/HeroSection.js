@@ -73,21 +73,25 @@ const Title = styled.div`
 `;
 
 const SubHead = styled.div`
-  font-family: "ProximaNova-Semibold";
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 600;
   font-size: 20px;
   text-align: center;
   line-height: 24px;
 `;
 
 const SubSubHead = styled.div`
-  font-family: "ProximaNova-Regular";
+  font-family: "Proxima Nova";
   font-size: 16px;
   text-align: center;
   line-height: 24px;
 `;
 
 const SemiBold = styled.span`
-  font-family: "ProximaNova-Semibold";
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 600;
 `;
 
 const StyledButton = styled.button`

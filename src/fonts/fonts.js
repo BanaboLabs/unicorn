@@ -9,8 +9,7 @@ export default createGlobalStyle`
          url('../fonts/Mark Simonson - Proxima Nova Alt Regular-webfont.woff') format('woff'),
          url('../fonts/Mark Simonson - Proxima Nova Alt Regular-webfont.ttf') format('truetype'),
          url('../fonts/Mark Simonson - Proxima Nova Alt Regular-webfont.svg#proxima_nova_altregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+
 
 }
 `;
