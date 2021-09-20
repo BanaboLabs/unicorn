@@ -68,7 +68,7 @@ const SubWrapper = styled.div`
 `;
 
 const NavWrapper = styled.div`
-  display: inline-block;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 `;
