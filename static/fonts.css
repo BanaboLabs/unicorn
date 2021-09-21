@@ -1,12 +1,23 @@
 @font-face {
-  font-family: "Proxima Nova";
-  src: url("https://banabowebfonts.s3.amazonaws.com/Mark+Simonson+-+Proxima+Nova+Alt+Bold-webfont.eot")
+  font-family: "ProximaNovaExtraBold";
+  src: url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-extrabold.eot")
       format("eot"),
-    url("https://banabowebfonts.s3.amazonaws.com/Mark+Simonson+-+Proxima+Nova+Alt+Bold-webfont.svg")
+    url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-extrabold.svg")
       format("svg"),
-    url("https://banabowebfonts.s3.amazonaws.com/Mark+Simonson+-+Proxima+Nova+Alt+Bold-webfont.woff")
+    url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-extrabold.woff")
       format("woff"),
-    url("https://banabowebfonts.s3.amazonaws.com/Mark+Simonson+-+Proxima+Nova+Alt+Bold-webfont.ttf")
+    url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-extrabold.ttf")
       format("truetype");
-  font-weight: initial;
+}
+
+@font-face {
+  font-family: "ProximaNovaBold";
+  src: url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-extrabold.eot")
+      format("eot"),
+    url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-bold.svg")
+      format("svg"),
+    url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-extrabold.woff")
+      format("woff"),
+    url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-extrabold.ttf")
+      format("truetype");
 }
