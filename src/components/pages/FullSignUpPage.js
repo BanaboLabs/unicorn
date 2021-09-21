@@ -15,6 +15,7 @@ export default function FullSignUpPage() {
   // Tells us whether the user has submitted or not
   const [submitted, setSubmitted] = useState(false);
 
+  // Notion Api w/ SheetMonkey to save a users signup information
   useEffect(() => {
     if (submitted == true) {
       function postSignUp() {

@@ -16,6 +16,7 @@ export default function FullContactPage() {
     event.preventDefault();
   };
 
+  // Notion Api w/ SheetMonkey to save a users messsage information
   useEffect(() => {
     if (submitted == true) {
       function postSignUp() {
