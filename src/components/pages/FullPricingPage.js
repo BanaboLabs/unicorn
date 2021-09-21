@@ -37,7 +37,7 @@ const ContentWrapper = styled.div`
 
 const Headline = styled.div`
   color: #f6f5f1;
-  font-family: "ProximaNova-Bold";
+  font-family: "ProximaNovaBold";
   font-size: 50px;
   line-height: 1.2;
   min-width: 100%;
@@ -46,7 +46,7 @@ const Headline = styled.div`
 
 const Subheadline = styled.div`
   color: #f6f5f1;
-  font-family: "ProximaNova-regular";
+  font-family: "ProximaNovaRegular";
   font-size: 20px;
   line-height: 1.2;
   min-width: 100%;

@@ -89,13 +89,13 @@ const ContentWrapper = styled.div`
 `;
 
 const Text = styled.div`
-  font-family: "ProximaNova-Bold";
+  font-family: "ProximaNovaBold";
   font-size: 50px;
   color: #ffffff;
 `;
 
 const SubText = styled.div`
-  font-family: "ProximaNova-Regular";
+  font-family: "ProximaNovaRegular";
   font-size: 20px;
   color: #ffffff;
 `;
@@ -106,7 +106,7 @@ const Input1 = styled.input`
   width: 500px;
   height: 50px;
   font-size: 18px;
-  font-family: "ProximaNova-Regular";
+  font-family: "ProximaNovaRegular";
   background: rgba(74, 74, 86, 0.44);
   border-radius: 5px;
   outline: none;
@@ -131,7 +131,7 @@ const InputWrapper = styled.div`
 `;
 
 const StyledButton = styled.button`
-  font-family: "ProximaSoft-Bold";
+  font-family: "ProximaNovaBold";
   font-size: 19px;
   color: #ffffff;
   border: none;

@@ -74,13 +74,13 @@ const NavWrapper = styled.div`
 `;
 
 const Title = styled.div`
-  font-family: "ProximaNova-Bold";
+  font-family: "ProximaNovaBold";
   color: #252531;
   font-size: 30px;
 `;
 
 const TabItem = styled.div`
-  font-family: "ProximaNova-Semibold";
+  font-family: "ProximaNovaSemiBold";
   color: #252531;
   font-size: 19px;
 `;
@@ -90,7 +90,7 @@ const StyledLink = styled(Link)`
 `;
 
 const Button = styled.button`
-  font-family: "ProximaSoft-Bold";
+  font-family: "ProximaNovaBold";
   font-size: 19px;
   color: #ffffff;
   border: none;

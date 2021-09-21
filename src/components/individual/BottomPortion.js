@@ -98,7 +98,7 @@ const Title = styled.div`
 `;
 
 const Header = styled.div`
-  font-family: "ProximaNova-Semibold";
+  font-family: "ProximaNovaSemiBold";
   font-size: 22px;
   text-align: center;
   color: white;
@@ -157,7 +157,7 @@ const CenteredImg = styled.img`
 `;
 
 const StyledButton = styled.button`
-  font-family: "ProximaSoft-Bold";
+  font-family: "ProximaNovaBold";
   font-size: 19px;
   color: #ffffff;
   border: none;

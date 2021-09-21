@@ -65,9 +65,7 @@ const ContentWrapper = styled.div`
 `;
 
 const FeatureTitle = styled.div`
-  font-family: Proxima Nova;
-  font-style: normal;
-  font-weight: 800;
+  font-family: "ProximaNovaExtraBold";
   font-size: 48px;
   line-height: 64px;
   text-align: center;
@@ -96,9 +94,7 @@ const Spacer3 = styled.div`
 `;
 
 const FeatureSubhead = styled.div`
-  font-family: Proxima Nova;
-  font-style: normal;
-  font-weight: normal;
+  font-family: ProximaNovaRegular;
   font-size: 20px;
   line-height: 32px;
   text-align: center;

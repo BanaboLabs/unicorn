@@ -58,7 +58,7 @@ const Title = styled.div`
   font-size: 80px;
   background: linear-gradient(90deg, #265de3, #af71ff);
   -webkit-background-clip: text;
-  font-family: "ProximaNovaExtraBold", "Palatino", "Thonburi";
+  font-family: "ProximaNovaExtraBold";
   font-style: normal;
   text-align: center;
   line-height: 100px;
@@ -77,9 +77,7 @@ const Title = styled.div`
 `;
 
 const SubHead = styled.div`
-  font-family: "Proxima Nova", "Palatino", "Thonburi";
-  font-style: normal;
-  font-weight: 600;
+  font-family: "ProximaNovaSemiBold";
   font-size: 20px;
   text-align: center;
   line-height: 24px;
@@ -88,7 +86,7 @@ const SubHead = styled.div`
 `;
 
 const SubSubHead = styled.div`
-  font-family: "Proxima Nova", "Palatino", "Thonburi";
+  font-family: "ProximaNovaRegular";
   font-size: 16px;
   text-align: center;
   line-height: 24px;
@@ -97,17 +95,13 @@ const SubSubHead = styled.div`
 `;
 
 const SemiBold = styled.span`
-  font-family: "Proxima Nova", "Palatino", "Thonburi";
-  font-style: normal;
-  font-weight: 600;
+  font-family: "ProximaNovaSemiBold";
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern";
 `;
 
 const StyledButton = styled.button`
-  font-family: "Proxima Nova", "Palatino", "Thonburi";
-  font-style: normal;
-  font-weight: 700;
+  font-family: "ProximaNovaBold";
   font-size: 19px;
   color: #ffffff;
   border: none;
@@ -151,5 +145,3 @@ const CenteredImgAbsolute = styled.img`
 const StyledLink = styled(Link)`
   text-decoration: none;
 `;
-
-// Semibold is 600, bold is 700, sextrabold is 800
