@@ -1,11 +1,12 @@
 @font-face {
   font-family: "Proxima Nova";
-  src: url("https://banabowebfonts.s3.amazonaws.com/Mark+Simonson+-+Proxima+Nova+Alt+Regular-webfont.eot")
+  src: url("https://banabowebfonts.s3.amazonaws.com/Mark+Simonson+-+Proxima+Nova+Alt+Bold-webfont.eot")
       format("eot"),
-    url("https://banabowebfonts.s3.amazonaws.com/Mark+Simonson+-+Proxima+Nova+Alt+Regular-webfont.svg")
+    url("https://banabowebfonts.s3.amazonaws.com/Mark+Simonson+-+Proxima+Nova+Alt+Bold-webfont.svg")
       format("svg"),
-    url("https://banabowebfonts.s3.amazonaws.com/Mark+Simonson+-+Proxima+Nova+Alt+Regular-webfont.woff")
+    url("https://banabowebfonts.s3.amazonaws.com/Mark+Simonson+-+Proxima+Nova+Alt+Bold-webfont.woff")
       format("woff"),
-    url("https://banabowebfonts.s3.amazonaws.com/Mark+Simonson+-+Proxima+Nova+Alt+Regular-webfont.ttf")
+    url("https://banabowebfonts.s3.amazonaws.com/Mark+Simonson+-+Proxima+Nova+Alt+Bold-webfont.ttf")
       format("truetype");
+  font-weight: initial;
 }
