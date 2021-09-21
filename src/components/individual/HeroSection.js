@@ -60,7 +60,6 @@ const Title = styled.div`
   -webkit-background-clip: text;
   font-family: "ProximaNovaExtraBold", "Palatino", "Thonburi";
   font-style: normal;
-  font-weight: 800;
   text-align: center;
   line-height: 100px;
   color: transparent;
