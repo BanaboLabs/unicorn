@@ -3,7 +3,6 @@ import FullIndexPage from "../components/pages/FullIndexPage";
 import Layout from "../components/layout/layout";
 import SEO from "../components/layout/seo";
 import GlobalFonts from "../fonts/fonts";
-import "../../static/fonts.css";
 
 function IndexPage() {
   return (
