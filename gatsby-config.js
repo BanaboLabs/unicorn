@@ -17,6 +17,13 @@ module.exports = {
         start_url: `/`,
         icon: `./src/images/logo-white.svg`,
       },
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: ["Proxima Nova"],
+          urls: ["fonts.css"],
+        },
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

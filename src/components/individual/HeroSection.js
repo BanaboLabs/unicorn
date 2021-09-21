@@ -45,7 +45,7 @@ const Wrapper = styled.div`
 
 const ContentWrapper = styled.div`
   display: -webkit-flexbox; /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -moz-flexbox; /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox; /* TWEENER - IE 10 */
   display: -webkit-flex;
   align-items: center;
