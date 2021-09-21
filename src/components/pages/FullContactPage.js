@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import useInput from "../customhooks/useInput";
 import chatIcon from "../../images/chaticon.svg";
@@ -8,11 +8,37 @@ export default function FullContactPage() {
   const yourName = useInput("");
   const emailAddress = useInput("");
   const yourMessage = useInput("");
+  // Tells us whether the user has submitted or not
+  const [submitted, setSubmitted] = useState(false);
 
   // Function to save the link info
   const noRefresh = (event) => {
     event.preventDefault();
   };
+
+  useEffect(() => {
+    if (submitted == true) {
+      function postSignUp() {
+        const data = {
+          Email: yourName.value,
+          Name: emailAddress.value,
+          Message: yourMessage.value,
+        };
+
+        fetch("https://api.sheetmonkey.io/form/kwSXEApTeEbZy4XcYK4PnU", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }).then((result) => {
+          // Handle the result
+        });
+      }
+
+      postSignUp();
+    }
+  }, [submitted]);
 
   return (
     <ParentWrapper>
@@ -45,7 +71,10 @@ export default function FullContactPage() {
                   value={yourMessage.value}
                   onChange={yourMessage.onChange}
                 ></TextArea>
-                <StyledButton type="submit"> Send Message </StyledButton>
+                <StyledButton type="submit" onClick={() => setSubmitted(true)}>
+                  {" "}
+                  Send Message{" "}
+                </StyledButton>
               </InputWrapper>
             </Form>
           </StyledDiv>
