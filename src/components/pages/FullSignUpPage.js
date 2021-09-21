@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import useInput from "../customhooks/useInput";
 import Blur from "../../images/blur.svg";
@@ -9,9 +9,36 @@ const noRefresh = (event) => {
 };
 
 export default function FullSignUpPage() {
+  // Information Captured
   const yourName = useInput("");
   const emailAddress = useInput("");
+  // Tells us whether the user has submitted or not
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (submitted == true) {
+      function postSignUp() {
+        const data = {
+          Email: yourName.value,
+          Name: emailAddress.value,
+        };
+
+        fetch("https://api.sheetmonkey.io/form/uRgMbCEDTTRYcGuiGbLyxv", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }).then((result) => {
+          // Handle the result
+        });
+      }
+
+      postSignUp();
+    }
+  }, [submitted]);
+
+  // UI Code
   return (
     <ParentWrapper>
       <Wrapper>
