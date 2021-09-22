@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../../images/logo-white.svg";
+import logowhite from "../../images/banabologowhite.svg";
 import { Link } from "gatsby";
 
 export default function HeaderWhite() {
@@ -11,10 +11,10 @@ export default function HeaderWhite() {
           <ParentGroup>
             <SubGroup1>
               <StyledLink to="/">
-                <img src={logo} alt="growth" />
+                <img src={logowhite} alt="growth" />
               </StyledLink>
               <StyledLink to="/">
-                <Title>Sandbox</Title>
+                <Title>Banabo</Title>
               </StyledLink>
             </SubGroup1>
             <SubGroup2>
@@ -120,7 +120,7 @@ const SubGroup1 = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
-  gap: 25px;
+  gap: 20px;
 `;
 
 const SubGroup2 = styled.div`

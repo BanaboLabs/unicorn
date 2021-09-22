@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import HeaderBlack from "./HeaderBlack";
-import visualization1 from "../../images/visualization1.svg";
-import TheWrapper from "../../images/Wrapper.svg";
-import blackbackground from "../../images/blackbackground.svg";
+import product from "../../images/product.svg";
 import { Link } from "gatsby";
 
 export default function HeroSection() {
@@ -24,10 +22,9 @@ export default function HeroSection() {
           We’ll let you in as soon as we can.
         </SubSubHead>
         <StyledLink to="/signup">
-          <StyledButton>Try Sandbox</StyledButton>
+          <StyledButton>Try Banabo</StyledButton>
         </StyledLink>
-        <CenteredImgRelative src={blackbackground} alt="growth" />
-        <CenteredImgAbsolute src={visualization1} alt="growth" />
+        <img src={product} alt="growth" />
       </ContentWrapper>
     </Wrapper>
   );
@@ -36,11 +33,7 @@ export default function HeroSection() {
 const Wrapper = styled.div`
   min-height: 100%;
   min-width: 100%;
-  background-size: cover;
-  background-position: center;
   position: relative;
-  background: url(${TheWrapper});
-  background-size: 100% 100%;
 `;
 
 const ContentWrapper = styled.div`
@@ -54,7 +47,7 @@ const ContentWrapper = styled.div`
 `;
 
 const Title = styled.div`
-  margin-top: 40px;
+  margin-top: 20px;
   font-size: 80px;
   background: linear-gradient(90deg, #265de3, #af71ff);
   -webkit-background-clip: text;
@@ -107,15 +100,14 @@ const StyledButton = styled.button`
   border: none;
   width: 180px;
   height: 50px;
-  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
   border-radius: 6px;
-  background-color: #2194ff;
-  margin: 0 auto;
+  background: linear-gradient(90deg, #265de3, #af71ff);
+
   :hover {
-    background-color: #5db1fe;
+    background: linear-gradient(90deg, #0848e5, #8323fe);
   }
 `;
 
@@ -145,3 +137,26 @@ const CenteredImgAbsolute = styled.img`
 const StyledLink = styled(Link)`
   text-decoration: none;
 `;
+
+/* const CenteredImgRelative = styled.img`
+  text-align: center;
+  padding-top: 280px;
+  margin: 0 auto;
+  min-width: 100%;
+  position: relative;
+`;
+
+const CenteredImgAbsolute = styled.img`
+  text-align: center;
+  top: 700px;
+  margin: 0 auto;
+  max-width: 100%;
+  position: absolute;
+  @media (min-width: 2100px) {
+    min-width: 55%;
+  }
+  @media (max-width: 780px) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+`; */
