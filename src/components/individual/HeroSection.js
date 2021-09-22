@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import HeaderBlack from "./HeaderBlack";
+import HeaderDropDownBlack from "./HeaderDropDownBlack";
 import product from "../../images/product.svg";
 import { Link } from "gatsby";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 export default function HeroSection() {
+  const isDesktop = useMediaQuery("(min-width: 800px)");
+
   return (
     <Wrapper>
-      <HeaderBlack />
+      {isDesktop ? <HeaderBlack /> : <HeaderDropDownBlack />}
       <ContentWrapper>
         <Title>
           Growth. <br /> Made Easy

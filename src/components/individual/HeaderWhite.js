@@ -130,8 +130,4 @@ const SubGroup2 = styled.div`
   gap: 50px;
 `;
 
-const MobileHidden = styled.div`
-  @media (max-width: 840px) {
-    display: none;
-  }
-`;
+const MobileHidden = styled.div``;

@@ -1,11 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import HeaderWhite from "../individual/HeaderWhite";
+import HeaderDropDownWhite from "../individual/HeaderDropDownWhite";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 export default function FullPricingPage() {
+  const isDesktop = useMediaQuery("(min-width: 800px)");
+
   return (
     <Wrapper>
-      <HeaderWhite />
+      {isDesktop ? <HeaderWhite /> : <HeaderDropDownWhite />}
       <ContentWrapper>
         <Headline>
           Banabo is free during <br /> the Beta Release

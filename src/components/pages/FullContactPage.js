@@ -3,8 +3,12 @@ import styled from "styled-components";
 import useInput from "../customhooks/useInput";
 import chatIcon from "../../images/chaticon.svg";
 import HeaderWhite from "../individual/HeaderWhite";
+import useMediaQuery from "../../hooks/useMediaQuery";
+import HeaderDropDownWhite from "../individual/HeaderDropDownWhite";
 
 export default function FullContactPage() {
+  const isDesktop = useMediaQuery("(min-width: 800px)");
+
   const yourName = useInput("");
   const emailAddress = useInput("");
   const yourMessage = useInput("");
@@ -44,7 +48,7 @@ export default function FullContactPage() {
   return (
     <ParentWrapper>
       <Wrapper>
-        <HeaderWhite />
+        {isDesktop ? <HeaderWhite /> : <HeaderDropDownWhite />}
         <ContentWrapper>
           <StyledDiv>
             {submitted == false ? (
@@ -130,12 +134,18 @@ const Text = styled.div`
   font-family: "ProximaNovaBold";
   font-size: 50px;
   color: #ffffff;
+  @media (max-width: 700px) {
+    font-size: 40px;
+  }
 `;
 
 const SubText = styled.div`
   font-family: "ProximaNovaRegular";
   font-size: 20px;
   color: #ffffff;
+  @media (max-width: 700px) {
+    font-size: 16px;
+  }
 `;
 
 const Input1 = styled.input`
@@ -150,6 +160,9 @@ const Input1 = styled.input`
   outline: none;
   transition: all 0.2s ease 0s;
   padding: 6px 20px;
+  @media (max-width: 700px) {
+    width: 300px;
+  }
 
   :focus {
     box-shadow: 0 0 1pt 1pt #40a3ff;
@@ -181,6 +194,9 @@ const TextArea = styled.textarea`
   transition: all 0.2s ease 0s;
   padding: 14px 20px;
   resize: none;
+  @media (max-width: 700px) {
+    width: 300px;
+  }
 
   :focus {
     box-shadow: 0 0 1pt 1pt #40a3ff;
@@ -199,6 +215,9 @@ const StyledButton = styled.button`
   cursor: pointer;
   border-radius: 6px;
   background: linear-gradient(90deg, #265de3, #af71ff);
+  @media (max-width: 700px) {
+    width: 340px;
+  }
 
   :hover {
     background: linear-gradient(90deg, #104fe8 -10.37%, #9a4bff 108.53%);
