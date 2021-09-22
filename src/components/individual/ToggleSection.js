@@ -24,9 +24,9 @@ export default function ToggleSection() {
       </Container>
       <div>
         {toggle == true ? (
-          <img src={withoutbanabo} />
+          <CenteredImg src={withoutbanabo} />
         ) : (
-          <img src={withbanabo} />
+          <CenteredImg src={withbanabo} />
         )}
       </div>
     </ContentWrapper>
@@ -54,14 +54,14 @@ const Container = styled.div`
 `;
 
 const Button = styled.div`
-  width: ${(props) => (props.widthvalue ? 154 : 134)}px;
+  width: ${(props) => (props.widthvalue ? 134 : 154)}px;
   height: 38px;
   background: #2194ff;
   border-radius: 60px;
   position: absolute;
   will-change: transform;
   transition: transform 0.4s ease-out;
-  right: ${(props) => (props.rightvalue ? "none" : 0)};
+  right: ${(props) => (props.rightvalue ? 0 : "none")};
 `;
 
 // 1) Needs to move
@@ -83,10 +83,15 @@ const Text = styled.div`
   height: 32px;
 `;
 
-/*
-
-{toggle == true ? (
-          <img src={withoutbanabo} />
-        ) : (
-          <img src={withbanabo} />
-        )} */
+const CenteredImg = styled.img`
+  text-align: center;
+  top: 700px;
+  margin: 0 auto;
+  max-width: 100%;
+  @media (min-width: 2100px) {
+    min-width: 55%;
+  }
+  @media (max-width: 1080px) {
+    padding-left: 20px;
+  }
+`;

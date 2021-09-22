@@ -53,7 +53,7 @@ export default function HeaderBlack() {
 
 const Wrapper = styled.div`
   min-height: 10vh;
-  min-width: 100vh;
+  min-width: 100%;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -71,6 +71,11 @@ const NavWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 700px) {
+    display: grid;
+    justify-content: center;
+  }
 `;
 
 const Title = styled.div`
@@ -105,8 +110,12 @@ const Button = styled.button`
   background-color: #252531;
   transition: 0.2s ease-in-out;
 
+  @media (max-width: 700px) {
+    display: none;
+  }
+
   :hover {
-    background-color: #53536b;
+    background-color: #000000;
   }
 `;
 
@@ -136,3 +145,26 @@ const MobileHidden = styled.div`
     display: none;
   }
 `;
+
+/* 
+
+const Wrapper = styled.div`
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-image: url(${Blur});
+  min-width: 100vh;
+  min-height: 100vh;
+`;
+
+const ContentWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: 90vh;
+  gap: 35px;
+`;
+
+*/

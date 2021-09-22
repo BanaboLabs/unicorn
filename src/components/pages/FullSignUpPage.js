@@ -102,17 +102,16 @@ const Wrapper = styled.div`
   background-position: center;
   position: relative;
   background-image: url(${Blur});
-  min-width: 100vh;
-  min-height: 100vh;
+  min-width: 100%;
+  min-height: 100;
 `;
 
 const ContentWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  text-align: center;
-  min-height: 90vh;
+  min-height: 100vh;
   gap: 35px;
 `;
 
@@ -120,12 +119,18 @@ const Text = styled.div`
   font-family: "ProximaNovaBold";
   font-size: 50px;
   color: #ffffff;
+  @media (max-width: 700px) {
+    font-size: 40px;
+  }
 `;
 
 const SubText = styled.div`
   font-family: "ProximaNovaRegular";
   font-size: 20px;
   color: #ffffff;
+  @media (max-width: 700px) {
+    font-size: 16px;
+  }
 `;
 
 const Input1 = styled.input`
@@ -140,6 +145,10 @@ const Input1 = styled.input`
   outline: none;
   transition: all 0.2s ease 0s;
   padding: 6px 20px;
+
+  @media (max-width: 700px) {
+    width: 300px;
+  }
 
   :focus {
     box-shadow: 0 0 1pt 1pt #40a3ff;
@@ -171,8 +180,12 @@ const StyledButton = styled.button`
   border-radius: 6px;
   background: linear-gradient(90deg, #265de3, #af71ff);
 
+  @media (max-width: 700px) {
+    width: 340px;
+  }
+
   :hover {
-    background: linear-gradient(90deg, #0848e5, #8323fe);
+    background: linear-gradient(90deg, #104fe8 -10.37%, #9a4bff 108.53%);
   }
 `;
 

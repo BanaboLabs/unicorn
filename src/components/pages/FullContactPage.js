@@ -47,37 +47,53 @@ export default function FullContactPage() {
         <HeaderWhite />
         <ContentWrapper>
           <StyledDiv>
-            <Form onSubmit={noRefresh}>
-              <InputWrapper>
-                <Text>Contact Us</Text>
-                <SubTextWrapper>
-                  <SubText>We’re always ready to answer questions</SubText>
-                  <SubText>You’ll hear back within 24 hours</SubText>{" "}
-                </SubTextWrapper>
-
-                <Input1
-                  type="text"
-                  placeholder="Your Name"
-                  value={yourName.value}
-                  onChange={yourName.onChange}
-                />
-                <Input1
-                  type="email"
-                  placeholder="Email Address"
-                  value={emailAddress.value}
-                  onChange={emailAddress.onChange}
-                />
-                <TextArea
-                  placeholder="Write your message here..."
-                  value={yourMessage.value}
-                  onChange={yourMessage.onChange}
-                ></TextArea>
-                <StyledButton type="submit" onClick={() => setSubmitted(true)}>
-                  {" "}
-                  Send Message{" "}
-                </StyledButton>
-              </InputWrapper>
-            </Form>
+            {submitted == false ? (
+              <Form onSubmit={noRefresh}>
+                <InputWrapper>
+                  <Text>Contact Us</Text>
+                  <SubTextWrapper>
+                    <SubText>We’re always ready to answer questions</SubText>
+                    <SubText>You’ll hear back within 24 hours</SubText>{" "}
+                  </SubTextWrapper>
+                  <Input1
+                    type="text"
+                    placeholder="Your Name"
+                    value={yourName.value}
+                    onChange={yourName.onChange}
+                  />
+                  <Input1
+                    type="email"
+                    placeholder="Email Address"
+                    value={emailAddress.value}
+                    onChange={emailAddress.onChange}
+                  />
+                  <TextArea
+                    placeholder="Write your message here..."
+                    value={yourMessage.value}
+                    onChange={yourMessage.onChange}
+                  ></TextArea>{" "}
+                  <StyledButton
+                    type="submit"
+                    onClick={() => setSubmitted(true)}
+                  >
+                    Send Message
+                  </StyledButton>
+                </InputWrapper>
+              </Form>
+            ) : (
+              <Form onSubmit={noRefresh}>
+                <InputWrapper>
+                  <Text>Contact Us</Text>
+                  <SubTextWrapper>
+                    <SubText>We’re always ready to answer questions</SubText>
+                    <SubText>You’ll hear back within 24 hours</SubText>{" "}
+                  </SubTextWrapper>
+                  <StyledButton>
+                    Thank you! Your message has been received!
+                  </StyledButton>
+                </InputWrapper>
+              </Form>
+            )}
           </StyledDiv>
           <StyledImg src={chatIcon} />
         </ContentWrapper>
@@ -185,7 +201,7 @@ const StyledButton = styled.button`
   background: linear-gradient(90deg, #265de3, #af71ff);
 
   :hover {
-    background: linear-gradient(90deg, #0848e5, #8323fe);
+    background: linear-gradient(90deg, #104fe8 -10.37%, #9a4bff 108.53%);
   }
 `;
 
@@ -207,4 +223,22 @@ const SubTextWrapper = styled.div`
   text-align: left;
 `;
 
-////
+/*
+
+{highlight == "Link" ? (
+                  <TabHighlight>
+                    <TabItemHorizontalWrapper>
+                      <Link linkcolor={linkColor} />
+                      <Text style={{ color: "#FFFFFF" }}>Links</Text>
+                    </TabItemHorizontalWrapper>
+                  </TabHighlight>
+                ) : (
+                  <TabHighlightClear>
+                    <TabItemHorizontalWrapper>
+                      <Link linkcolor={linkColor} />
+                      <Text style={{ color: "#969AAF" }}>Links</Text>
+                    </TabItemHorizontalWrapper>
+                  </TabHighlightClear>
+                )}
+
+*/

@@ -1,16 +1,33 @@
 import React from "react";
 import styled from "styled-components";
-import featuregroup from "../../images/featuregroup.svg";
-import GroupIllustrationsSmall from "../../images/groupillustrationssmall.svg";
+import featuregrouplarge from "../../images/featuregrouplarge.svg";
+import featuregroupsmall from "../../images/featuregroupsmall.svg";
 
 export default function MiddleSection() {
   return (
-    <ContentWrapper>
-      <CenteredImgLarge src={featuregroup} alt="growth" />
-      <CenteredImgSmall src={GroupIllustrationsSmall} alt="growth" />
-    </ContentWrapper>
+    <ParentWrapper>
+      <Wrapper>
+        <ContentWrapper>
+          <CenteredImgLarge src={featuregrouplarge} alt="growth" />
+          <CenteredImgSmall src={featuregroupsmall} alt="growth" />
+        </ContentWrapper>
+      </Wrapper>
+    </ParentWrapper>
   );
 }
+
+const ParentWrapper = styled.div`
+  overflow-y: auto;
+  overflow-x: hidden;
+`;
+
+const Wrapper = styled.div`
+  min-height: 100%;
+  min-width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+`;
 
 const ContentWrapper = styled.div`
   display: -webkit-flexbox; /* OLD - iOS 6-, Safari 3.1-6 */
@@ -24,21 +41,24 @@ const ContentWrapper = styled.div`
 
 const CenteredImgLarge = styled.img`
   text-align: center;
-  @media (max-width: 1280px) {
+  @media (max-width: 1080px) {
     display: none;
   }
   @media (min-width: 2100px) {
-    margin-left: 40px;
   }
 `;
 
 const CenteredImgSmall = styled.img`
   text-align: center;
+  @media (max-width: 780px) {
+    width: 100%;
+  }
+  text-align: center;
   display: none;
-  @media (max-width: 1280px) {
+  @media (max-width: 1080px) {
     display: block;
   }
   @media (max-width: 780px) {
-    width: 600px;
+    max-width: 650px;
   }
 `;

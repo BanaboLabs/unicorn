@@ -24,7 +24,7 @@ export default function HeroSection() {
         <StyledLink to="/signup">
           <StyledButton>Try Banabo</StyledButton>
         </StyledLink>
-        <img src={product} alt="growth" />
+        <CenteredImg src={product} alt="growth" />
       </ContentWrapper>
     </Wrapper>
   );
@@ -107,30 +107,7 @@ const StyledButton = styled.button`
   background: linear-gradient(90deg, #265de3, #af71ff);
 
   :hover {
-    background: linear-gradient(90deg, #0848e5, #8323fe);
-  }
-`;
-
-const CenteredImgRelative = styled.img`
-  text-align: center;
-  padding-top: 280px;
-  margin: 0 auto;
-  min-width: 100%;
-  position: relative;
-`;
-
-const CenteredImgAbsolute = styled.img`
-  text-align: center;
-  top: 700px;
-  margin: 0 auto;
-  max-width: 100%;
-  position: absolute;
-  @media (min-width: 2100px) {
-    min-width: 55%;
-  }
-  @media (max-width: 780px) {
-    padding-right: 20px;
-    padding-left: 20px;
+    background: linear-gradient(90deg, #104fe8 -10.37%, #9a4bff 108.53%);
   }
 `;
 
@@ -138,20 +115,11 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
-/* const CenteredImgRelative = styled.img`
-  text-align: center;
-  padding-top: 280px;
-  margin: 0 auto;
-  min-width: 100%;
-  position: relative;
-`;
-
-const CenteredImgAbsolute = styled.img`
+const CenteredImg = styled.img`
   text-align: center;
   top: 700px;
   margin: 0 auto;
   max-width: 100%;
-  position: absolute;
   @media (min-width: 2100px) {
     min-width: 55%;
   }
@@ -159,4 +127,4 @@ const CenteredImgAbsolute = styled.img`
     padding-right: 20px;
     padding-left: 20px;
   }
-`; */
+`;

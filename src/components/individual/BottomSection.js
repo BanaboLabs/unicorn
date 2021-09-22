@@ -86,9 +86,14 @@ const Title = styled.div`
 `;
 
 const RectangleWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
+  display: grid;
   gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+
+  @media (max-width: 1140px) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 `;
 
 const Rectangle = styled.div`
@@ -139,7 +144,7 @@ const StyledButton1 = styled.button`
   background: linear-gradient(90deg, #265de3, #af71ff);
 
   :hover {
-    background: linear-gradient(90deg, #0848e5, #8323fe);
+    background: linear-gradient(90deg, #104fe8 -10.37%, #9a4bff 108.53%);
   }
 `;
 
@@ -157,7 +162,7 @@ const StyledButton2 = styled.button`
   background: linear-gradient(90deg, #265de3, #af71ff);
 
   :hover {
-    background: linear-gradient(90deg, #0848e5, #8323fe);
+    background: linear-gradient(90deg, #104fe8 -10.37%, #9a4bff 108.53%);
   }
 `;
 
@@ -175,7 +180,7 @@ const StyledButton3 = styled.button`
   background: linear-gradient(90deg, #265de3, #af71ff);
 
   :hover {
-    background: linear-gradient(90deg, #0848e5, #8323fe);
+    background: linear-gradient(90deg, #104fe8 -10.37%, #9a4bff 108.53%);
   }
 `;
 

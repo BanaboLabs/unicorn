@@ -8,7 +8,7 @@ export default function FullPricingPage() {
       <HeaderWhite />
       <ContentWrapper>
         <Headline>
-          Sandbox is free during <br /> the Beta Release
+          Banabo is free during <br /> the Beta Release
         </Headline>
         <Subheadline>We will introduce pricing in 2022</Subheadline>
       </ContentWrapper>
