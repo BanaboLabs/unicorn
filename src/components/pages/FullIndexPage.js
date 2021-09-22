@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import HeroSection from "../individual/HeroSection";
-import BottomPortion from "../individual/BottomPortion";
-import GroupIllustrationsSmall from "../../images/groupillustrationssmall.svg";
 import background from "../../images/background.svg";
-import featuregroup from "../../images/featuregroup.svg";
-import ToggleFeature from "../individual/ToggleFeature";
+import ToggleSection from "../individual/ToggleSection";
 import BottomSection from "../individual/BottomSection";
+import MiddleSection from "../individual/MiddleSection";
 
 export default function FullIndexPage() {
   return (
@@ -15,10 +13,9 @@ export default function FullIndexPage() {
         <ContentWrapper>
           <HeroSection />
           <Spacer />
-          <CenteredImgLarge src={featuregroup} alt="growth" />
-          <CenteredImgSmall src={GroupIllustrationsSmall} alt="growth" />
+          <MiddleSection />
           <Spacer3 />
-          <ToggleFeature />
+          <ToggleSection />
           <Spacer3 />
           <BottomSection />
         </ContentWrapper>

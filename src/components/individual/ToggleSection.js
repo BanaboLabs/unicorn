@@ -3,16 +3,14 @@ import styled from "styled-components";
 import withbanabo from "../../images/withbanabo.svg";
 import withoutbanabo from "../../images/withoutbanabo.svg";
 
-export default function ToggleFeature() {
+export default function ToggleSection() {
   const [toggle, toggleSelected] = useState(false);
   const [rightvalue, rightValueSelected] = useState(false);
   const [widthvalue, widthValueSelected] = useState(false);
 
   useEffect(() => {
-    if (toggle == true) {
-      rightValueSelected(!rightvalue);
-      widthValueSelected(!widthvalue);
-    }
+    rightValueSelected(!rightvalue);
+    widthValueSelected(!widthvalue);
   }, [toggle]);
 
   return (
@@ -61,7 +59,8 @@ const Button = styled.div`
   background: #2194ff;
   border-radius: 60px;
   position: absolute;
-  transition: all 0.9s ease;
+  will-change: transform;
+  transition: transform 0.4s ease-out;
   right: ${(props) => (props.rightvalue ? "none" : 0)};
 `;
 

@@ -82,6 +82,7 @@ const Title = styled.div`
   text-align: center;
   line-height: 100px;
   color: transparent;
+  font-family: "ProximaNovaExtraBold";
 `;
 
 const RectangleWrapper = styled.div`
