@@ -84,6 +84,9 @@ const Title = styled.div`
   line-height: 100px;
   color: transparent;
   font-family: "ProximaNovaExtraBold";
+  @media (max-width: 700px) {
+    font-size: 60px;
+  }
 `;
 
 const RectangleWrapper = styled.div`

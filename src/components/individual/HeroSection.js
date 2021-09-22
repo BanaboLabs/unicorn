@@ -62,6 +62,12 @@ const Title = styled.div`
   color: transparent;
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern";
+
+  @media (max-width: 700px) {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
   @media (max-width: 780px) {
     width: 80%;
   }
@@ -80,6 +86,9 @@ const SubHead = styled.div`
   line-height: 24px;
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern";
+  @media (max-width: 700px) {
+    width: 95%;
+  }
 `;
 
 const SubSubHead = styled.div`
@@ -89,6 +98,9 @@ const SubSubHead = styled.div`
   line-height: 24px;
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern";
+  @media (max-width: 700px) {
+    width: 95%;
+  }
 `;
 
 const SemiBold = styled.span`
