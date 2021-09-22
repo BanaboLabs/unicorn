@@ -34,7 +34,7 @@ export default function BottomSection() {
             <SubText>
               Add Banabo to your website within 5 minutes. It’s really that easy
             </SubText>
-            <StyledLink href="https://docs.startneon.com/">
+            <StyledLink href="https://docs.banabo.io/">
               <StyledButton2>
                 <span>
                   Read Docs <img src={buttonarrow} />
@@ -128,7 +128,7 @@ const SubText = styled.div`
   font-family: "ProximaNovaSemiBold";
   font-size: 18px;
   color: #dfdede;
-  width: 300px;
+  width: 290px;
 `;
 
 const StyledButton1 = styled.button`
