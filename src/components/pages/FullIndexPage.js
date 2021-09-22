@@ -40,7 +40,7 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 135px;
+  gap: 140px;
 `;
 
 const MiddleParent = styled.div`

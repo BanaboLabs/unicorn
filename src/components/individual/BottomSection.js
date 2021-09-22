@@ -66,6 +66,7 @@ export default function BottomSection() {
 }
 
 const ContentWrapper = styled.div`
+  margin-top: 30px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -107,7 +108,7 @@ const Rectangle = styled.div`
 `;
 
 const BottomSpacer = styled.div`
-  padding-bottom: 200px;
+  padding-bottom: 150px;
 `;
 
 const InsideContentWrapper = styled.div`

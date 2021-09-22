@@ -19,7 +19,7 @@ export default function HeaderBlack() {
             </SubGroup1>
             <SubGroup2>
               <MobileHidden>
-                <StyledLink to="https://docs.startneon.com/">
+                <StyledLink to="https://docs.banabo.io/">
                   <TabItem>Docs</TabItem>
                 </StyledLink>
               </MobileHidden>
@@ -37,7 +37,7 @@ export default function HeaderBlack() {
           </ParentGroup>
           <SubGroup2>
             <MobileHidden>
-              <StyledLink to="https://app.startneon.com/login">
+              <StyledLink to="https://app.banabo.io/login">
                 <TabItem>Login</TabItem>
               </StyledLink>
             </MobileHidden>

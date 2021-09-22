@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Sandbox`,
+    title: `Banabo`,
     description: `The only growth tool you'll need`,
     author: `@Colin & Ben`,
     keywords: `growth, marketing, attribution, cross-channel, conversion`,
@@ -16,7 +16,7 @@ module.exports = {
         name: `gatsby starter default`,
         short_name: `starter`,
         start_url: `/`,
-        icon: `./src/images/logo-white.svg`,
+        icon: `./src/images/banabologowhite.svg`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
