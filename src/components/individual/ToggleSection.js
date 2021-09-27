@@ -94,4 +94,8 @@ const CenteredImg = styled.img`
   @media (max-width: 1080px) {
     padding-left: 20px;
   }
+  @media (max-width: 700px) {
+    max-width: 99%;
+    padding-top: 10px;
+  }
 `;

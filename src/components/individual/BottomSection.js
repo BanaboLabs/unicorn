@@ -85,7 +85,8 @@ const Title = styled.div`
   color: transparent;
   font-family: "ProximaNovaExtraBold";
   @media (max-width: 700px) {
-    font-size: 60px;
+    font-size: 55px;
+    line-height: 70px;
   }
 `;
 

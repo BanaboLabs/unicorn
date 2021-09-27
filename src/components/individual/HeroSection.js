@@ -16,10 +16,18 @@ export default function HeroSection() {
         <Title>
           Growth. <br /> Made Easy
         </Title>
-        <SubHead>
-          Map the source of every visitor interaction on your <br /> website all
-          the way through conversion
-        </SubHead>
+        {isDesktop ? (
+          <SubHead>
+            Map the source of every visitor interaction on your <br /> website
+            all the way through conversion
+          </SubHead>
+        ) : (
+          <SubHead>
+            Map the source of every visitor interaction on your website all the
+            way through conversion
+          </SubHead>
+        )}
+
         <SubSubHead>
           Sign up to reserve your spot in our <SemiBold>Beta Release</SemiBold>
           <br />
@@ -64,8 +72,8 @@ const Title = styled.div`
   font-feature-settings: "kern";
 
   @media (max-width: 700px) {
-    font-size: 60px;
     line-height: 70px;
+    font-size: 55px;
   }
 
   @media (max-width: 780px) {
@@ -88,6 +96,7 @@ const SubHead = styled.div`
   font-feature-settings: "kern";
   @media (max-width: 700px) {
     width: 95%;
+    font-size: 17px;
   }
 `;
 
@@ -100,6 +109,7 @@ const SubSubHead = styled.div`
   font-feature-settings: "kern";
   @media (max-width: 700px) {
     width: 95%;
+    font-size: 15px;
   }
 `;
 

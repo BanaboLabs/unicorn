@@ -41,28 +41,28 @@ export default function HeaderDropDownBlack() {
                     <StyledLink href="/signup">
                       <StyledButton1>
                         <Align>
-                          <img src={hearticon} /> Sign Up
+                          <img src={hearticon} /> <span>Sign Up</span>
                         </Align>
                       </StyledButton1>
                     </StyledLink>
                     <StyledLink href="https://docs.banabo.io">
                       <StyledButton3>
                         <Align>
-                          <img src={docsicon} /> Docs
+                          <img src={docsicon} /> <Span>Docs</Span>
                         </Align>
                       </StyledButton3>
                     </StyledLink>
                     <StyledLink href="/pricing">
                       <StyledButton4>
                         <Align>
-                          <img src={staricon} /> Pricing
+                          <img src={staricon} /> <Span>Pricing</Span>
                         </Align>
                       </StyledButton4>
                     </StyledLink>
                     <StyledLink href="/contact">
                       <StyledButton5>
                         <Align>
-                          <img src={personicon} /> Contact
+                          <img src={personicon} /> <Span>Contact</Span>
                         </Align>
                       </StyledButton5>
                     </StyledLink>
@@ -151,19 +151,21 @@ const DropDownWrapper = styled.div`
 `;
 
 const TheImage = styled.div`
-  width: 340px;
-  height: 320px;
+  width: 349px;
+  height: 333px;
+  background: #47475d;
+  border: 2px solid #7b7b8c;
+
+  box-shadow: 0px 4px 80px 5px rgba(119, 105, 244, 0.2);
+  border-radius: 10px;
   position: absolute;
   top: 80px;
   right: 0;
-  background: #ffffff;
-  box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.18);
-  border-radius: 10px;
 `;
 
 const Headline = styled.div`
   font-family: "ProximaNovaBold";
-  color: #252531;
+  color: #ffffff;
   font-size: 19px;
 `;
 
@@ -173,7 +175,7 @@ const StyledButton1 = styled.button`
   color: #ffffff;
   border: none;
   width: 122px;
-  height: 34px;
+  height: 40px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -187,43 +189,23 @@ const StyledButton1 = styled.button`
   }
 `;
 
-const StyledButton2 = styled.button`
-  font-family: "ProximaNovaBold";
-  font-size: 16px;
-  color: #ffffff;
-  border: none;
-  width: 90px;
-  height: 34px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 10px;
-  background: #47475d;
-  box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.18);
-  border-radius: 10px;
-
-  :hover {
-    background: #000000;
-  }
-`;
-
 const StyledButton3 = styled.button`
   font-family: "ProximaNovaBold";
   font-size: 16px;
   color: #ffffff;
   border: none;
   width: 86px;
-  height: 34px;
+  height: 40px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
   border-radius: 10px;
-  background: #47475d;
+  background: #9c9cae;
   box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.18);
   border-radius: 10px;
 
   :hover {
-    background: #000000;
+    background: #7d7d8b;
   }
 `;
 
@@ -233,17 +215,17 @@ const StyledButton4 = styled.button`
   color: #ffffff;
   border: none;
   width: 102px;
-  height: 34px;
+  height: 40px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
   border-radius: 10px;
-  background: #47475d;
+  background: #9c9cae;
   box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.18);
   border-radius: 10px;
 
   :hover {
-    background: #000000;
+    background: #7d7d8b;
   }
 `;
 
@@ -253,17 +235,17 @@ const StyledButton5 = styled.button`
   color: #ffffff;
   border: none;
   width: 109px;
-  height: 34px;
+  height: 40px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
   border-radius: 10px;
-  background: #47475d;
+  background: #9c9cae;
   box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.18);
   border-radius: 10px;
 
   :hover {
-    background: #000000;
+    background: #7d7d8b;
   }
 `;
 
@@ -278,4 +260,8 @@ const Align = styled.div`
   display: flex;
   padding-left: 5px;
   gap: 10px;
+`;
+
+const Span = styled.span`
+  padding-top: 3px;
 `;

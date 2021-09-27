@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import featuregrouplarge from "../../images/featuregrouplarge.svg";
 import featuregroupsmall from "../../images/featuregroupsmall.svg";
+import featuregrouptiny from "../../images/featuregrouptiny.svg";
 
 export default function MiddleSection() {
   return (
@@ -10,6 +11,7 @@ export default function MiddleSection() {
         <ContentWrapper>
           <CenteredImgLarge src={featuregrouplarge} alt="growth" />
           <CenteredImgSmall src={featuregroupsmall} alt="growth" />
+          <CenteredImgTiny src={featuregrouptiny} alt="growth" />
         </ContentWrapper>
       </Wrapper>
     </ParentWrapper>
@@ -44,21 +46,27 @@ const CenteredImgLarge = styled.img`
   @media (max-width: 1080px) {
     display: none;
   }
-  @media (min-width: 2100px) {
-  }
 `;
 
 const CenteredImgSmall = styled.img`
   text-align: center;
-  @media (max-width: 780px) {
+  display: none;
+  @media (max-width: 720px) {
     width: 100%;
   }
-  text-align: center;
-  display: none;
-  @media (max-width: 1080px) {
+  @media (min-width: 720px) {
     display: block;
   }
-  @media (max-width: 780px) {
-    max-width: 650px;
+  @media (min-width: 1080px) {
+    display: none;
+  }
+`;
+
+const CenteredImgTiny = styled.img`
+  text-align: center;
+  display: none;
+  @media (max-width: 720px) {
+    display: block;
+    width: 100%;
   }
 `;

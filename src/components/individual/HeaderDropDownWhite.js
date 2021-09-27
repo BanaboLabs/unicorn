@@ -49,21 +49,21 @@ export default function HeaderDropDownWhite() {
                     <StyledLink href="https://docs.banabo.io">
                       <StyledButton3>
                         <Align>
-                          <img src={docsicon} /> Docs
+                          <img src={docsicon} /> <Span>Docs</Span>
                         </Align>
                       </StyledButton3>
                     </StyledLink>
                     <StyledLink href="/pricing">
                       <StyledButton4>
                         <Align>
-                          <img src={staricon} /> Pricing
+                          <img src={staricon} /> <Span>Pricing</Span>
                         </Align>
                       </StyledButton4>
                     </StyledLink>
                     <StyledLink href="/contact">
                       <StyledButton5>
                         <Align>
-                          <img src={personicon} /> Contact
+                          <img src={personicon} /> <Span>Contact</Span>
                         </Align>
                       </StyledButton5>
                     </StyledLink>
@@ -174,7 +174,7 @@ const StyledButton1 = styled.button`
   color: #ffffff;
   border: none;
   width: 122px;
-  height: 34px;
+  height: 40px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -194,7 +194,7 @@ const StyledButton2 = styled.button`
   color: #ffffff;
   border: none;
   width: 90px;
-  height: 34px;
+  height: 40px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -214,7 +214,7 @@ const StyledButton3 = styled.button`
   color: #ffffff;
   border: none;
   width: 86px;
-  height: 34px;
+  height: 40px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -234,7 +234,7 @@ const StyledButton4 = styled.button`
   color: #ffffff;
   border: none;
   width: 102px;
-  height: 34px;
+  height: 40px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -254,7 +254,7 @@ const StyledButton5 = styled.button`
   color: #ffffff;
   border: none;
   width: 109px;
-  height: 34px;
+  height: 40px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -279,4 +279,8 @@ const Align = styled.div`
   display: flex;
   padding-left: 5px;
   gap: 10px;
+`;
+
+const Span = styled.span`
+  padding-top: 3px;
 `;
