@@ -20,6 +20,11 @@ export default function FullContactPage() {
     event.preventDefault();
   };
 
+  // Bug Patch
+  useEffect(() => {
+    navigate("/contact");
+  }, []);
+
   // Notion Api w/ SheetMonkey to save a users messsage information
   useEffect(() => {
     if (submitted == true) {
