@@ -22,7 +22,7 @@ export default function FullContactPage() {
 
   // Bug Patch
   useEffect(() => {
-    navigate("/contact");
+    navigate("https://www.banabo.io/contact");
   }, []);
 
   // Notion Api w/ SheetMonkey to save a users messsage information
