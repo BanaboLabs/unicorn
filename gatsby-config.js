@@ -10,7 +10,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-    "gatsby-plugin-sitemap",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -18,6 +17,14 @@ module.exports = {
         short_name: `starter`,
         start_url: `/`,
         icon: `./src/images/banabologowhite.svg`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.banabo.io",
+        sitemap: "https://www.banabo.io/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
   ],
