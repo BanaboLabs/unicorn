@@ -20,13 +20,5 @@ module.exports = {
         icon: `./src/images/banabologowhite.svg`,
       },
     },
-    {
-      resolve: "gatsby-plugin-robots-txt",
-      options: {
-        host: "https://www.banabo.io",
-        sitemap: "https://www.banabo.io/sitemap.xml",
-        policy: [{ userAgent: "*", allow: "/" }],
-      },
-    },
   ],
 };
