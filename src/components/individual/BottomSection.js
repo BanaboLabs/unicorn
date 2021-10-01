@@ -13,7 +13,7 @@ export default function BottomSection() {
       <RectangleWrapper>
         <Rectangle>
           <InsideContentWrapper>
-            <img src={star} />
+            <img src={star} alt="channel growth" />
             <Text>Free during beta</Text>
             <SubText>
               See for yourself what Banabo has to offer. No credit card required
@@ -21,7 +21,7 @@ export default function BottomSection() {
             <StyledLink to="/signup">
               <StyledButton1>
                 <span>
-                  Sign Up <img src={buttonarrow} />
+                  Sign Up <img src={buttonarrow} alt="channel growth" />
                 </span>
               </StyledButton1>
             </StyledLink>
@@ -29,7 +29,7 @@ export default function BottomSection() {
         </Rectangle>
         <Rectangle>
           <InsideContentWrapper>
-            <img src={bolt} />
+            <img src={bolt} alt="channel growth" />
             <Text>Simple to integrate</Text>
             <SubText>
               Add Banabo to your website within 5 minutes. It’s really that easy
@@ -45,7 +45,7 @@ export default function BottomSection() {
         </Rectangle>
         <Rectangle>
           <InsideContentWrapper>
-            <img src={person} />
+            <img src={person} alt="channel growth" />
             <Text>Always ready support</Text>
             <SubText>
               We’re here to answer all your questions within 24 hours

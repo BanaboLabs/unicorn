@@ -24,9 +24,9 @@ export default function ToggleSection() {
       </Container>
       <div>
         {toggle == true ? (
-          <CenteredImg src={withoutbanabo} />
+          <CenteredImg src={withoutbanabo} alt="channel attribution" />
         ) : (
-          <CenteredImg src={withbanabo} />
+          <CenteredImg src={withbanabo} alt="channel attribution" />
         )}
       </div>
     </ContentWrapper>

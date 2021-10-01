@@ -3,13 +3,14 @@ module.exports = {
     title: `Banabo`,
     description: `The only growth tool you'll need`,
     author: `@Colin & Ben`,
-    keywords: `growth, marketing, attribution, cross-channel, conversion`,
+    keywords: `marketing attribution, shopify growth marketing, cross-channel attribution scores, multi-channel conversions, startup marketing software`,
+    siteUrl: "https://banabo.io",
     // Need to add image metadata
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-
+    "gatsby-plugin-sitemap",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -19,8 +20,13 @@ module.exports = {
         icon: `./src/images/banabologowhite.svg`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.banabo.io",
+        sitemap: "https://www.banabo.io/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
   ],
 };
