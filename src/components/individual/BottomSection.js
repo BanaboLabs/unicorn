@@ -73,7 +73,7 @@ const ContentWrapper = styled.div`
   gap: 60px;
 `;
 
-const Title = styled.div`
+const Title = styled.h1`
   font-size: 80px;
   background: linear-gradient(90deg, #265de3, #af71ff);
   -webkit-background-clip: text;

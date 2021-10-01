@@ -39,7 +39,7 @@ const ContentWrapper = styled.div`
   gap: 35px;
 `;
 
-const Headline = styled.div`
+const Headline = styled.h1`
   color: #f6f5f1;
   font-family: "ProximaNovaBold";
   font-size: 50px;

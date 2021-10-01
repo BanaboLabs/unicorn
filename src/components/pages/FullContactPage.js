@@ -130,7 +130,7 @@ const ContentWrapper = styled.div`
   margin-top: 80px;
 `;
 
-const Text = styled.div`
+const Text = styled.h1`
   font-family: "ProximaNovaBold";
   font-size: 50px;
   color: #ffffff;
