@@ -13,7 +13,7 @@ export default function BottomSection() {
       <RectangleWrapper>
         <Rectangle>
           <InsideContentWrapper>
-            <img src={star} alt="channel growth" />
+            <img src={star} alt="free during beta" />
             <Text>Free during beta</Text>
             <SubText>
               See for yourself what Banabo has to offer. No credit card required
@@ -21,7 +21,7 @@ export default function BottomSection() {
             <StyledLink to="/signup">
               <StyledButton1>
                 <span>
-                  Sign Up <img src={buttonarrow} alt="channel growth" />
+                  Sign Up <img src={buttonarrow} alt="sign up" />
                 </span>
               </StyledButton1>
             </StyledLink>
@@ -37,7 +37,7 @@ export default function BottomSection() {
             <StyledLink href="https://docs.banabo.io/">
               <StyledButton2>
                 <span>
-                  Read Docs <img src={buttonarrow} />
+                  Read Docs <img src={buttonarrow} alt="read docs" />
                 </span>
               </StyledButton2>
             </StyledLink>
@@ -53,7 +53,7 @@ export default function BottomSection() {
             <StyledLink to="/contact">
               <StyledButton3>
                 <span>
-                  Contact Us <img src={buttonarrow} />
+                  Contact Us <img src={buttonarrow} alt="contact us" />
                 </span>
               </StyledButton3>
             </StyledLink>
