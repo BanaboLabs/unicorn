@@ -99,7 +99,7 @@ export default function FullContactPage() {
               </Form>
             )}
           </StyledDiv>
-          <StyledImg src={chatIcon} />
+          <StyledImg src={chatIcon} alt="channel growth" />
         </ContentWrapper>
       </Wrapper>
     </ParentWrapper>
