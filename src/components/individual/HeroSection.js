@@ -36,7 +36,7 @@ export default function HeroSection() {
         <StyledLink to="/signup">
           <StyledButton>Try Banabo</StyledButton>
         </StyledLink>
-        <CenteredImg src={product} alt="growth" />
+        <CenteredImg src={product} alt="channel growth" />
       </ContentWrapper>
     </Wrapper>
   );
