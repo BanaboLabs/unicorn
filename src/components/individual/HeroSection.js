@@ -87,7 +87,7 @@ const Title = styled.div`
   }
 `;
 
-const SubHead = styled.div`
+const SubHead = styled.h2`
   font-family: "ProximaNovaSemiBold";
   font-size: 20px;
   text-align: center;

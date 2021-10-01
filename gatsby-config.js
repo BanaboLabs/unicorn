@@ -2,7 +2,7 @@
 module.exports = {
   siteMetadata: {
     title: `Banabo`,
-    description: `The only growth tool you'll need`,
+    description: `Try Banabo. The only growth tool you'll need`,
     author: `@Colin & Ben`,
     keywords: `marketing attribution, shopify growth marketing, cross-channel attribution scores, multi-channel conversions, startup marketing software`,
     siteUrl: "https://banabo.io",
