@@ -7,13 +7,15 @@ import { Helmet } from "react-helmet";
 
 function IndexPage() {
   return (
-    <Layout>
+    <div>
       <Helmet>
         <script src="https://engine.banabo.io/embeddable/index.js"></script>
       </Helmet>
-      <GlobalFonts />
-      <SEO title="Home" />
-      <FullIndexPage />
-    </Layout>
+      <Layout>
+        <GlobalFonts />
+        <SEO title="Home" />
+        <FullIndexPage />
+      </Layout>
+    </div>
   );
 }
