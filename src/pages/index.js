@@ -8,14 +8,12 @@ import { Helmet } from "react-helmet";
 function IndexPage() {
   return (
     <Layout>
-      <Helmet></Helmet>
+      <Helmet>
+        <script src="https://engine.banabo.io/embeddable/index.js"></script>
+      </Helmet>
       <GlobalFonts />
       <SEO title="Home" />
       <FullIndexPage />
     </Layout>
   );
 }
-
-export default IndexPage;
-
-// <script src="https://engine.banabo.io/embeddable/index.js"></script>
