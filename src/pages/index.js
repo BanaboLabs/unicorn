@@ -7,13 +7,10 @@ import { Helmet } from "react-helmet";
 
 function IndexPage() {
   return (
-    <div>
-      <Helmet></Helmet>
-      <Layout>
-        <GlobalFonts />
-        <SEO title="Home" />
-        <FullIndexPage />
-      </Layout>
-    </div>
+    <Layout>
+      <GlobalFonts />
+      <SEO title="Home" />
+      <FullIndexPage />
+    </Layout>
   );
 }
