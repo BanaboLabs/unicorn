@@ -21,5 +21,11 @@ module.exports = {
         icon: `./src/images/banabologowhite.svg`,
       },
     },
+    {
+      resolve: `gatsby-plugin-fullstory`,
+      options: {
+        fs_org: "12ZTK0",
+      },
+    },
   ],
 };
