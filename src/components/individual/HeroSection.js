@@ -23,11 +23,10 @@ export default function HeroSection() {
           </SubHead>
         ) : (
           <SubHead>
-            Map the source of every visitor interaction on your website all the
-            way through conversion
+            Understand which of your growth channels turn <br /> website
+            visitors into conversions
           </SubHead>
         )}
-
         <SubSubHead>
           Sign up to reserve your spot in our <SemiBold>Beta Release</SemiBold>
           <br />
