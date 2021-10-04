@@ -7,6 +7,9 @@ var plugins = [{
     },{
       plugin: require('/Users/colinsnyder/Desktop/www/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"gatsby starter default","short_name":"starter","start_url":"/","icon":"./src/images/banabologowhite.svg","cache_busting_mode":"query","include_favicon":true,"legacy":true,"theme_color_in_head":true,"cacheDigest":"774b087f751eb9f9f936ef0e036b601e"},
+    },{
+      plugin: require('/Users/colinsnyder/Desktop/www/node_modules/gatsby-plugin-fullstory/gatsby-ssr'),
+      options: {"plugins":[],"fs_org":"12ZTK0"},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [

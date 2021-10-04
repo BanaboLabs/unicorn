@@ -18,8 +18,8 @@ export default function HeroSection() {
         </Title>
         {isDesktop ? (
           <SubHead>
-            Map the source of every visitor interaction on your <br /> website
-            all the way through conversion
+            Understand which of your growth channels turn <br /> website
+            visitors into conversions
           </SubHead>
         ) : (
           <SubHead>
