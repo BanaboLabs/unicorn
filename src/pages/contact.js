@@ -3,16 +3,13 @@ import Layout from "../components/layout/layout";
 import SEO from "../components/layout/seo";
 import FullContactPage from "../components/pages/FullContactPage";
 import { Helmet } from "react-helmet";
-import FullStory from "react-fullstory";
+import * as FullStory from "@fullstory/browser";
 
-const ORG_ID = "12ZTK0";
+FullStory.init({ orgId: "12ZTK0" });
 
 function ContactPage() {
   return (
     <Layout>
-      <div className="app">
-        <FullStory org={ORG_ID} />
-      </div>
       <Helmet>
         <script src="https://engine.banabo.io/embeddable/index.js"></script>
       </Helmet>
