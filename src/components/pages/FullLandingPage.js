@@ -77,9 +77,13 @@ export default function FullLandingPage() {
                         />
                         <StyledButton
                           type="submit"
-                          onClick={() => setSubmitted(true)}
+                          onClick={() =>
+                            yourName.length >= 2 && emailAddress.length >= 2
+                              ? setSubmitted(true)
+                              : null
+                          }
                         >
-                          Sign Up{" "}
+                          Sign Up
                         </StyledButton>
                       </InputWrapper>
                     ) : (
