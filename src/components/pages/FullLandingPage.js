@@ -120,7 +120,7 @@ const NewWrapper = styled.div`
   align-items: center;
   min-height: 100vh;
   gap: 35px;
-  padding-bottom: 300px;
+  padding-bottom: 240px;
 `;
 
 const ContentWrapper = styled.div`
@@ -235,7 +235,7 @@ const SubTextWrapper = styled.div`
 `;
 
 const StyledIMG = styled.img`
-  padding-top: 220px;
+  padding-top: 180px;
   width: 90%;
   height: 90%;
 `;
