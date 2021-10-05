@@ -235,7 +235,7 @@ const SubTextWrapper = styled.div`
 `;
 
 const StyledIMG = styled.img`
-  padding-top: 180px;
+  padding-top: 220px;
   width: 90%;
   height: 90%;
 `;
