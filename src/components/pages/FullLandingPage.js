@@ -135,7 +135,7 @@ const NewWrapper = styled.div`
   align-items: center;
   min-height: 100vh;
   gap: 35px;
-  padding-bottom: 125px;
+  padding-bottom: 90px;
   @media (min-height: 1200px) {
     padding-bottom: 300px;
   }
@@ -254,8 +254,8 @@ const SubTextWrapper = styled.div`
 
 const StyledIMG1 = styled.img`
   padding-top: 180px;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
 `;
 
 const StyledIMG2 = styled.img`
