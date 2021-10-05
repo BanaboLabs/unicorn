@@ -135,9 +135,9 @@ const NewWrapper = styled.div`
   align-items: center;
   min-height: 100vh;
   gap: 35px;
-  padding-bottom: 90px;
+  padding-bottom: 20px;
   @media (min-height: 1200px) {
-    padding-bottom: 300px;
+    padding-bottom: 200px;
   }
 `;
 
