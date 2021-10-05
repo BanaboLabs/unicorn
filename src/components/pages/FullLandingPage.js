@@ -120,7 +120,7 @@ const NewWrapper = styled.div`
   align-items: center;
   min-height: 100vh;
   gap: 35px;
-  padding-bottom: 240px;
+  padding-bottom: 235px;
 `;
 
 const ContentWrapper = styled.div`
