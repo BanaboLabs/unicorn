@@ -78,7 +78,8 @@ export default function FullLandingPage() {
                         <StyledButton
                           type="submit"
                           onClick={() =>
-                            yourName.length >= 2 && emailAddress.length >= 2
+                            yourName.value.length >= 2 &&
+                            emailAddress.value.length >= 2
                               ? setSubmitted(true)
                               : null
                           }
