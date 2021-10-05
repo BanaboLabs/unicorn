@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import useInput from "../customhooks/useInput";
 import LeftSide from "../../images/leftside.svg";
+import SmallBanabo from "../../images/smallbanabo.svg";
 
 // Function to save the link info
 const noRefresh = (event) => {
@@ -45,53 +46,56 @@ export default function FullLandingPage() {
       <Wrapper>
         <ContentWrapper>
           <Background1>
-            <StyledIMG src={LeftSide} />
+            <StyledIMG1 src={LeftSide} />
           </Background1>
           <Background2>
-            <NewWrapper>
-              <StyledDiv>
-                <Form onSubmit={noRefresh}>
-                  {submitted == false ? (
-                    <InputWrapper>
-                      <Text>Sign Up</Text>
-                      <SubTextWrapper>
-                        <SubText>
-                          Sign up to reserve your spot in our Beta Release.
-                        </SubText>
-                        <SubText>We’ll let you in as soon as we can</SubText>
-                      </SubTextWrapper>
-                      <Input1
-                        type="text"
-                        placeholder="Your Name"
-                        value={yourName.value}
-                        onChange={yourName.onChange}
-                      />
-                      <Input1
-                        type="email"
-                        placeholder="Email Address"
-                        value={emailAddress.value}
-                        onChange={emailAddress.onChange}
-                      />
-                      <StyledButton
-                        type="submit"
-                        onClick={() => setSubmitted(true)}
-                      >
-                        Sign Up{" "}
-                      </StyledButton>
-                    </InputWrapper>
-                  ) : (
-                    <InputWrapper>
-                      <Text>Thank You!</Text>
-                      <SubTextWrapper>
-                        <SubText>
-                          We’ll send an email when it’s ready for you
-                        </SubText>
-                      </SubTextWrapper>
-                    </InputWrapper>
-                  )}
-                </Form>
-              </StyledDiv>
-            </NewWrapper>
+            <Div>
+              <StyledIMG2 src={SmallBanabo} />
+              <NewWrapper>
+                <StyledDiv>
+                  <Form onSubmit={noRefresh}>
+                    {submitted == false ? (
+                      <InputWrapper>
+                        <Text>Sign Up</Text>
+                        <SubTextWrapper>
+                          <SubText>
+                            Sign up to reserve your spot in our Beta Release.
+                          </SubText>
+                          <SubText>We’ll let you in as soon as we can</SubText>
+                        </SubTextWrapper>
+                        <Input1
+                          type="text"
+                          placeholder="Your Name"
+                          value={yourName.value}
+                          onChange={yourName.onChange}
+                        />
+                        <Input1
+                          type="email"
+                          placeholder="Email Address"
+                          value={emailAddress.value}
+                          onChange={emailAddress.onChange}
+                        />
+                        <StyledButton
+                          type="submit"
+                          onClick={() => setSubmitted(true)}
+                        >
+                          Sign Up{" "}
+                        </StyledButton>
+                      </InputWrapper>
+                    ) : (
+                      <InputWrapper>
+                        <Text>Thank You!</Text>
+                        <SubTextWrapper>
+                          <SubText>
+                            We’ll send an email when it’s ready for you
+                          </SubText>
+                        </SubTextWrapper>
+                      </InputWrapper>
+                    )}
+                  </Form>
+                </StyledDiv>
+              </NewWrapper>
+            </Div>
           </Background2>
         </ContentWrapper>
       </Wrapper>
@@ -99,18 +103,24 @@ export default function FullLandingPage() {
   );
 }
 
-const ParentWrapper = styled.div`
-  overflow-y: auto;
-  overflow-x: hidden;
-`;
+const ParentWrapper = styled.div``;
 
 const Wrapper = styled.div`
-  min-height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  min-height: 100%;
   min-width: 100%;
   background-size: cover;
   background-position: center;
   position: relative;
   background-color: #21212b;
+`;
+
+const Div = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
 const NewWrapper = styled.div`
@@ -120,13 +130,13 @@ const NewWrapper = styled.div`
   align-items: center;
   min-height: 100vh;
   gap: 35px;
-  padding-bottom: 235px;
+  padding-bottom: 135px;
 `;
 
 const ContentWrapper = styled.div`
   text-align: center;
   display: flex;
-  @media (max-width: 1600px) {
+  @media (max-width: 1400px) {
     display: grid;
   }
 `;
@@ -135,7 +145,7 @@ const Background1 = styled.div`
   width: 50%;
   height: 100vh;
   background: #192c66;
-  @media (max-width: 1600px) {
+  @media (max-width: 1400px) {
     display: none;
   }
 `;
@@ -144,7 +154,7 @@ const Background2 = styled.div`
   width: 50%;
   height: 100vh;
   background: #252531;
-  @media (max-width: 1600px) {
+  @media (max-width: 1400px) {
     width: 100%;
   }
 `;
@@ -234,8 +244,19 @@ const SubTextWrapper = styled.div`
   text-align: center;
 `;
 
-const StyledIMG = styled.img`
+const StyledIMG1 = styled.img`
   padding-top: 180px;
   width: 90%;
   height: 90%;
+`;
+
+const StyledIMG2 = styled.img`
+  padding-top: 40px;
+  width: 80%;
+  height: 80%;
+  display: none;
+
+  @media (max-width: 700px) {
+    display: block;
+  }
 `;
