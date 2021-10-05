@@ -130,7 +130,10 @@ const NewWrapper = styled.div`
   align-items: center;
   min-height: 100vh;
   gap: 35px;
-  padding-bottom: 135px;
+  padding-bottom: 125px;
+  @media (min-height: 1200px) {
+    padding-bottom: 300px;
+  }
 `;
 
 const ContentWrapper = styled.div`
