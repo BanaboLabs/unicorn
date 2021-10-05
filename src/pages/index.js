@@ -12,7 +12,7 @@ function IndexPage() {
         <script src="https://engine.banabo.io/embeddable/index.js"></script>
       </Helmet>
       <GlobalFonts />
-      <SEO title="Home" />
+      <SEO title="Attribute every growth channel" />
       <FullIndexPage />
     </Layout>
   );
