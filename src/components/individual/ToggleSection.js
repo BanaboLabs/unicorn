@@ -16,37 +16,29 @@ export default function ToggleSection() {
   return (
     <ContentWrapper>
       <Container onClick={() => toggleSelected(!toggle)}>
-        <Button rightvalue={rightvalue} widthvalue={widthvalue} />
-        <TextWrapper>
-          <Text>Without Banabo</Text>
-          <Text>With Banabo</Text>
-        </TextWrapper>
+        <Button rightvalue={rightvalue} widthvalue={widthvalue}>
+          <TextWrapper>
+            <Text>Without Banabo</Text>
+            <Text>Without Banabo</Text>
+          </TextWrapper>
+        </Button>
       </Container>
-      <div>
-        {toggle == true ? (
-          <CenteredImg src={withoutbanabo} alt="channel attribution" />
-        ) : (
-          <CenteredImg src={withbanabo} alt="channel attribution" />
-        )}
-      </div>
     </ContentWrapper>
   );
 }
 
 const ContentWrapper = styled.div`
-  display: -webkit-flexbox; /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-flexbox; /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox; /* TWEENER - IE 10 */
-  display: -webkit-flex;
+  display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 2.5vh;
 `;
 
 const Container = styled.div`
-  width: 278px;
-  height: 38px;
-  background: #47475e;
+  height: 73px;
+  width: 350.8428649902344px;
+  background: #ffffff;
+  box-shadow: 0px 0px 30px 5px rgba(174, 174, 174, 0.18);
+  border-radius: 60px;
   border-radius: 60px;
   position: relative;
   cursor: pointer;
@@ -54,33 +46,27 @@ const Container = styled.div`
 `;
 
 const Button = styled.div`
-  width: ${(props) => (props.widthvalue ? 134 : 154)}px;
-  height: 38px;
+  height: 72px;
+  width: 180px;
   background: #2194ff;
   border-radius: 60px;
-  position: absolute;
   will-change: transform;
+  padding-top: 20px;
   transition: transform 0.4s ease-out;
   right: ${(props) => (props.rightvalue ? 0 : "none")};
 `;
 
-// 1) Needs to move
-// 2) Needs to expand
+const Text = styled.div`
+  font-family: "ProximaNovaSemiBold";
+  font-size: 18px;
+  color: #252531;
+  padding-left: 55px;
+`;
 
 const TextWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  position: absolute;
-  width: 290px;
-`;
-
-const Text = styled.div`
-  font-family: "ProximaNovaSemiBold";
-  color: white;
-  padding-top: 10px;
-  padding-left: 20px;
-  width: 200px;
-  height: 32px;
+  gap: 50px;
 `;
 
 const CenteredImg = styled.img`
@@ -100,4 +86,12 @@ const CenteredImg = styled.img`
   }
 `;
 
-//
+/* <div>
+        {toggle == true ? (
+          <CenteredImg src={withoutbanabo} alt="channel attribution" />
+        ) : (
+          <CenteredImg src={withbanabo} alt="channel attribution" />
+        )}
+      </div> */
+
+// width: ${(props) => (props.widthvalue ? 134 : 154)}px;

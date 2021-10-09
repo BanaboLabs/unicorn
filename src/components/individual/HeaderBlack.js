@@ -61,9 +61,9 @@ const Wrapper = styled.div`
 `;
 
 const SubWrapper = styled.div`
-  display: block;
-  grid-auto-flow: row;
-  justify-items: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   padding: 20px;
 `;
 
@@ -71,6 +71,7 @@ const NavWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 620px;
 
   @media (max-width: 700px) {
     display: grid;
@@ -106,8 +107,9 @@ const Button = styled.button`
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
-  border-radius: 6px;
-  background-color: #252531;
+  background: #252531;
+  border-radius: 300px;
+
   transition: 0.2s ease-in-out;
 
   @media (max-width: 700px) {
@@ -130,7 +132,7 @@ const SubGroup1 = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
-  gap: 20px;
+  gap: 10px;
 `;
 
 const SubGroup2 = styled.div`

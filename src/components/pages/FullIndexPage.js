@@ -1,22 +1,26 @@
 import React, { useState, useEffect } from "react";
+
 import styled from "styled-components";
-import HeroSection from "../individual/HeroSection";
-import background from "../../images/background.svg";
-import ToggleSection from "../individual/ToggleSection";
-import BottomSection from "../individual/BottomSection";
-import MiddleSection from "../individual/MiddleSection";
+import Section1 from "../individual/Prod/section1";
+import Section2 from "../individual/Prod/section2";
+import Section3 from "../individual/Prod/section3";
+import Section4 from "../individual/Prod/section4";
+import Section5 from "../individual/Prod/section5";
+import Section6 from "../individual/Prod/section6";
+
+// Alter drop shadows to match website
 
 export default function FullIndexPage() {
   return (
     <ParentWrapper>
       <Wrapper>
         <ContentWrapper>
-          <HeroSection />
-          <MiddleParent>
-            <MiddleSection />
-            <ToggleSection />
-          </MiddleParent>
-          <BottomSection />
+          <Section1 />
+          <Section2 />
+          <Section3 />
+          <Section4 />
+          <Section5 />
+          <Section6 />
         </ContentWrapper>
       </Wrapper>
     </ParentWrapper>
@@ -34,18 +38,9 @@ const Wrapper = styled.div`
   background-size: cover;
   background-position: center;
   position: relative;
-  background-image: url("${background}");
 `;
 
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 140px;
-`;
-
-const MiddleParent = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 30px;
 `;
