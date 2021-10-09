@@ -83,6 +83,7 @@ const VerticalWrapper1 = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 80px;
+
   @media (max-width: 900px) {
     gap: 40px;
   }
@@ -93,6 +94,11 @@ const VerticalWrapper2 = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 80px;
+
+  @media (max-height: 900px) {
+    gap: 30px;
+  }
+
   @media (max-width: 900px) {
     gap: 40px;
   }

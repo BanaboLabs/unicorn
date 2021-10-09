@@ -18,7 +18,7 @@ export default function Section5() {
             </Title>
             <SubTitle>
               Banabo analyzes each channel with our in-house machine learning
-              model to attribute influence towards conversion
+              model to attribute influence
             </SubTitle>
           </VerticalWrapper1>
           {isDesktop ? (
@@ -96,7 +96,6 @@ const VerticalWrapper1 = styled.div`
   display: flex;
   flex-direction: column;
   gap: 35px;
-  padding-top: 20px;
   @media (max-width: 900px) {
     flex-direction: column;
     display: flex;
@@ -123,9 +122,8 @@ const SubTitle = styled.div`
   font-size: 24px;
   line-height: 29px;
   color: #3a3a3a;
-  width: 620px;
+  width: 520px;
   @media (max-width: 900px) {
     font-size: 16px;
-    width: 300px;
   }
 `;

@@ -101,6 +101,10 @@ const VerticalWrapper11 = styled.div`
   @media (max-width: 900px) {
     padding-top: 0px;
   }
+
+  @media (max-height: 900px) {
+    padding-top: 20px;
+  }
 `;
 
 const VerticalWrapper1 = styled.div`
@@ -182,6 +186,11 @@ const LogoStrip = styled.img`
   @media (max-width: 900px) {
     display: none;
   }
+
+  @media (max-height: 700px) {
+    height: 80%;
+    width: 80%;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -219,6 +228,9 @@ const VStack = styled.div`
   display: flex;
   flex-direction: column;
   gap: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const ProductSmall = styled.img`
