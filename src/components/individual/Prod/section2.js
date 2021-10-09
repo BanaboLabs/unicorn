@@ -48,13 +48,6 @@ export default function Section2() {
               sendToParent={setIsParentData}
             />
           )}
-          <Button>
-            <span>
-              <HorizontalWrapper3>
-                <img src={downarrow} alt="contact us" /> SEE HOW IT WORKS
-              </HorizontalWrapper3>
-            </span>
-          </Button>
         </VerticalWrapper1>
       </ContentWrapper>
     </Wrapper>
@@ -72,6 +65,10 @@ const ContentWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   padding: 130px;
+  @media (max-width: 900px) {
+    padding: 0px;
+    padding-bottom: 60px;
+  }
 `;
 
 const AlterIMG = styled.img`
@@ -85,14 +82,20 @@ const VerticalWrapper1 = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 100px;
+  gap: 80px;
+  @media (max-width: 900px) {
+    gap: 40px;
+  }
 `;
 
 const VerticalWrapper2 = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 70px;
+  gap: 80px;
+  @media (max-width: 900px) {
+    gap: 40px;
+  }
 `;
 
 const HorizontalWrapper1 = styled.div`

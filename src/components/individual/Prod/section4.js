@@ -62,6 +62,10 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   text-align: left;
   padding: 180px;
+  @media (max-width: 900px) {
+    padding: 0px;
+    padding-top: 60px;
+  }
 `;
 
 const Container1 = styled.div`
@@ -103,6 +107,7 @@ const HorizontalWrapper1 = styled.div`
   gap: 120px;
   @media (max-width: 900px) {
     flex-direction: column;
+    gap: 60px;
   }
 `;
 

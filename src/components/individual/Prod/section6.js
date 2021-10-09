@@ -90,7 +90,7 @@ const ContentWrapper = styled.div`
 
 const RectangleWrapper = styled.div`
   display: flex;
-  gap: 20px;
+  gap: 40px;
   justify-content: center;
   align-items: center;
   flex-direction: row;

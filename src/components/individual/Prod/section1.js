@@ -32,8 +32,9 @@ export default function Section1() {
                 website conversions, with Banabo
               </SubTitle>
               <Spacer />
+              <Spacer />
               <StyledLink to="/signup">
-                <StyledButton>See it in action</StyledButton>
+                <StyledButton>Sign Up</StyledButton>
               </StyledLink>
             </VerticalWrapper1>
             <Product src={section1product} />
@@ -71,6 +72,9 @@ const ContentWrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  @media (max-width: 900px) {
+    margin: 20px;
+  }
 `;
 
 const HorizontalWrapper1 = styled.div`
@@ -94,11 +98,8 @@ const VerticalWrapper11 = styled.div`
   flex-direction: column;
   padding-top: 80px;
 
-  @media (max-height: 900px) {
-    padding-top: 20px;
-  }
-
   @media (max-width: 900px) {
+    padding-top: 0px;
   }
 `;
 
@@ -127,6 +128,9 @@ const Title = styled.div`
 
 const Spacer = styled.div`
   padding-top: 40px;
+  @media (max-width: 900px) {
+    padding-top: 15px;
+  }
 `;
 
 const BigSpacer = styled.div`
@@ -182,7 +186,7 @@ const LogoStrip = styled.img`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  @media (max-height: 900px) {
+  @media (max-width: 900px) {
     padding-left: 12px;
   }
 `;
@@ -200,6 +204,12 @@ const StyledButton = styled.button`
   border-radius: 300px;
   background: linear-gradient(90deg, #265de3, #af71ff);
 
+  @media (max-width: 900px) {
+    width: 84px;
+    height: 27px;
+    font-size: 13px;
+  }
+
   :hover {
     background: linear-gradient(90deg, #104fe8 -10.37%, #9a4bff 108.53%);
   }
@@ -216,5 +226,6 @@ const ProductSmall = styled.img`
 
   @media (max-width: 900px) {
     display: inline;
+    padding-top: 40px;
   }
 `;
