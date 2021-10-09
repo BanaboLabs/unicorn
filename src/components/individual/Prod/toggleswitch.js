@@ -49,6 +49,12 @@ const Container = styled.div`
   align-items: center;
   position: relative;
   cursor: pointer;
+
+  @media (max-width: 900px) {
+    background-image: none;
+    width: 331px;
+    height: 43px;
+  }
 `;
 
 const Button = styled.div`
@@ -61,27 +67,44 @@ const Button = styled.div`
   transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
   position: absolute;
   left: ${(props) => (props.widthvalue ? 0 : 285)}px;
+
+  @media (max-width: 900px) {
+    left: ${(props) => (props.widthvalue ? 0 : 170)}px;
+    width: ${(props) => (props.widthvalue ? 180 : 160)}px;
+    height: 43px;
+  }
 `;
 
 const TextWrapper = styled.div`
   font-family: "ProximaNovaSemiBold";
-  font-size: 26px;
   color: #252531;
   display: flex;
   flex-direction: row;
   gap: 100px;
   position: absolute;
-  padding: 50px;
+  padding: 60px;
+  @media (max-width: 900px) {
+    gap: 25px;
+    padding: 30px;
+  }
 `;
 
 const Text1 = styled.div`
   font-family: "ProximaNovaSemiBold";
   font-size: 26px;
   color: "#252531";
+  @media (max-width: 900px) {
+    font-size: 16px;
+    width: 150px;
+  }
 `;
 
 const Text2 = styled.div`
   font-family: "ProximaNovaSemiBold";
   font-size: 26px;
   color: "#252531";
+  @media (max-width: 900px) {
+    font-size: 16px;
+    width: 150px;
+  }
 `;

@@ -6,14 +6,19 @@ import { Link } from "gatsby";
 import section1product from "../../../images/section1product.svg";
 import background1 from "../../../images/backgroundprod.svg";
 import background2 from "../../../images/backgroundprod2.svg";
+import productsmall from "../../../images/productsmall.svg";
 import logostrip from "../../../images/logostrip.svg";
+import useMediaQuery from "../../../hooks/useMediaQuery";
+import HeaderDropDownBlack from "../HeaderDropDownBlack";
 
 export default function Section1() {
+  const isDesktop = useMediaQuery("(min-width: 800px)");
+
   return (
     <Wrapper>
       <ContentWrapper>
-        <HeaderBlack />
-        <VerticalWrapper1>
+        {isDesktop ? <HeaderBlack /> : <HeaderDropDownBlack />}
+        <VerticalWrapper11>
           <HorizontalWrapper1>
             <VerticalWrapper1>
               <HorizontalWrapper2>
@@ -33,14 +38,15 @@ export default function Section1() {
             </VerticalWrapper1>
             <Product src={section1product} />
           </HorizontalWrapper1>
+          <ProductSmall src={productsmall} />
           <BigSpacer />
           <VStack>
             <SubHead>
               No matter your growth stack, Banabo can connect to any platform
             </SubHead>
-            <img src={logostrip} />
+            <LogoStrip src={logostrip} />
           </VStack>
-        </VerticalWrapper1>
+        </VerticalWrapper11>
       </ContentWrapper>
     </Wrapper>
   );
@@ -54,6 +60,10 @@ const Wrapper = styled.div`
 
   @media (min-width: 1800px) {
     background-image: url(${background2});
+  }
+
+  @media (max-width: 900px) {
+    background-image: none;
   }
 `;
 
@@ -74,12 +84,32 @@ const HorizontalWrapper2 = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 20px;
+  @media (max-width: 900px) {
+    gap: 0px;
+  }
+`;
+
+const VerticalWrapper11 = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+
+  @media (max-height: 900px) {
+    padding-top: 20px;
+  }
+
+  @media (max-width: 900px) {
+  }
 `;
 
 const VerticalWrapper1 = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 80px;
+
+  @media (max-height: 900px) {
+    padding-top: 20px;
+  }
 `;
 
 const Title = styled.div`
@@ -87,6 +117,12 @@ const Title = styled.div`
   font-size: 70px;
   color: #252531;
   line-height: 85px;
+
+  @media (max-width: 900px) {
+    font-size: 35px;
+    padding-left: 10px;
+    line-height: 60px;
+  }
 `;
 
 const Spacer = styled.div`
@@ -95,6 +131,10 @@ const Spacer = styled.div`
 
 const BigSpacer = styled.div`
   padding-top: 85px;
+
+  @media (max-height: 900px) {
+    padding-top: 30px;
+  }
 `;
 
 const SubTitle = styled.div`
@@ -103,6 +143,12 @@ const SubTitle = styled.div`
   line-height: 29px;
   color: #737180;
   width: 600px;
+
+  @media (max-width: 900px) {
+    font-size: 18px;
+    width: 350px;
+    padding-left: 12px;
+  }
 `;
 
 const SubHead = styled.div`
@@ -111,6 +157,10 @@ const SubHead = styled.div`
   font-family: "ProximaNovaSemiBold";
   color: #252531;
   text-align: center;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 const LightBulb = styled.img`
@@ -118,10 +168,23 @@ const LightBulb = styled.img`
   height: 70px;
 `;
 
-const Product = styled.img``;
+const Product = styled.img`
+  @media (max-width: 900px) {
+    display: none;
+  }
+`;
+
+const LogoStrip = styled.img`
+  @media (max-width: 900px) {
+    display: none;
+  }
+`;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+  @media (max-height: 900px) {
+    padding-left: 12px;
+  }
 `;
 
 const StyledButton = styled.button`
@@ -146,4 +209,12 @@ const VStack = styled.div`
   display: flex;
   flex-direction: column;
   gap: 18px;
+`;
+
+const ProductSmall = styled.img`
+  display: none;
+
+  @media (max-width: 900px) {
+    display: inline;
+  }
 `;

@@ -5,9 +5,13 @@ import bar from "../../../images/bar.png";
 import withbanabo from "../../../images/withbanaboprod.svg";
 import withoutbanabo from "../../../images/withoutbanaboprod.svg";
 import downarrow from "../../../images/downarrowprod.svg";
+import withbanabosmall from "../../../images/withbanabosmall.svg";
+import withoutbanabosmall from "../../../images/withoutbanabosmall.svg";
+import useMediaQuery from "../../../hooks/useMediaQuery";
 
 export default function Section2() {
   const [isParentData, setIsParentData] = useState(false);
+  const isDesktop = useMediaQuery("(min-width: 900px)");
 
   return (
     <Wrapper>
@@ -17,21 +21,33 @@ export default function Section2() {
             <HorizontalWrapper1>
               <YellowRectangle>
                 <HorizontalWrapper2>
-                  <img src={bar} />
+                  <AlterIMG src={bar} />
                   <BlackText>Map out what influences a purchase</BlackText>
                 </HorizontalWrapper2>
               </YellowRectangle>
-              <ToggleSwitch
-                toChild={isParentData}
-                sendToParent={setIsParentData}
-              />
+              {isDesktop ? (
+                <ToggleSwitch
+                  toChild={isParentData}
+                  sendToParent={setIsParentData}
+                />
+              ) : null}
             </HorizontalWrapper1>
-            {isParentData == true ? (
+            {isParentData == true && isDesktop == true ? (
               <img src={withbanabo} />
-            ) : (
+            ) : isParentData == false && isDesktop == true ? (
               <img src={withoutbanabo} />
+            ) : isParentData == true && isDesktop == false ? (
+              <img src={withbanabosmall} />
+            ) : (
+              <img src={withoutbanabosmall} />
             )}
           </VerticalWrapper2>
+          {isDesktop ? null : (
+            <ToggleSwitch
+              toChild={isParentData}
+              sendToParent={setIsParentData}
+            />
+          )}
           <Button>
             <span>
               <HorizontalWrapper3>
@@ -58,6 +74,13 @@ const ContentWrapper = styled.div`
   padding: 130px;
 `;
 
+const AlterIMG = styled.img`
+  @media (max-width: 900px) {
+    width: 25px;
+    height: 25px;
+  }
+`;
+
 const VerticalWrapper1 = styled.div`
   display: flex;
   align-items: center;
@@ -78,15 +101,22 @@ const HorizontalWrapper1 = styled.div`
   gap: 50px;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 
 const HorizontalWrapper2 = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 5px;
   text-align: center;
   justify-content: center;
   align-items: center;
+  @media (max-width: 900px) {
+    width: 300px;
+  }
 `;
 
 const HorizontalWrapper3 = styled.div`
@@ -107,13 +137,24 @@ const YellowRectangle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 900px) {
+    height: 56px;
+    width: 323px;
+    border-radius: 20px;
+  }
 `;
 
 const BlackText = styled.div`
   font-family: "ProximaNovaSemiBold";
   font-size: 26px;
-  line-height: 32px;
+
   color: #252531;
+
+  @media (max-width: 900px) {
+    font-size: 16px;
+    line-height: 10px;
+  }
 `;
 
 const Button = styled.button`

@@ -5,12 +5,15 @@ import gear from "../../../images/gearprod.svg";
 import contact from "../../../images/contactprod.svg";
 import buttonarrow from "../../../images/buttonarrow.svg";
 import { Link } from "gatsby";
+import useMediaQuery from "../../../hooks/useMediaQuery";
 
 export default function BottomSection() {
+  const isDesktop = useMediaQuery("(min-width: 900px)");
+
   return (
     <Wrapper>
       <ContentWrapper>
-        <Title>Get started for free</Title>
+        {isDesktop ? <Title>Get started for free</Title> : null}
         <RectangleWrapper>
           <Rectangle>
             <InsideContentWrapper>
@@ -85,6 +88,18 @@ const ContentWrapper = styled.div`
   padding: 130px;
 `;
 
+const RectangleWrapper = styled.div`
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
+`;
+
 const Title = styled.h1`
   font-size: 80px;
   font-family: Proxima Nova;
@@ -100,23 +115,17 @@ const Title = styled.h1`
   }
 `;
 
-const RectangleWrapper = styled.div`
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 30px;
-
-  @media (max-width: 1140px) {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-`;
-
 const Rectangle = styled.div`
   height: 360px;
   width: 400px;
   background: #ffffff;
   box-shadow: 2px 5px 40px 0 rgb(0 0 0 / 8%);
   border-radius: 20px;
+
+  @media (max-width: 900px) {
+    height: 288px;
+    width: 321px;
+  }
 `;
 
 const BottomSpacer = styled.div`
@@ -128,6 +137,9 @@ const InsideContentWrapper = styled.div`
   gap: 35px;
   padding-left: 25px;
   padding-top: 25px;
+  @media (max-width: 900px) {
+    gap: 20px;
+  }
 `;
 
 const Text = styled.div`
@@ -141,6 +153,9 @@ const SubText = styled.div`
   font-size: 18px;
   color: #8d8d8d;
   width: 290px;
+  @media (max-width: 900px) {
+    width: 240px;
+  }
 `;
 
 const StyledButton1 = styled.button`

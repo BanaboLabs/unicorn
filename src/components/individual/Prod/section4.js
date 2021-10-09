@@ -1,17 +1,28 @@
 import React from "react";
 import styled from "styled-components";
 import step2 from "../../../images/step2.svg";
+import step2small from "../../../images/step2small.svg";
 import horn from "../../../images/horn.gif";
+import useMediaQuery from "../../../hooks/useMediaQuery";
 
 export default function Section4() {
+  const isDesktop = useMediaQuery("(min-width: 900px)");
+
   return (
     <Wrapper>
       <ContentWrapper>
         <HorizontalWrapper1>
-          <Container>
-            <img src={step2} />
-            <IMG src={horn} />
-          </Container>
+          {isDesktop ? (
+            <Container1>
+              <img src={step2} />
+              <THEImg src={horn} />
+            </Container1>
+          ) : (
+            <Container1>
+              <img src={step2small} />
+              <THEImg src={horn} />
+            </Container1>
+          )}
           <VerticalWrapper1>
             <Title>
               See paths leading <br /> to conversion
@@ -21,6 +32,17 @@ export default function Section4() {
               to a signup or purchase
             </SubTitle>
           </VerticalWrapper1>
+          {isDesktop ? (
+            <Container2>
+              <img src={step2} />
+              <THEImg src={horn} />
+            </Container2>
+          ) : (
+            <Container2>
+              <img src={step2small} />
+              <THEImg src={horn} />
+            </Container2>
+          )}
         </HorizontalWrapper1>
       </ContentWrapper>
     </Wrapper>
@@ -42,22 +64,46 @@ const ContentWrapper = styled.div`
   padding: 180px;
 `;
 
-const Container = styled.div`
+const Container1 = styled.div`
   position: relative;
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
-const IMG = styled.img`
+const Container2 = styled.div`
+  position: relative;
+  display: none;
+  @media (max-width: 900px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+  }
+`;
+
+const THEImg = styled.img`
   position: absolute;
   top: 60px;
   left: 60px;
   height: 62px;
   width: 62px;
+  @media (max-width: 900px) {
+    height: 39px;
+    width: 39px;
+    top: 25px;
+    left: 157px;
+  }
 `;
 
 const HorizontalWrapper1 = styled.div`
   display: flex;
   flex-direction: row;
   gap: 120px;
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 
 const VerticalWrapper1 = styled.div`
@@ -65,6 +111,14 @@ const VerticalWrapper1 = styled.div`
   flex-direction: column;
   gap: 35px;
   padding-top: 20px;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+  }
 `;
 
 const Title = styled.div`
@@ -72,6 +126,10 @@ const Title = styled.div`
   font-size: 70px;
   color: #252531;
   line-height: 85px;
+  @media (max-width: 900px) {
+    font-size: 35px;
+    line-height: 43px;
+  }
 `;
 
 const SubTitle = styled.div`
@@ -80,4 +138,7 @@ const SubTitle = styled.div`
   line-height: 29px;
   color: #3a3a3a;
   width: 600px;
+  @media (max-width: 900px) {
+    font-size: 16px;
+  }
 `;
