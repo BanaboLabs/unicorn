@@ -90,6 +90,10 @@ const HorizontalWrapper1 = styled.div`
     flex-direction: column;
     gap: 60px;
   }
+
+  @media (max-width: 1600px) {
+    gap: 70px;
+  }
 `;
 
 const VerticalWrapper1 = styled.div`

@@ -81,6 +81,10 @@ const HorizontalWrapper1 = styled.div`
   display: flex;
   flex-direction: row;
   gap: 120px;
+
+  @media (max-width: 1600px) {
+    gap: 60px;
+  }
 `;
 
 const HorizontalWrapper2 = styled.div`
@@ -103,7 +107,7 @@ const VerticalWrapper11 = styled.div`
   }
 
   @media (max-height: 900px) {
-    padding-top: 20px;
+    padding-top: 25px;
   }
 `;
 
