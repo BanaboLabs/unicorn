@@ -124,6 +124,6 @@ const SubTitle = styled.div`
   color: #3a3a3a;
   width: 600px;
   @media (max-width: 900px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 `;
