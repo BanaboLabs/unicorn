@@ -46,6 +46,9 @@ const Headline = styled.h1`
   line-height: 1.2;
   min-width: 100%;
   text-align: center;
+  @media (max-width: 900px) {
+    font-size: 36px;
+  }
 `;
 
 const Subheadline = styled.div`
@@ -55,4 +58,7 @@ const Subheadline = styled.div`
   line-height: 1.2;
   min-width: 100%;
   text-align: center;
+  @media (max-width: 900px) {
+    font-size: 16px;
+  }
 `;

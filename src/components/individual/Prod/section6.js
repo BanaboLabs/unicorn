@@ -168,7 +168,7 @@ const StyledButton1 = styled.button`
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 16px;
   background: linear-gradient(90deg, #265de3, #af71ff);
 
   :hover {
@@ -186,7 +186,7 @@ const StyledButton2 = styled.button`
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 16px;
   background: linear-gradient(90deg, #265de3, #af71ff);
 
   :hover {
@@ -204,7 +204,7 @@ const StyledButton3 = styled.button`
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 16px;
   background: linear-gradient(90deg, #265de3, #af71ff);
 
   :hover {

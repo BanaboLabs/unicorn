@@ -4,6 +4,7 @@ import HeaderBlack from "../HeaderBlack";
 import lightbulb from "../../../images/lightbulb.gif";
 import { Link } from "gatsby";
 import section1product from "../../../images/section1product.svg";
+import section1productprod from "../../../images/section1productprod.svg";
 import background1 from "../../../images/backgroundprod.svg";
 import background2 from "../../../images/backgroundprod2.svg";
 import productsmall from "../../../images/productsmall.svg";
@@ -26,18 +27,17 @@ export default function Section1() {
                 <Title>Know the impact.</Title>
               </HorizontalWrapper2>
               <Title>For every channel.</Title>
-              <Spacer />
+              <LittleLittleSpacer />
               <SubTitle>
                 Get precise influence scores on the growth channels that drive
                 website conversions, with Banabo
               </SubTitle>
-              <Spacer />
-              <Spacer />
+              <BigBigSpacer />
               <StyledLink to="/signup">
                 <StyledButton>Sign Up</StyledButton>
               </StyledLink>
             </VerticalWrapper1>
-            <Product src={section1product} />
+            <Product src={section1productprod} />
           </HorizontalWrapper1>
           <ProductSmall src={productsmall} />
           <BigSpacer />
@@ -130,10 +130,17 @@ const Title = styled.div`
   }
 `;
 
-const Spacer = styled.div`
-  padding-top: 40px;
+const BigBigSpacer = styled.div`
+  padding-top: 35px;
   @media (max-width: 900px) {
-    padding-top: 15px;
+    padding-top: 20px;
+  }
+`;
+
+const LittleLittleSpacer = styled.div`
+  padding-top: 35px;
+  @media (max-width: 900px) {
+    padding-top: 20px;
   }
 `;
 
@@ -214,8 +221,8 @@ const StyledButton = styled.button`
   background: linear-gradient(90deg, #265de3, #af71ff);
 
   @media (max-width: 900px) {
-    width: 84px;
-    height: 27px;
+    width: 100px;
+    height: 32px;
     font-size: 13px;
   }
 

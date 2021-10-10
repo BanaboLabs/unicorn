@@ -17,8 +17,8 @@ export default function Section5() {
               Scores for <br /> every channel
             </Title>
             <SubTitle>
-              Banabo analyzes each channel with our in-house machine learning
-              model to attribute influence
+              Banabo analyzes a visitor’s journey using machine <br /> learning
+              to tell you which channels impacted conversion
             </SubTitle>
           </VerticalWrapper1>
           {isDesktop ? (
@@ -78,7 +78,7 @@ const THEImg = styled.img`
     height: 39px;
     width: 39px;
     top: 29px;
-    left: 20px;
+    left: 160px;
   }
 `;
 
@@ -111,9 +111,11 @@ const Title = styled.div`
   font-size: 70px;
   color: #252531;
   line-height: 85px;
+  padding-top: 20px;
   @media (max-width: 900px) {
     font-size: 35px;
     line-height: 43px;
+    padding-top: 0px;
   }
 `;
 
@@ -122,7 +124,7 @@ const SubTitle = styled.div`
   font-size: 24px;
   line-height: 29px;
   color: #3a3a3a;
-  width: 520px;
+  width: 600px;
   @media (max-width: 900px) {
     font-size: 16px;
   }

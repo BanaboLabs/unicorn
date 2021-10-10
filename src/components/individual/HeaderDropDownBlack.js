@@ -44,11 +44,14 @@ export default function HeaderDropDownBlack() {
                     <InsideVerticalWrapper1>
                       <InsideHorizontalWrapper1>
                         <InsideTitle>DIRECTORY</InsideTitle>
-                        <img src={insidex} onClick={() => setActive(!active)} />
+                        <StyledIMG
+                          src={insidex}
+                          onClick={() => setActive(!active)}
+                        />
                       </InsideHorizontalWrapper1>
                       <StyledLink to="https://docs.banabo.io/">
                         <InsideItemHorizontalWrapper>
-                          <img src={modaldocs} />
+                          <FixedIMG src={modaldocs} />
                           <InsideItemVerticalWrapper>
                             <InsideTitle>Docs</InsideTitle>
                             <InsideGray>Getting Started</InsideGray>
@@ -57,7 +60,7 @@ export default function HeaderDropDownBlack() {
                       </StyledLink>
                       <StyledLink to="/contact">
                         <InsideItemHorizontalWrapper>
-                          <img src={modalcontact} />
+                          <FixedIMG src={modalcontact} />
                           <InsideItemVerticalWrapper>
                             <InsideTitle>Contact</InsideTitle>
                             <InsideGray>Quick Support</InsideGray>
@@ -66,7 +69,7 @@ export default function HeaderDropDownBlack() {
                       </StyledLink>
                       <StyledLink to="/pricing">
                         <InsideItemHorizontalWrapper>
-                          <img src={modalprice} />
+                          <FixedIMG src={modalprice} />
                           <InsideItemVerticalWrapper>
                             <InsideTitle>Pricing</InsideTitle>
                             <InsideGray>Free During Beta</InsideGray>
@@ -99,6 +102,15 @@ const TheRectangleWrapper = styled.div`
   align-items: center;
 `;
 
+const FixedIMG = styled.img`
+  width: 40px;
+  height: 40px;
+`;
+
+const StyledIMG = styled.img`
+  cursor: pointer;
+`;
+
 const TheRectangle = styled.div`
   width: 359px;
   height: 358px;
@@ -109,10 +121,10 @@ const TheRectangle = styled.div`
 
 const BlueRectangle = styled.div`
   width: 351px;
-  height: 57px;
+  height: 52px;
   background: #f4f8fb;
   border-radius: 8px;
-  margin-left: 5px;
+  margin-left: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,14 +159,14 @@ const InsideItemVerticalWrapper = styled.div`
 
 const InsideTitle = styled.div`
   font-family: "ProximaNovaSemiBold";
-  font-size: 12px;
+  font-size: 14px;
   line-height: 15px;
   color: #47475e;
 `;
 
 const InsideGray = styled.div`
   font-family: "ProximaNovaSemiBold";
-  font-size: 12px;
+  font-size: 14px;
   line-height: 15px;
   color: #999ba8;
 `;
@@ -234,12 +246,12 @@ const DropDownWrapper = styled.div`
 `;
 
 const StyledButton = styled.button`
-  font-family: "ProximaNovaSemibold";
+  font-family: "ProximaNovaBold";
   font-size: 12px;
   color: #ffffff;
   border: none;
-  width: 85px;
-  height: 27px;
+  width: 100px;
+  height: 32px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;

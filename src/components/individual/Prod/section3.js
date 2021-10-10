@@ -17,8 +17,8 @@ export default function Section3() {
               Connect your <br /> channels
             </Title>
             <SubTitle>
-              Banabo will create a unqiue link that maps visitors <br /> from
-              each channel to your website destination
+              Banabo creates a clickable link for each channel <br /> that
+              uniquely identifies every website visitor
             </SubTitle>
           </VerticalWrapper1>
           {isDesktop ? (

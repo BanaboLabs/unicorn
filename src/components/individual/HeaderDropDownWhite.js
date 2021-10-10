@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import logoblack from "../../images/banabologowhite.svg";
+import logowhite from "../../images/banabologowhite.svg";
 import { Link } from "gatsby";
-import hearticon from "../../images/hearticonwhite.svg";
-import keyicon from "../../images/keyiconwhite.svg";
-import docsicon from "../../images/docsiconwhite.svg";
-import staricon from "../../images/stariconwhite.svg";
-import personicon from "../../images/personiconwhite.svg";
+import insidex from "../../images/insidex.svg";
+import modaldocs from "../../images/modaldocs.png";
+import modalcontact from "../../images/modalcontact.png";
+import modalprice from "../../images/modalprice.png";
+import rightarrow from "../../images/cuterightarrow.svg";
 
 export default function HeaderDropDownWhite() {
   const [active, setActive] = useState(false);
@@ -15,60 +15,77 @@ export default function HeaderDropDownWhite() {
     <Wrapper>
       <SubWrapper>
         <NavWrapper>
-          <ParentGroup>
-            <SubGroup1>
-              <StyledLink to="/">
-                <img src={logoblack} alt="growth" />
-              </StyledLink>
-              <StyledLink to="/">
-                <Title>Banabo</Title>
-              </StyledLink>
-            </SubGroup1>
-          </ParentGroup>
+          {active == false ? (
+            <ParentGroup>
+              <SubGroup1>
+                <StyledLink to="/">
+                  <img src={logowhite} alt="growth" />
+                </StyledLink>
+                <StyledLink to="/">
+                  <Title>Banabo</Title>
+                </StyledLink>
+              </SubGroup1>
+            </ParentGroup>
+          ) : null}
           <ParentGroup>
             <DropDownWrapper>
-              <RectangleWrapper onClick={() => setActive(!active)}>
-                <InsideRectangleWrapper>
-                  <InsideRectangle />
-                  <InsideRectangle />
-                  <InsideRectangle />
-                </InsideRectangleWrapper>
-              </RectangleWrapper>
+              {active == false ? (
+                <RectangleWrapper onClick={() => setActive(!active)}>
+                  <InsideRectangleWrapper>
+                    <InsideRectangle />
+                    <InsideRectangle />
+                    <InsideRectangle />
+                  </InsideRectangleWrapper>
+                </RectangleWrapper>
+              ) : null}
               {active ? (
-                <TheImage>
-                  <DropDownInsideWrapper>
-                    <Headline>Options</Headline>
-                    <StyledLink href="/signup">
-                      <StyledButton1>
-                        <Align>
-                          <img src={hearticon} /> Sign Up
-                        </Align>
-                      </StyledButton1>
-                    </StyledLink>
-
-                    <StyledLink href="https://docs.banabo.io">
-                      <StyledButton3>
-                        <Align>
-                          <img src={docsicon} /> <Span>Docs</Span>
-                        </Align>
-                      </StyledButton3>
-                    </StyledLink>
-                    <StyledLink href="/pricing">
-                      <StyledButton4>
-                        <Align>
-                          <img src={staricon} /> <Span>Pricing</Span>
-                        </Align>
-                      </StyledButton4>
-                    </StyledLink>
-                    <StyledLink href="/contact">
-                      <StyledButton5>
-                        <Align>
-                          <img src={personicon} /> <Span>Contact</Span>
-                        </Align>
-                      </StyledButton5>
-                    </StyledLink>
-                  </DropDownInsideWrapper>
-                </TheImage>
+                <TheRectangleWrapper>
+                  <TheRectangle>
+                    <InsideVerticalWrapper1>
+                      <InsideHorizontalWrapper1>
+                        <InsideTitle>DIRECTORY</InsideTitle>
+                        <StyledIMG
+                          src={insidex}
+                          onClick={() => setActive(!active)}
+                        />
+                      </InsideHorizontalWrapper1>
+                      <StyledLink to="https://docs.banabo.io/">
+                        <InsideItemHorizontalWrapper>
+                          <FixedIMG src={modaldocs} />
+                          <InsideItemVerticalWrapper>
+                            <InsideTitle>Docs</InsideTitle>
+                            <InsideGray>Getting Started</InsideGray>
+                          </InsideItemVerticalWrapper>
+                        </InsideItemHorizontalWrapper>{" "}
+                      </StyledLink>
+                      <StyledLink to="/contact">
+                        <InsideItemHorizontalWrapper>
+                          <FixedIMG src={modalcontact} />
+                          <InsideItemVerticalWrapper>
+                            <InsideTitle>Contact</InsideTitle>
+                            <InsideGray>Quick Support</InsideGray>
+                          </InsideItemVerticalWrapper>
+                        </InsideItemHorizontalWrapper>
+                      </StyledLink>
+                      <StyledLink to="/pricing">
+                        <InsideItemHorizontalWrapper>
+                          <FixedIMG src={modalprice} />
+                          <InsideItemVerticalWrapper>
+                            <InsideTitle>Pricing</InsideTitle>
+                            <InsideGray>Free During Beta</InsideGray>
+                          </InsideItemVerticalWrapper>
+                        </InsideItemHorizontalWrapper>
+                      </StyledLink>
+                      <BlueRectangle>
+                        <StyledLink to="/signup">
+                          <StyledButton>
+                            <span>Sign Up</span>
+                          </StyledButton>
+                        </StyledLink>
+                      </BlueRectangle>
+                    </InsideVerticalWrapper1>
+                  </TheRectangle>
+                </TheRectangleWrapper>
               ) : null}
             </DropDownWrapper>
           </ParentGroup>
@@ -77,6 +94,82 @@ export default function HeaderDropDownWhite() {
     </Wrapper>
   );
 }
+
+const TheRectangleWrapper = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const FixedIMG = styled.img`
+  width: 40px;
+  height: 40px;
+`;
+
+const StyledIMG = styled.img`
+  cursor: pointer;
+`;
+
+const TheRectangle = styled.div`
+  width: 359px;
+  height: 358px;
+  background: #ffffff;
+  box-shadow: 0px 0px 30px 5px rgba(174, 174, 174, 0.18);
+  border-radius: 10px;
+`;
+
+const BlueRectangle = styled.div`
+  width: 351px;
+  height: 52px;
+  background: #f4f8fb;
+  border-radius: 8px;
+  margin-left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const InsideVerticalWrapper1 = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+`;
+
+const InsideHorizontalWrapper1 = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 23px;
+`;
+
+const InsideItemHorizontalWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  padding-left: 20px;
+`;
+
+const InsideItemVerticalWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+`;
+
+const InsideTitle = styled.div`
+  font-family: "ProximaNovaSemiBold";
+  font-size: 14px;
+  line-height: 15px;
+  color: #47475e;
+`;
+
+const InsideGray = styled.div`
+  font-family: "ProximaNovaSemiBold";
+  font-size: 14px;
+  line-height: 15px;
+  color: #999ba8;
+`;
 
 const Wrapper = styled.div`
   min-height: 10vh;
@@ -108,24 +201,25 @@ const ParentGroup = styled.div`
 `;
 
 const RectangleWrapper = styled.div`
-  width: 51px;
-  height: 45px;
-  background: #ffffff;
-  border-radius: 10px;
+  width: 50px;
+  height: 34px;
+  background: #47475e;
+  border-radius: 300px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const InsideRectangleWrapper = styled.div`
   display: grid;
   gap: 4px;
-  padding-left: 15px;
-  padding-top: 14px;
 `;
 
 const InsideRectangle = styled.div`
-  width: 20px;
-  height: 3px;
-  background: #47475e;
+  width: 17px;
+  height: 2px;
+  background: #ffffff;
 `;
 
 const SubGroup1 = styled.div`
@@ -151,136 +245,20 @@ const DropDownWrapper = styled.div`
   position: relative;
 `;
 
-const TheImage = styled.div`
-  width: 340px;
-  height: 320px;
-  position: absolute;
-  top: 80px;
-  right: 0;
-  background: #ffffff;
-  box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.18);
-  border-radius: 10px;
-`;
-
-const Headline = styled.div`
+const StyledButton = styled.button`
   font-family: "ProximaNovaBold";
-  color: #252531;
-  font-size: 19px;
-`;
-
-const StyledButton1 = styled.button`
-  font-family: "ProximaNovaBold";
-  font-size: 16px;
+  font-size: 12px;
   color: #ffffff;
   border: none;
-  width: 122px;
-  height: 40px;
+  width: 100px;
+  height: 32px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 300px;
   background: linear-gradient(90deg, #265de3, #af71ff);
-  box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.18);
-  border-radius: 10px;
 
   :hover {
     background: linear-gradient(90deg, #104fe8 -10.37%, #9a4bff 108.53%);
   }
-`;
-
-const StyledButton2 = styled.button`
-  font-family: "ProximaNovaBold";
-  font-size: 16px;
-  color: #ffffff;
-  border: none;
-  width: 90px;
-  height: 40px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 10px;
-  background: #47475d;
-  box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.18);
-  border-radius: 10px;
-
-  :hover {
-    background: #000000;
-  }
-`;
-
-const StyledButton3 = styled.button`
-  font-family: "ProximaNovaBold";
-  font-size: 16px;
-  color: #ffffff;
-  border: none;
-  width: 86px;
-  height: 40px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 10px;
-  background: #47475d;
-  box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.18);
-  border-radius: 10px;
-
-  :hover {
-    background: #000000;
-  }
-`;
-
-const StyledButton4 = styled.button`
-  font-family: "ProximaNovaBold";
-  font-size: 16px;
-  color: #ffffff;
-  border: none;
-  width: 102px;
-  height: 40px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 10px;
-  background: #47475d;
-  box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.18);
-  border-radius: 10px;
-
-  :hover {
-    background: #000000;
-  }
-`;
-
-const StyledButton5 = styled.button`
-  font-family: "ProximaNovaBold";
-  font-size: 16px;
-  color: #ffffff;
-  border: none;
-  width: 109px;
-  height: 40px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 10px;
-  background: #47475d;
-  box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.18);
-  border-radius: 10px;
-
-  :hover {
-    background: #000000;
-  }
-`;
-
-const DropDownInsideWrapper = styled.div`
-  padding-left: 40px;
-  padding-top: 30px;
-  display: grid;
-  gap: 20px;
-`;
-
-const Align = styled.div`
-  display: flex;
-  padding-left: 5px;
-  gap: 10px;
-`;
-
-const Span = styled.span`
-  padding-top: 3px;
 `;

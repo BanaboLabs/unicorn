@@ -25,11 +25,11 @@ export default function Section4() {
           )}
           <VerticalWrapper1>
             <Title>
-              See paths leading <br /> to conversion
+              See conversion <br /> paths
             </Title>
             <SubTitle>
-              See which combination of touch-points with <br /> your brand leads
-              to a signup or purchase
+              Understand the exact combination of touch-points <br /> with your
+              brand that leads to a signup or purchase
             </SubTitle>
           </VerticalWrapper1>
           {isDesktop ? (
