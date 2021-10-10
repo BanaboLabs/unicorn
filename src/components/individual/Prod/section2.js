@@ -128,15 +128,6 @@ const HorizontalWrapper2 = styled.div`
   }
 `;
 
-const HorizontalWrapper3 = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-`;
-
 const YellowRectangle = styled.div`
   height: 99px;
   width: 553px;
