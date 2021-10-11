@@ -4,7 +4,6 @@ import ToggleSwitch from "./toggleswitch";
 import bar from "../../../images/bar.png";
 import withbanabo from "../../../images/withbanaboprod.svg";
 import withoutbanabo from "../../../images/withoutbanaboprod.svg";
-import downarrow from "../../../images/downarrowprod.svg";
 import withbanabosmall from "../../../images/withbanabosmall.svg";
 import withoutbanabosmall from "../../../images/withoutbanabosmall.svg";
 import useMediaQuery from "../../../hooks/useMediaQuery";

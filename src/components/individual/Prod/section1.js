@@ -3,7 +3,6 @@ import styled from "styled-components";
 import HeaderBlack from "../HeaderBlack";
 import lightbulb from "../../../images/lightbulb.gif";
 import { Link } from "gatsby";
-import section1product from "../../../images/section1product.svg";
 import section1productprod from "../../../images/section1productprod.svg";
 import background1 from "../../../images/backgroundprod.svg";
 import background2 from "../../../images/backgroundprod2.svg";
