@@ -78,7 +78,7 @@ const THEImg = styled.img`
     height: 39px;
     width: 39px;
     top: 25px;
-    left: 157px;
+    left: 17px;
   }
 `;
 
@@ -125,5 +125,6 @@ const SubTitle = styled.div`
   width: 600px;
   @media (max-width: 900px) {
     font-size: 14px;
+    width: 300px;
   }
 `;
