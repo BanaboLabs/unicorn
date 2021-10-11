@@ -203,7 +203,7 @@ const Rectangle = styled.div`
   padding: 20px;
 
   @media (max-width: 900px) {
-    width: 334px;
+    width: 370px;
     height: 189px;
   }
 `;
@@ -215,7 +215,7 @@ const InsideVStack = styled.div`
   padding-top: 20px;
   padding-bottom: 40px;
   @media (max-width: 900px) {
-    gap: 12px;
+    gap: 14px;
   }
 `;
 

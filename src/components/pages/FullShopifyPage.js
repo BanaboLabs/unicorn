@@ -89,7 +89,7 @@ export default function FullShopifyPage() {
                 <GrayLight>tag.</GrayLight>
               </TextWrapper>
               <Rectangle>
-                <img src={Code1} />
+                <CodeIMG src={Code1} />
               </Rectangle>
             </SmallVStack>
             <Line />
@@ -134,11 +134,18 @@ const ContentWrapper = styled.div`
 const ShrunkIMG = styled.img`
   width: 69%;
   height: 69%;
+
+  @media (max-width: 900px) {
+    width: 40%;
+    height: 40%;
+  }
 `;
 
-const ShrunkIMG3 = styled.img`
-  width: 69%;
-  height: 69%;
+const CodeIMG = styled.img`
+  @media (max-width: 900px) {
+    width: 80%;
+    height: 80%;
+  }
 `;
 
 const HStack2 = styled.div`
@@ -198,6 +205,8 @@ const SubTitle = styled.div`
 
   @media (max-width: 900px) {
     font-size: 26px;
+    width: 300px;
+    text-align: center;
   }
 `;
 
@@ -205,6 +214,11 @@ const LargeVStack = styled.div`
   display: flex;
   flex-direction: column;
   gap: 108px;
+  @media (max-width: 900px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const SmallVStack = styled.div`
@@ -213,12 +227,19 @@ const SmallVStack = styled.div`
   gap: 36px;
   align-content: left;
   justify-items: left;
+  @media (max-width: 900px) {
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const Line = styled.div`
   width: 1380px;
   height: 1px;
   background: #eaeaea;
+  @media (max-width: 900px) {
+    width: 80%;
+  }
 `;
 
 const GrayLight = styled.span`
@@ -234,6 +255,11 @@ const TextWrapper = styled.div`
   line-height: 24px;
   color: #7f7f7f;
   font-size: 20px;
+  @media (max-width: 900px) {
+    font-size: 16px;
+    width: 340px;
+    text-align: center;
+  }
 `;
 
 const Rectangle = styled.div`
@@ -245,4 +271,9 @@ const Rectangle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 900px) {
+    width: 300px;
+    height: 137px;
+  }
 `;
