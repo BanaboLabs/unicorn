@@ -49,7 +49,7 @@ export default function HeaderDropDownBlack() {
                           onClick={() => setActive(!active)}
                         />
                       </InsideHorizontalWrapper1>
-                      <StyledLink to="https://docs.banabo.io/">
+                      <StyledLink to="/docs">
                         <InsideItemHorizontalWrapper>
                           <FixedIMG src={modaldocs} />
                           <InsideItemVerticalWrapper>

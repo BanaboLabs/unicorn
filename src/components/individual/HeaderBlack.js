@@ -19,7 +19,7 @@ export default function HeaderBlack() {
             </SubGroup1>
             <SubGroup2>
               <MobileHidden>
-                <StyledLink to="https://docs.banabo.io/">
+                <StyledLink to="/docs">
                   <TabItem>Docs</TabItem>
                 </StyledLink>
               </MobileHidden>
