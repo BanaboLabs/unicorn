@@ -36,8 +36,8 @@ export default function DocsPage() {
                   <InsideHStack>
                     <img src={uno} />
                     <InsideText>
-                      Add a clickable Banabo link for each channel to uniquely
-                      identify every website visitor
+                      Add a clickable Banabo link to each <br /> channel for
+                      uniquely identify visitors
                     </InsideText>
                   </InsideHStack>
                   <InsideHStack>
@@ -111,7 +111,7 @@ const Adjustableimg = styled.img`
 const HStack1 = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 260px;
+  gap: 180px;
   padding-top: 100px;
   padding-left: 30px;
 
@@ -192,8 +192,8 @@ const SubTitle = styled.div`
 `;
 
 const Rectangle = styled.div`
-  width: 491px;
-  height: 278px;
+  width: 533px;
+  height: 276.77px;
   background: #ffffff;
   box-shadow: 2px 5px 40px 0 rgb(0 0 0 / 8%);
   border-radius: 20px;
@@ -211,7 +211,7 @@ const Rectangle = styled.div`
 const InsideVStack = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
   padding-top: 20px;
   padding-bottom: 40px;
   @media (max-width: 900px) {
@@ -246,7 +246,7 @@ const CardVStack = styled.div`
 const CardHStack = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 445px;
+  gap: 200px;
   @media (max-width: 900px) {
     gap: 0px;
     display: flex;
