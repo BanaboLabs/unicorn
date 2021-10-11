@@ -152,7 +152,7 @@ const BigSpacer = styled.div`
   padding-top: 85px;
 
   @media (max-height: 900px) {
-    padding-top: 30px;
+    padding-top: 10px;
   }
 `;
 
