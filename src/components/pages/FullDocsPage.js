@@ -51,18 +51,18 @@ export default function DocsPage() {
             </HStack1>
             <CardVStack>
               <CardHStack>
-                <StyledLink to="https://docs.banabo.io/platforms/shopify">
+                <StyledLink to="/shopify">
                   <Adjustableimg src={shopify} />{" "}
                 </StyledLink>{" "}
-                <StyledLink to="https://docs.banabo.io/platforms/squarespace">
+                <StyledLink to="/react">
                   <Adjustableimg src={react} />
                 </StyledLink>
               </CardHStack>
               <CardHStack>
-                <StyledLink to="https://docs.banabo.io/platforms/webflow">
+                <StyledLink to="/squarespace">
                   <Adjustableimg src={squarespace} />
                 </StyledLink>
-                <StyledLink to="https://docs.banabo.io/platforms/react">
+                <StyledLink to="/webflow">
                   <Adjustableimg src={webflow} />
                 </StyledLink>
               </CardHStack>
