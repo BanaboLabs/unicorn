@@ -40,7 +40,7 @@ export default function BottomSection() {
                 Add Banabo to your website within 5 minutes. It’s really that
                 easy
               </SubText>
-              <StyledLink href="https://docs.banabo.io/">
+              <StyledLink to="/docs">
                 <StyledButton2>
                   <span>
                     Read Docs <img src={buttonarrow} alt="read docs" />
