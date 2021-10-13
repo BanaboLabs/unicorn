@@ -17,12 +17,7 @@ export default function Section4() {
               <img src={step2} />
               <THEImg src={horn} />
             </Container1>
-          ) : (
-            <Container1>
-              <img src={step2small} />
-              <THEImg src={horn} />
-            </Container1>
-          )}
+          ) : null}
           <VerticalWrapper1>
             <Title>
               See conversion <br /> paths
@@ -32,17 +27,12 @@ export default function Section4() {
               brand that leads to a signup or purchase
             </SubTitle>
           </VerticalWrapper1>
-          {isDesktop ? (
-            <Container2>
-              <img src={step2} />
-              <THEImg src={horn} />
-            </Container2>
-          ) : (
+          {isDesktop != true ? (
             <Container2>
               <img src={step2small} />
               <THEImg src={horn} />
             </Container2>
-          )}
+          ) : null}
         </HorizontalWrapper1>
       </ContentWrapper>
     </Wrapper>
@@ -63,7 +53,7 @@ const ContentWrapper = styled.div`
   text-align: left;
   padding: 180px;
   @media (max-width: 900px) {
-    padding: 20px;
+    padding: 0px;
     padding-top: 60px;
   }
 `;
@@ -84,6 +74,7 @@ const Container2 = styled.div`
     align-items: center;
     vertical-align: middle;
     text-align: center;
+    padding-bottom: 20px;
   }
 `;
 

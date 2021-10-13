@@ -52,7 +52,7 @@ const ContentWrapper = styled.div`
   text-align: left;
   padding: 180px;
   @media (max-width: 900px) {
-    padding: 20px;
+    padding: 0px;
     padding-top: 60px;
   }
 `;
@@ -65,6 +65,7 @@ const Container = styled.div`
     align-items: center;
     vertical-align: middle;
     text-align: center;
+    padding-bottom: 20px;
   }
 `;
 
