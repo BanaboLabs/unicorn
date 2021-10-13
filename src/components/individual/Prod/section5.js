@@ -17,8 +17,8 @@ export default function Section5() {
               Scores for <br /> every channel
             </Title>
             <SubTitle>
-              Banabo analyzes a visitor’s journey using machine <br /> learning
-              to tell you which channels impacted conversion
+              Banabo analyzes a visitor’s journey with machine <br /> learning
+              to show which channels impacted conversion
             </SubTitle>
           </VerticalWrapper1>
           {isDesktop ? (
