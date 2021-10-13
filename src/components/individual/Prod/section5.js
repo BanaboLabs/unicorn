@@ -52,7 +52,7 @@ const ContentWrapper = styled.div`
   text-align: left;
   padding: 180px;
   @media (max-width: 900px) {
-    padding: 0px;
+    padding: 20px;
     padding-top: 60px;
   }
 `;
@@ -78,7 +78,7 @@ const THEImg = styled.img`
     height: 39px;
     width: 39px;
     top: 29px;
-    left: 36px;
+    left: 42px;
   }
 `;
 
@@ -130,7 +130,7 @@ const SubTitle = styled.div`
   color: #3a3a3a;
   width: 600px;
   @media (max-width: 900px) {
-    font-size: 14px;
-    width: 350px;
+    font-size: 15px;
+    width: 368px;
   }
 `;
