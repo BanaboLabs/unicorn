@@ -109,6 +109,11 @@ const Wrapper = styled.div`
   background-image: url(${Blur});
   min-width: 100%;
   min-height: 100;
+
+  @media (max-width: 900px) {
+    background-image: none;
+    background-color: #252531;
+  }
 `;
 
 const ContentWrapper = styled.div`
@@ -152,7 +157,7 @@ const Input1 = styled.input`
   padding: 6px 20px;
 
   @media (max-width: 700px) {
-    width: 300px;
+    width: 80vw;
   }
 
   :focus {
@@ -186,7 +191,7 @@ const StyledButton = styled.button`
   background: linear-gradient(90deg, #265de3, #af71ff);
 
   @media (max-width: 700px) {
-    width: 340px;
+    width: 88vw;
   }
 
   :hover {

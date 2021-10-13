@@ -219,7 +219,7 @@ const StyledButton = styled.button`
   border-radius: 6px;
   background: linear-gradient(90deg, #265de3, #af71ff);
   @media (max-width: 900px) {
-    width: 88vw;
+    width: 90vw;
   }
 
   :hover {
