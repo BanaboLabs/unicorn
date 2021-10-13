@@ -184,7 +184,6 @@ const SubWrapper = styled.div`
   display: block;
   grid-auto-flow: row;
   justify-items: center;
-  padding: 20px;
 `;
 
 const NavWrapper = styled.div`
