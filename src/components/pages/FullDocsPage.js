@@ -80,11 +80,12 @@ const ParentWrapper = styled.div`
 `;
 
 const Wrapper = styled.div`
-  min-height: 100%;
+  min-height: 100vh;
   min-width: 100%;
   background-size: cover;
   background-position: center;
   position: relative;
+  background-color: #ffffff;
 `;
 
 const ContentWrapper = styled.div`
@@ -187,7 +188,7 @@ const SubTitle = styled.div`
   line-height: 45px;
 
   @media (max-width: 900px) {
-    font-size: 26px;
+    font-size: 24px;
   }
 `;
 
@@ -203,7 +204,7 @@ const Rectangle = styled.div`
   padding: 20px;
 
   @media (max-width: 900px) {
-    width: 370px;
+    width: 72vw;
     height: 189px;
   }
 `;
@@ -230,7 +231,7 @@ const InsideText = styled.div`
   font-family: "ProximaNovaSemibold";
   font-size: 22px;
   @media (max-width: 900px) {
-    font-size: 16px;
+    font-size: 15px;
   }
 `;
 
@@ -248,7 +249,7 @@ const CardHStack = styled.div`
   flex-direction: row;
   gap: 200px;
   @media (max-width: 900px) {
-    gap: 0px;
+    gap: 30px;
     display: flex;
     align-items: center;
     flex-direction: column;

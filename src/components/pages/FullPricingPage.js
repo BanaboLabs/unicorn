@@ -37,6 +37,9 @@ const ContentWrapper = styled.div`
   text-align: center;
   min-height: 80vh;
   gap: 35px;
+  @media (max-width: 900px) {
+    gap: 25px;
+  }
 `;
 
 const Headline = styled.h1`
@@ -47,7 +50,7 @@ const Headline = styled.h1`
   min-width: 100%;
   text-align: center;
   @media (max-width: 900px) {
-    font-size: 36px;
+    font-size: 32px;
   }
 `;
 

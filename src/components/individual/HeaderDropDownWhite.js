@@ -112,7 +112,7 @@ const StyledIMG = styled.img`
 `;
 
 const TheRectangle = styled.div`
-  width: 359px;
+  width: 95vw;
   height: 358px;
   background: #ffffff;
   box-shadow: 0px 0px 30px 5px rgba(174, 174, 174, 0.18);
@@ -120,11 +120,11 @@ const TheRectangle = styled.div`
 `;
 
 const BlueRectangle = styled.div`
-  width: 351px;
-  height: 52px;
+  width: 92vw;
+  height: 70px;
   background: #f4f8fb;
   border-radius: 8px;
-  margin-left: 4px;
+  margin-left: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,7 +133,7 @@ const BlueRectangle = styled.div`
 const InsideVerticalWrapper1 = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
 `;
 
 const InsideHorizontalWrapper1 = styled.div`

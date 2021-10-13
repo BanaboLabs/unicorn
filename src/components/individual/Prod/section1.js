@@ -16,8 +16,8 @@ export default function Section1() {
 
   return (
     <Wrapper>
+      {isDesktop ? <HeaderBlack /> : <HeaderDropDownBlack />}
       <ContentWrapper>
-        {isDesktop ? <HeaderBlack /> : <HeaderDropDownBlack />}
         <VerticalWrapper11>
           <HorizontalWrapper1>
             <VerticalWrapper1>
@@ -71,9 +71,6 @@ const ContentWrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  @media (max-width: 900px) {
-    margin: 20px;
-  }
 `;
 
 const HorizontalWrapper1 = styled.div`

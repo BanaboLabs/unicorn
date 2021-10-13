@@ -160,8 +160,8 @@ const Input1 = styled.input`
   outline: none;
   transition: all 0.2s ease 0s;
   padding: 6px 20px;
-  @media (max-width: 700px) {
-    width: 300px;
+  @media (max-width: 900px) {
+    width: 80vw;
   }
 
   :focus {
@@ -179,6 +179,9 @@ const InputWrapper = styled.div`
   display: grid;
   gap: 25px;
   justify-items: left;
+  @media (max-width: 900px) {
+    padding-bottom: 20px;
+  }
 `;
 
 const TextArea = styled.textarea`
@@ -194,8 +197,8 @@ const TextArea = styled.textarea`
   transition: all 0.2s ease 0s;
   padding: 14px 20px;
   resize: none;
-  @media (max-width: 700px) {
-    width: 300px;
+  @media (max-width: 900px) {
+    width: 80vw;
   }
 
   :focus {
@@ -215,8 +218,8 @@ const StyledButton = styled.button`
   cursor: pointer;
   border-radius: 6px;
   background: linear-gradient(90deg, #265de3, #af71ff);
-  @media (max-width: 700px) {
-    width: 340px;
+  @media (max-width: 900px) {
+    width: 88vw;
   }
 
   :hover {
@@ -241,23 +244,3 @@ const SubTextWrapper = styled.div`
   grid-gap: 5px;
   text-align: left;
 `;
-
-/*
-
-{highlight == "Link" ? (
-                  <TabHighlight>
-                    <TabItemHorizontalWrapper>
-                      <Link linkcolor={linkColor} />
-                      <Text style={{ color: "#FFFFFF" }}>Links</Text>
-                    </TabItemHorizontalWrapper>
-                  </TabHighlight>
-                ) : (
-                  <TabHighlightClear>
-                    <TabItemHorizontalWrapper>
-                      <Link linkcolor={linkColor} />
-                      <Text style={{ color: "#969AAF" }}>Links</Text>
-                    </TabItemHorizontalWrapper>
-                  </TabHighlightClear>
-                )}
-
-*/
