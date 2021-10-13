@@ -112,7 +112,7 @@ const StyledIMG = styled.img`
 `;
 
 const TheRectangle = styled.div`
-  width: 95vw;
+  width: 92vw;
   height: 358px;
   background: #ffffff;
   box-shadow: 0px 0px 30px 5px rgba(174, 174, 174, 0.18);
@@ -120,7 +120,7 @@ const TheRectangle = styled.div`
 `;
 
 const BlueRectangle = styled.div`
-  width: 92vw;
+  width: 89vw;
   height: 70px;
   background: #f4f8fb;
   border-radius: 8px;
