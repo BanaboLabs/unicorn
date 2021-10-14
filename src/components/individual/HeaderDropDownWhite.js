@@ -128,7 +128,7 @@ const TheRectangle = styled.div`
 `;
 
 const BlueRectangle = styled.div`
-  width: 89vw;
+  width: 85vw;
   height: 70px;
   background: #f4f8fb;
   border-radius: 8px;
@@ -190,14 +190,19 @@ const Wrapper = styled.div`
 const SubWrapper = styled.div`
   display: block;
   grid-auto-flow: row;
-  justify-items: center;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
 `;
 
 const NavWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 900px) {
+    gap: 38vw;
+  }
 `;
 
 const ParentGroup = styled.div`

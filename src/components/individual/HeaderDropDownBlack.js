@@ -39,55 +39,53 @@ export default function HeaderDropDownBlack() {
                 </RectangleWrapper>
               ) : null}
               {active ? (
-                <TheRectangleWrapper>
-                  <TheRectangle>
-                    <InsideVerticalWrapper1>
-                      <InsideHorizontalWrapper1>
-                        <InsideTitle>DIRECTORY</InsideTitle>
-                        <StyledIMG
-                          src={insidex}
-                          onClick={() => setActive(!active)}
-                        />
-                      </InsideHorizontalWrapper1>
-                      <StyledLink to="/docs">
-                        <InsideItemHorizontalWrapper>
-                          <FixedIMG src={modaldocs} />
-                          <InsideItemVerticalWrapper>
-                            <InsideTitle>Docs</InsideTitle>
-                            <InsideGray>Getting Started</InsideGray>
-                          </InsideItemVerticalWrapper>
-                        </InsideItemHorizontalWrapper>{" "}
-                      </StyledLink>
-                      <StyledLink to="/contact">
-                        <InsideItemHorizontalWrapper>
-                          <FixedIMG src={modalcontact} />
-                          <InsideItemVerticalWrapper>
-                            <InsideTitle>Contact</InsideTitle>
-                            <InsideGray>Quick Support</InsideGray>
-                          </InsideItemVerticalWrapper>
-                        </InsideItemHorizontalWrapper>
-                      </StyledLink>
-                      <StyledLink to="/pricing">
-                        <InsideItemHorizontalWrapper>
-                          <FixedIMG src={modalprice} />
-                          <InsideItemVerticalWrapper>
-                            <InsideTitle>Pricing</InsideTitle>
-                            <InsideGray>Free During Beta</InsideGray>
-                          </InsideItemVerticalWrapper>
-                        </InsideItemHorizontalWrapper>
-                      </StyledLink>
-                      <VerticalWrapperNew>
-                        <BlueRectangle>
-                          <StyledLink to="/signup">
-                            <StyledButton>
-                              <span>Sign Up</span>
-                            </StyledButton>
-                          </StyledLink>
-                        </BlueRectangle>
-                      </VerticalWrapperNew>
-                    </InsideVerticalWrapper1>
-                  </TheRectangle>
-                </TheRectangleWrapper>
+                <TheRectangle>
+                  <InsideVerticalWrapper1>
+                    <InsideHorizontalWrapper1>
+                      <InsideTitle>DIRECTORY</InsideTitle>
+                      <StyledIMG
+                        src={insidex}
+                        onClick={() => setActive(!active)}
+                      />
+                    </InsideHorizontalWrapper1>
+                    <StyledLink to="/docs">
+                      <InsideItemHorizontalWrapper>
+                        <FixedIMG src={modaldocs} />
+                        <InsideItemVerticalWrapper>
+                          <InsideTitle>Docs</InsideTitle>
+                          <InsideGray>Getting Started</InsideGray>
+                        </InsideItemVerticalWrapper>
+                      </InsideItemHorizontalWrapper>{" "}
+                    </StyledLink>
+                    <StyledLink to="/contact">
+                      <InsideItemHorizontalWrapper>
+                        <FixedIMG src={modalcontact} />
+                        <InsideItemVerticalWrapper>
+                          <InsideTitle>Contact</InsideTitle>
+                          <InsideGray>Quick Support</InsideGray>
+                        </InsideItemVerticalWrapper>
+                      </InsideItemHorizontalWrapper>
+                    </StyledLink>
+                    <StyledLink to="/pricing">
+                      <InsideItemHorizontalWrapper>
+                        <FixedIMG src={modalprice} />
+                        <InsideItemVerticalWrapper>
+                          <InsideTitle>Pricing</InsideTitle>
+                          <InsideGray>Free During Beta</InsideGray>
+                        </InsideItemVerticalWrapper>
+                      </InsideItemHorizontalWrapper>
+                    </StyledLink>
+                    <VerticalWrapperNew>
+                      <BlueRectangle>
+                        <StyledLink to="/signup">
+                          <StyledButton>
+                            <span>Sign Up</span>
+                          </StyledButton>
+                        </StyledLink>
+                      </BlueRectangle>
+                    </VerticalWrapperNew>
+                  </InsideVerticalWrapper1>
+                </TheRectangle>
               ) : null}
             </DropDownWrapper>
           </ParentGroup>
@@ -96,13 +94,6 @@ export default function HeaderDropDownBlack() {
     </Wrapper>
   );
 }
-
-const TheRectangleWrapper = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
 
 const VerticalWrapperNew = styled.div`
   display: flex;
@@ -128,7 +119,7 @@ const TheRectangle = styled.div`
 `;
 
 const BlueRectangle = styled.div`
-  width: 89vw;
+  width: 85vw;
   height: 70px;
   background: #f4f8fb;
   border-radius: 8px;
@@ -190,14 +181,19 @@ const Wrapper = styled.div`
 const SubWrapper = styled.div`
   display: block;
   grid-auto-flow: row;
-  justify-items: center;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
 `;
 
 const NavWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 900px) {
+    gap: 38vw;
+  }
 `;
 
 const ParentGroup = styled.div`
