@@ -76,13 +76,15 @@ export default function HeaderDropDownWhite() {
                           </InsideItemVerticalWrapper>
                         </InsideItemHorizontalWrapper>
                       </StyledLink>
-                      <BlueRectangle>
-                        <StyledLink to="/signup">
-                          <StyledButton>
-                            <span>Sign Up</span>
-                          </StyledButton>
-                        </StyledLink>
-                      </BlueRectangle>
+                      <VerticalWrapperNew>
+                        <BlueRectangle>
+                          <StyledLink to="/signup">
+                            <StyledButton>
+                              <span>Sign Up</span>
+                            </StyledButton>
+                          </StyledLink>
+                        </BlueRectangle>
+                      </VerticalWrapperNew>
                     </InsideVerticalWrapper1>
                   </TheRectangle>
                 </TheRectangleWrapper>
@@ -107,12 +109,18 @@ const FixedIMG = styled.img`
   height: 40px;
 `;
 
+const VerticalWrapperNew = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const StyledIMG = styled.img`
   cursor: pointer;
 `;
 
 const TheRectangle = styled.div`
-  width: 92vw;
+  width: 88vw;
   height: 358px;
   background: #ffffff;
   box-shadow: 0px 0px 30px 5px rgba(174, 174, 174, 0.18);
@@ -124,7 +132,6 @@ const BlueRectangle = styled.div`
   height: 70px;
   background: #f4f8fb;
   border-radius: 8px;
-  margin-left: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
