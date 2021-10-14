@@ -162,7 +162,7 @@ const HStack2 = styled.div`
   @media (max-width: 900px) {
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 1px;
   }
 `;
 

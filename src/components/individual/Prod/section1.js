@@ -80,6 +80,7 @@ const HorizontalWrapper1 = styled.div`
 
   @media (max-width: 1600px) {
     gap: 60px;
+    padding-left: 10px;
   }
 `;
 
@@ -111,6 +112,9 @@ const VerticalWrapper1 = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 80px;
+  display: flex;
+  justify-items: left;
+  align-content: left;
 
   @media (max-height: 900px) {
     padding-top: 20px;
@@ -124,7 +128,7 @@ const Title = styled.div`
   line-height: 85px;
 
   @media (max-width: 900px) {
-    font-size: 35px;
+    font-size: 32px;
     padding-left: 10px;
     line-height: 60px;
   }

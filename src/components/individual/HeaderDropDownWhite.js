@@ -201,7 +201,7 @@ const NavWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   @media (max-width: 900px) {
-    gap: 38vw;
+    gap: 34vw;
   }
 `;
 
