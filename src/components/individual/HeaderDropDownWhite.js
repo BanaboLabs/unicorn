@@ -120,7 +120,7 @@ const StyledIMG = styled.img`
 `;
 
 const TheRectangle = styled.div`
-  width: 88vw;
+  width: 90vw;
   height: 358px;
   background: #ffffff;
   box-shadow: 0px 0px 30px 5px rgba(174, 174, 174, 0.18);
@@ -140,7 +140,7 @@ const BlueRectangle = styled.div`
 const InsideVerticalWrapper1 = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 24px;
 `;
 
 const InsideHorizontalWrapper1 = styled.div`
@@ -238,7 +238,7 @@ const SubGroup1 = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
-  gap: 20px;
+  gap: 10px;
 `;
 
 const Title = styled.div`
