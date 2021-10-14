@@ -80,7 +80,7 @@ const HorizontalWrapper1 = styled.div`
 
   @media (max-width: 1600px) {
     gap: 60px;
-    padding-left: 10px;
+    padding-left: 8px;
   }
 `;
 

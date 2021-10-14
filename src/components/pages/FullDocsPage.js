@@ -125,7 +125,7 @@ const HStack1 = styled.div`
 
   @media (max-width: 900px) {
     gap: 0px;
-    padding-top: 0px;
+    padding-top: 60px;
     padding-left: 0px;
   }
 `;
@@ -245,7 +245,7 @@ const CardVStack = styled.div`
   flex-direction: column;
   gap: 75px;
   @media (max-width: 900px) {
-    gap: 0px;
+    gap: 30px;
   }
 `;
 
