@@ -3,7 +3,7 @@ import styled from "styled-components";
 import HeaderBlack from "../HeaderBlack";
 import lightbulb from "../../../images/lightbulb.gif";
 import { Link } from "gatsby";
-import product from "../../../images/product.png";
+import product from "../../../images/product.svg";
 import background1 from "../../../images/background.png";
 import background2 from "../../../images/background.png";
 import productsmall from "../../../images/productsmall.svg";
@@ -66,9 +66,12 @@ const HorizontalWrapper1 = styled.div`
   display: flex;
   flex-direction: row;
   gap: 120px;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: 1500px) {
     gap: 80px;
+    padding-right: 80px;
   }
 
   @media (max-width: 1200px) {
@@ -76,6 +79,7 @@ const HorizontalWrapper1 = styled.div`
     justify-content: center;
     align-items: center;
     gap: 30px;
+    padding-left: 80px;
   }
 `;
 
@@ -101,6 +105,7 @@ const VerticalStack = styled.div`
   display: flex;
   flex-direction: column;
   gap: 100px;
+  padding-bottom: 90px;
 `;
 
 const MiniVStack = styled.div`
@@ -167,14 +172,17 @@ const SubHead = styled.div`
 `;
 
 const Product = styled.img`
+  width: 63%;
+  height: 63%;
+
   @media (max-width: 1500px) {
-    width: 50%;
-    height: 50%;
+    width: 70%;
+    height: 70%;
   }
 
   @media (max-width: 1200px) {
-    width: 75%;
-    height: 75%;
+    width: 90%;
+    height: 90%;
   }
 `;
 
