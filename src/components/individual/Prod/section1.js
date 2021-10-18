@@ -3,16 +3,17 @@ import styled from "styled-components";
 import HeaderBlack from "../HeaderBlack";
 import lightbulb from "../../../images/lightbulb.gif";
 import { Link } from "gatsby";
-import section1productprod from "../../../images/section1productprod.svg";
-import background1 from "../../../images/backgroundprod.svg";
-import background2 from "../../../images/backgroundprod2.svg";
+import product from "../../../images/product.png";
+import background1 from "../../../images/background.png";
+import background2 from "../../../images/background.png";
 import productsmall from "../../../images/productsmall.svg";
 import logostrip from "../../../images/logostrip.svg";
+import logostripsmall from "../../../images/logostripsmall.png";
 import useMediaQuery from "../../../hooks/useMediaQuery";
 import HeaderDropDownBlack from "../HeaderDropDownBlack";
 
 export default function Section1() {
-  const isDesktop = useMediaQuery("(min-width: 800px)");
+  const isDesktop = useMediaQuery("(min-width: 1200px)");
 
   return (
     <Wrapper>
@@ -20,32 +21,29 @@ export default function Section1() {
       <ContentWrapper>
         <VerticalWrapper11>
           <HorizontalWrapper1>
-            <VerticalWrapper1>
-              <HorizontalWrapper2>
-                <LightBulb src={lightbulb} />
-                <Title>Know the impact.</Title>
-              </HorizontalWrapper2>
-              <Title>For every channel.</Title>
-              <LittleLittleSpacer />
-              <SubTitle>
-                Get precise influence scores on the growth channels that drive
-                website conversions, with Banabo
-              </SubTitle>
-              <BigBigSpacer />
-              <StyledLink to="/signup">
-                <StyledButton>Sign Up</StyledButton>
-              </StyledLink>
-            </VerticalWrapper1>
-            <Product src={section1productprod} />
+            {isDesktop ? null : <Product src={product} />}
+            <VerticalStack>
+              <VerticalWrapper1>
+                <Title>Convert more website visitors</Title>
+                <SubHead>
+                  Know the exact impact of each marketing channel on a website
+                  conversion with Banabo
+                </SubHead>
+                <StyledLink to="/signup">
+                  <StyledButton>Try Banabo Free</StyledButton>
+                </StyledLink>
+              </VerticalWrapper1>
+              <MiniVStack>
+                <GrayTitle>CONNECT TO EVERY CHANNEL</GrayTitle>
+                {isDesktop ? (
+                  <Logos src={logostrip} />
+                ) : (
+                  <Logos src={logostripsmall} />
+                )}
+              </MiniVStack>
+            </VerticalStack>
+            {isDesktop ? <Product src={product} /> : null}
           </HorizontalWrapper1>
-          <ProductSmall src={productsmall} />
-          <BigSpacer />
-          <VStack>
-            <SubHead>
-              No matter your growth stack, Banabo can connect to any platform
-            </SubHead>
-            <LogoStrip src={logostrip} />
-          </VStack>
         </VerticalWrapper11>
       </ContentWrapper>
     </Wrapper>
@@ -57,19 +55,10 @@ const Wrapper = styled.div`
   min-width: 100%;
   position: relative;
   background-image: url(${background1});
-
-  @media (min-width: 1800px) {
-    background-image: url(${background2});
-  }
-
-  @media (max-width: 900px) {
-    background-image: none;
-  }
 `;
 
 const ContentWrapper = styled.div`
   display: flex;
-  align-items: center;
   flex-direction: column;
 `;
 
@@ -78,19 +67,15 @@ const HorizontalWrapper1 = styled.div`
   flex-direction: row;
   gap: 120px;
 
-  @media (max-width: 1600px) {
-    gap: 60px;
-    padding-left: 8px;
+  @media (max-width: 1500px) {
+    gap: 80px;
   }
-`;
 
-const HorizontalWrapper2 = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-  @media (max-width: 900px) {
-    gap: 0px;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
   }
 `;
 
@@ -98,157 +83,119 @@ const VerticalWrapper11 = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 80px;
-
-  @media (max-width: 900px) {
-    padding-top: 0px;
+  align-items: center;
+  @media (max-width: 1200px) {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 10px;
   }
+`;
 
-  @media (max-height: 900px) {
-    padding-top: 25px;
+const Logos = styled.img`
+  width: 70%;
+  height: 70%;
+`;
+
+const VerticalStack = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+`;
+
+const MiniVStack = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  @media (max-width: 1200px) {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
+`;
+
+const GrayTitle = styled.div`
+  font-size: 16px;
+  line-height: 19px;
+  color: #9695a8;
+  font-family: "ProximaNovaSemibold";
 `;
 
 const VerticalWrapper1 = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 80px;
   display: flex;
   justify-items: left;
   align-content: left;
-
-  @media (max-height: 900px) {
-    padding-top: 20px;
+  gap: 30px;
+  @media (max-width: 1200px) {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 `;
 
 const Title = styled.div`
-  font-family: "ProximaNovaSemiBold";
-  font-size: 70px;
+  font-family: "ProximaNovaBold";
+  font-size: 74px;
   color: #252531;
-  line-height: 85px;
-
-  @media (max-width: 900px) {
-    font-size: 32px;
-    padding-left: 10px;
-    line-height: 60px;
-  }
-`;
-
-const BigBigSpacer = styled.div`
-  padding-top: 35px;
-  @media (max-width: 900px) {
-    padding-top: 20px;
-  }
-`;
-
-const LittleLittleSpacer = styled.div`
-  padding-top: 35px;
-  @media (max-width: 900px) {
-    padding-top: 20px;
-  }
-`;
-
-const BigSpacer = styled.div`
-  padding-top: 85px;
-
-  @media (max-height: 900px) {
-    padding-top: 10px;
-  }
-`;
-
-const SubTitle = styled.div`
-  font-family: "ProximaNovaRegular";
-  font-size: 24px;
-  line-height: 29px;
-  color: #737180;
   width: 600px;
+  line-height: 70px;
 
-  @media (max-width: 900px) {
-    font-size: 18px;
-    width: 350px;
-    padding-left: 12px;
+  @media (max-width: 1500px) {
+    font-size: 50px;
+    width: 400px;
+    line-height: 50px;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 38px;
+    width: 300px;
+    line-height: 45px;
   }
 `;
 
 const SubHead = styled.div`
   font-size: 20px;
   line-height: 24px;
-  font-family: "ProximaNovaSemiBold";
+  font-family: "ProximaNovaSemibold";
   color: #252531;
-  text-align: center;
-
-  @media (max-width: 900px) {
-    display: none;
+  width: 430px;
+  @media (max-width: 1200px) {
+    width: 80vw;
   }
-`;
-
-const LightBulb = styled.img`
-  width: 70px;
-  height: 70px;
 `;
 
 const Product = styled.img`
-  @media (max-width: 900px) {
-    display: none;
-  }
-`;
-
-const LogoStrip = styled.img`
-  @media (max-width: 900px) {
-    display: none;
+  @media (max-width: 1500px) {
+    width: 50%;
+    height: 50%;
   }
 
-  @media (max-height: 700px) {
-    height: 80%;
-    width: 80%;
+  @media (max-width: 1200px) {
+    width: 75%;
+    height: 75%;
   }
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  @media (max-width: 900px) {
-    padding-left: 12px;
-  }
 `;
 
 const StyledButton = styled.button`
-  font-family: "ProximaNovaBold";
-  font-size: 19px;
+  font-family: "ProximaNovaSemiBold";
+  font-size: 17px;
   color: #ffffff;
   border: none;
-  width: 180px;
-  height: 50px;
+  height: 45px;
+  width: 193px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
   border-radius: 300px;
   background: linear-gradient(90deg, #265de3, #af71ff);
 
-  @media (max-width: 900px) {
-    width: 100px;
-    height: 32px;
-    font-size: 13px;
-  }
-
   :hover {
     background: linear-gradient(90deg, #104fe8 -10.37%, #9a4bff 108.53%);
-  }
-`;
-
-const VStack = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const ProductSmall = styled.img`
-  display: none;
-
-  @media (max-width: 900px) {
-    display: inline;
-    padding-top: 40px;
   }
 `;

@@ -6,33 +6,35 @@ import horn from "../../../images/horn.gif";
 import useMediaQuery from "../../../hooks/useMediaQuery";
 
 export default function Section4() {
-  const isDesktop = useMediaQuery("(min-width: 900px)");
+  const isDesktop = useMediaQuery("(min-width: 1200px)");
 
   return (
     <Wrapper>
       <ContentWrapper>
         <HorizontalWrapper1>
-          {isDesktop ? (
-            <Container1>
-              <img src={step2} />
-              <THEImg src={horn} />
-            </Container1>
-          ) : null}
           <VerticalWrapper1>
-            <Title>
-              See conversion <br /> paths
-            </Title>
-            <SubTitle>
-              Understand the exact combination of touch-points <br /> with your
-              brand that leads to a signup or purchase
-            </SubTitle>
+            <BiggerVertical>
+              <SmallVertical>
+                <Step>STEP 2</Step>
+                <SmallBlackText>See conversion paths</SmallBlackText>
+              </SmallVertical>
+              <VerySmallBlackText>
+                Understand the exact combination of touch-points with your brand
+                that leads to a signup or purchase
+              </VerySmallBlackText>
+            </BiggerVertical>
           </VerticalWrapper1>
-          {isDesktop != true ? (
-            <Container2>
-              <img src={step2small} />
+          {isDesktop ? (
+            <Container>
+              <ShadowIMG src={step2} />
               <THEImg src={horn} />
-            </Container2>
-          ) : null}
+            </Container>
+          ) : (
+            <Container>
+              <ShadowIMG src={step2small} />
+              <THEImg src={horn} />
+            </Container>
+          )}
         </HorizontalWrapper1>
       </ContentWrapper>
     </Wrapper>
@@ -40,10 +42,35 @@ export default function Section4() {
 }
 
 const Wrapper = styled.div`
-  min-height: 100vh;
+  min-height: 50vh;
   min-width: 100%;
   position: relative;
-  background-color: #ffc95f;
+  background-color: #ffffff;
+`;
+
+const BiggerVertical = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: left;
+
+  @media (max-width: 1200px) {
+    text-align: left;
+    gap: 0px;
+    width: 80vw;
+  }
+`;
+
+const ShadowIMG = styled.img``;
+
+const SmallVertical = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  @media (max-width: 1200px) {
+    gap: 0px;
+  }
 `;
 
 const ContentWrapper = styled.div`
@@ -51,24 +78,115 @@ const ContentWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   text-align: left;
-  padding: 180px;
-  @media (max-width: 900px) {
+  padding: 60px;
+  @media (max-width: 1200px) {
     padding: 0px;
     padding-top: 60px;
   }
 `;
 
-const Container1 = styled.div`
-  position: relative;
-  @media (max-width: 900px) {
-    display: none;
+const Spacer = styled.div`
+  padding-top: 120px;
+`;
+
+const Title1 = styled.div`
+  font-size: 70px;
+  line-height: 85px;
+  color: #252531;
+  font-family: "ProximaNovaSemiBold";
+  @media (max-width: 1500px) {
+    font-size: 50px;
+    width: 400px;
+    line-height: 50px;
+  }
+  @media (max-width: 1200px) {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 `;
 
-const Container2 = styled.div`
+const SubHead = styled.div`
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #252531;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const Step = styled.div`
+  font-size: 24px;
+  line-height: 29px;
+  font-family: "ProximaNovaSemiBold";
+  color: #666581;
+  @media (max-width: 1200px) {
+    font-size: 18px;
+  }
+`;
+
+const THEImg = styled.img`
+  position: absolute;
+  top: 70px;
+  left: 70px;
+  height: 62px;
+  width: 62px;
+  @media (max-width: 1200px) {
+    height: 39px;
+    width: 39px;
+    top: 25px;
+    left: 10vw;
+  }
+  @media (max-width: 400px) {
+    height: 39px;
+    width: 39px;
+    top: 25px;
+    left: 5vw;
+  }
+`;
+
+const SmallBlackText = styled.div`
+  font-size: 50px;
+  line-height: 61px;
+  width: 450px;
+  font-family: "ProximaNovaSemiBold";
+  color: #252531;
+  @media (max-width: 1200px) {
+    font-size: 26px;
+  }
+`;
+
+const VerySmallBlackText = styled.div`
+  font-size: 24px;
+  line-height: 29px;
+  font-family: "ProximaNovaRegular";
+  color: #3a3a3a;
+  width: 550px;
+  @media (max-width: 1500px) {
+    width: 380px;
+  }
+  @media (max-width: 1200px) {
+    font-size: 18px;
+    width: 80vw;
+  }
+`;
+
+const HorizontalWrapper1 = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 120px;
+  align-items: top;
+  justify-content: top;
+  @media (max-width: 1500px) {
+    gap: 20px;
+  }
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
+`;
+
+const Container = styled.div`
   position: relative;
-  display: none;
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,36 +196,11 @@ const Container2 = styled.div`
   }
 `;
 
-const THEImg = styled.img`
-  position: absolute;
-  top: 60px;
-  left: 60px;
-  height: 62px;
-  width: 62px;
-  @media (max-width: 900px) {
-    height: 39px;
-    width: 39px;
-    top: 25px;
-    left: 20px;
-  }
-`;
-
-const HorizontalWrapper1 = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 120px;
-  @media (max-width: 900px) {
-    flex-direction: column;
-    gap: 60px;
-  }
-`;
-
 const VerticalWrapper1 = styled.div`
   display: flex;
   flex-direction: column;
   gap: 35px;
-  padding-top: 20px;
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     flex-direction: column;
     display: flex;
     justify-content: center;
@@ -122,7 +215,7 @@ const Title = styled.div`
   font-size: 70px;
   color: #252531;
   line-height: 85px;
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     font-size: 35px;
     line-height: 43px;
   }
@@ -134,7 +227,7 @@ const SubTitle = styled.div`
   line-height: 29px;
   color: #3a3a3a;
   width: 600px;
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     font-size: 15px;
     width: 330px;
   }

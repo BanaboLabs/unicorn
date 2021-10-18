@@ -2,39 +2,37 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import ToggleSwitch from "./toggleswitch";
 import bar from "../../../images/bar.png";
-import withbanabo from "../../../images/withbanaboprod.svg";
-import withoutbanabo from "../../../images/withoutbanaboprod.svg";
+import withbanabo from "../../../images/withbanaboprod.png";
+import withoutbanabo from "../../../images/withoutbanaboprod.png";
 import withbanabosmall from "../../../images/withbanabosmall.svg";
 import withoutbanabosmall from "../../../images/withoutbanabosmall.svg";
 import useMediaQuery from "../../../hooks/useMediaQuery";
+import background from "../../../images/background2.png";
 
 export default function Section2() {
   const [isParentData, setIsParentData] = useState(false);
-  const isDesktop = useMediaQuery("(min-width: 900px)");
+  const isDesktop = useMediaQuery("(min-width: 1200px)");
 
   return (
     <Wrapper>
       <ContentWrapper>
         <VerticalWrapper1>
           <VerticalWrapper2>
-            <HorizontalWrapper1>
-              <YellowRectangle>
-                <HorizontalWrapper2>
-                  <AlterIMG src={bar} />
-                  <BlackText>Map out what influences a purchase</BlackText>
-                </HorizontalWrapper2>
-              </YellowRectangle>
+            <HorizontalWrapper>
+              <BigBlackText>
+                Uncover every channel that contributes to a purchase
+              </BigBlackText>
               {isDesktop ? (
                 <ToggleSwitch
                   toChild={isParentData}
                   sendToParent={setIsParentData}
                 />
-              ) : null}
-            </HorizontalWrapper1>
+              ) : null}{" "}
+            </HorizontalWrapper>
             {isParentData == true && isDesktop == true ? (
-              <img src={withbanabo} />
+              <EditIMG src={withbanabo} />
             ) : isParentData == false && isDesktop == true ? (
-              <img src={withoutbanabo} />
+              <EditIMG src={withoutbanabo} />
             ) : isParentData == true && isDesktop == false ? (
               <img src={withbanabosmall} />
             ) : (
@@ -54,26 +52,41 @@ export default function Section2() {
 }
 
 const Wrapper = styled.div`
-  min-height: 100%;
+  min-height: 100vh;
   min-width: 100%;
   position: relative;
+  background-image: url(${background});
+  @media (max-width: 1200px) {
+    min-height: 60vh;
+  }
+`;
+
+const HorizontalWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  @media (max-width: 1500px) {
+    flex-direction: column;
+    gap: 60px;
+  }
+`;
+
+const EditIMG = styled.img`
+  @media (max-width: 1500px) {
+    width: 80%;
+    height: 80%;
+  }
 `;
 
 const ContentWrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 130px;
-  @media (max-width: 900px) {
+  padding: 20px;
+  @media (max-width: 1200px) {
     padding: 0px;
     padding-bottom: 60px;
-  }
-`;
-
-const AlterIMG = styled.img`
-  @media (max-width: 900px) {
-    width: 25px;
-    height: 25px;
   }
 `;
 
@@ -83,7 +96,7 @@ const VerticalWrapper1 = styled.div`
   flex-direction: column;
   gap: 80px;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     gap: 40px;
   }
 `;
@@ -92,15 +105,7 @@ const VerticalWrapper2 = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 80px;
-
-  @media (max-height: 900px) {
-    gap: 30px;
-  }
-
-  @media (max-width: 900px) {
-    gap: 40px;
-  }
+  gap: 60px;
 `;
 
 const HorizontalWrapper1 = styled.div`
@@ -110,7 +115,7 @@ const HorizontalWrapper1 = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     flex-direction: column;
   }
 `;
@@ -122,7 +127,7 @@ const HorizontalWrapper2 = styled.div`
   text-align: center;
   justify-content: center;
   align-items: center;
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     width: 300px;
   }
 `;
@@ -137,10 +142,30 @@ const YellowRectangle = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     height: 56px;
     width: 323px;
     border-radius: 20px;
+  }
+`;
+
+const BigBlackText = styled.div`
+  font-size: 44px;
+  line-height: 54px;
+  text-align: left;
+  width: 600px;
+  font-family: "ProximaNovaSemiBold";
+  color: #252531;
+  @media (max-width: 1500px) {
+    text-align: center;
+  }
+
+  @media (max-width: 1200px) {
+    padding-top: 40px;
+    text-align: center;
+    font-size: 22px;
+    width: 70vw;
+    line-height: 27px;
   }
 `;
 
@@ -150,7 +175,7 @@ const BlackText = styled.div`
 
   color: #252531;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     font-size: 16px;
     line-height: 10px;
   }

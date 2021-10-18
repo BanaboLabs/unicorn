@@ -41,7 +41,7 @@ const ContentWrapper = styled.div`
 
 const Container = styled.div`
   width: 560px;
-  height: 73px;
+  height: 66px;
   background: #ffffff;
   box-shadow: 2px 5px 40px 0 rgb(0 0 0 / 8%);
   border-radius: 60px;
@@ -50,7 +50,11 @@ const Container = styled.div`
   position: relative;
   cursor: pointer;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1500px) {
+    height: 60px;
+  }
+
+  @media (max-width: 1200px) {
     background-image: none;
     width: 331px;
     height: 43px;
@@ -59,7 +63,7 @@ const Container = styled.div`
 
 const Button = styled.div`
   width: ${(props) => (props.widthvalue ? 290 : 275)}px;
-  height: 72px;
+  height: 66px;
   background: #379eff;
   border-radius: 60px;
   transition: all 0.25s linear;
@@ -68,7 +72,11 @@ const Button = styled.div`
   position: absolute;
   left: ${(props) => (props.widthvalue ? 0 : 285)}px;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1500px) {
+    height: 60px;
+  }
+
+  @media (max-width: 1200px) {
     left: ${(props) => (props.widthvalue ? 0 : 170)}px;
     width: ${(props) => (props.widthvalue ? 180 : 160)}px;
     height: 43px;
@@ -82,8 +90,8 @@ const TextWrapper = styled.div`
   flex-direction: row;
   gap: 100px;
   position: absolute;
-  padding: 60px;
-  @media (max-width: 900px) {
+  padding: 50px;
+  @media (max-width: 1200px) {
     gap: 25px;
     padding: 30px;
   }
@@ -93,7 +101,7 @@ const Text1 = styled.div`
   font-family: "ProximaNovaSemiBold";
   font-size: 26px;
   color: "#252531";
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     font-size: 16px;
     width: 150px;
   }
@@ -103,7 +111,7 @@ const Text2 = styled.div`
   font-family: "ProximaNovaSemiBold";
   font-size: 26px;
   color: "#252531";
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     font-size: 16px;
     width: 150px;
   }

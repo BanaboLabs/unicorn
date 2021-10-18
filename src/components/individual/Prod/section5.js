@@ -6,29 +6,31 @@ import goldheart from "../../../images/goldheart.gif";
 import useMediaQuery from "../../../hooks/useMediaQuery";
 
 export default function Section5() {
-  const isDesktop = useMediaQuery("(min-width: 900px)");
-
+  const isDesktop = useMediaQuery("(min-width: 1200px)");
   return (
     <Wrapper>
       <ContentWrapper>
         <HorizontalWrapper1>
           <VerticalWrapper1>
-            <Title>
-              Scores for <br /> every channel
-            </Title>
-            <SubTitle>
-              Banabo analyzes a visitor’s journey with machine <br /> learning
-              to show which channels impacted conversion
-            </SubTitle>
+            <BiggerVertical>
+              <SmallVertical>
+                <Step>STEP 3</Step>
+                <SmallBlackText>Scores for every channel</SmallBlackText>
+              </SmallVertical>
+              <VerySmallBlackText>
+                Banabo analyzes each channel with our in-house machine learning
+                model to attribute influence towards conversion
+              </VerySmallBlackText>
+            </BiggerVertical>
           </VerticalWrapper1>
           {isDesktop ? (
             <Container>
-              <img src={step3} />
+              <ShadowIMG src={step3} />
               <THEImg src={goldheart} />
             </Container>
           ) : (
             <Container>
-              <img src={step3small} />
+              <ShadowIMG src={step3small} />
               <THEImg src={goldheart} />
             </Container>
           )}
@@ -39,10 +41,35 @@ export default function Section5() {
 }
 
 const Wrapper = styled.div`
-  min-height: 100vh;
+  min-height: 50vh;
   min-width: 100%;
   position: relative;
-  background-color: #eff0f6;
+  background-color: #ffffff;
+`;
+
+const BiggerVertical = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: left;
+
+  @media (max-width: 1200px) {
+    text-align: left;
+    gap: 0px;
+    width: 80vw;
+  }
+`;
+
+const ShadowIMG = styled.img``;
+
+const SmallVertical = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  @media (max-width: 1200px) {
+    gap: 0px;
+  }
 `;
 
 const ContentWrapper = styled.div`
@@ -50,16 +77,115 @@ const ContentWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   text-align: left;
-  padding: 180px;
-  @media (max-width: 900px) {
+  padding: 60px;
+  @media (max-width: 1200px) {
     padding: 0px;
     padding-top: 60px;
   }
 `;
 
+const Spacer = styled.div`
+  padding-top: 120px;
+`;
+
+const Title1 = styled.div`
+  font-size: 70px;
+  line-height: 85px;
+  color: #252531;
+  font-family: "ProximaNovaSemiBold";
+  @media (max-width: 1500px) {
+    font-size: 50px;
+    width: 400px;
+    line-height: 50px;
+  }
+  @media (max-width: 1200px) {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+`;
+
+const SubHead = styled.div`
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #252531;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const Step = styled.div`
+  font-size: 24px;
+  line-height: 29px;
+  font-family: "ProximaNovaSemiBold";
+  color: #666581;
+  @media (max-width: 1200px) {
+    font-size: 18px;
+  }
+`;
+
+const THEImg = styled.img`
+  position: absolute;
+  top: 70px;
+  left: 70px;
+  height: 62px;
+  width: 62px;
+  @media (max-width: 1200px) {
+    height: 39px;
+    width: 39px;
+    top: 25px;
+    left: 10vw;
+  }
+  @media (max-width: 400px) {
+    height: 39px;
+    width: 39px;
+    top: 25px;
+    left: 5vw;
+  }
+`;
+
+const SmallBlackText = styled.div`
+  font-size: 50px;
+  line-height: 61px;
+  width: 450px;
+  font-family: "ProximaNovaSemiBold";
+  color: #252531;
+  @media (max-width: 1200px) {
+    font-size: 26px;
+  }
+`;
+
+const VerySmallBlackText = styled.div`
+  font-size: 24px;
+  line-height: 29px;
+  font-family: "ProximaNovaRegular";
+  color: #3a3a3a;
+  width: 550px;
+  @media (max-width: 1500px) {
+    width: 380px;
+  }
+  @media (max-width: 1200px) {
+    font-size: 18px;
+    width: 80vw;
+  }
+`;
+
+const HorizontalWrapper1 = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 120px;
+  align-items: top;
+  justify-content: top;
+  @media (max-width: 1500px) {
+    gap: 20px;
+  }
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
+`;
+
 const Container = styled.div`
   position: relative;
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,39 +195,11 @@ const Container = styled.div`
   }
 `;
 
-const THEImg = styled.img`
-  position: absolute;
-  top: 60px;
-  left: 65px;
-  height: 62px;
-  width: 62px;
-  @media (max-width: 900px) {
-    height: 39px;
-    width: 39px;
-    top: 29px;
-    left: 42px;
-  }
-`;
-
-const HorizontalWrapper1 = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 120px;
-  @media (max-width: 900px) {
-    flex-direction: column;
-    gap: 60px;
-  }
-
-  @media (max-width: 1600px) {
-    gap: 70px;
-  }
-`;
-
 const VerticalWrapper1 = styled.div`
   display: flex;
   flex-direction: column;
   gap: 35px;
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     flex-direction: column;
     display: flex;
     justify-content: center;
@@ -116,11 +214,9 @@ const Title = styled.div`
   font-size: 70px;
   color: #252531;
   line-height: 85px;
-  padding-top: 20px;
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     font-size: 35px;
     line-height: 43px;
-    padding-top: 0px;
   }
 `;
 
@@ -130,8 +226,8 @@ const SubTitle = styled.div`
   line-height: 29px;
   color: #3a3a3a;
   width: 600px;
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     font-size: 15px;
-    width: 368px;
+    width: 330px;
   }
 `;

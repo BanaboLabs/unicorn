@@ -65,6 +65,9 @@ const SubWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   padding: 20px;
+  @media (max-width: 1500px) {
+    padding-right: 100px;
+  }
 `;
 
 const NavWrapper = styled.div`
@@ -73,9 +76,8 @@ const NavWrapper = styled.div`
   align-items: center;
   gap: 620px;
 
-  @media (max-width: 700px) {
-    display: grid;
-    justify-content: center;
+  @media (max-width: 1500px) {
+    gap: 340px;
   }
 `;
 

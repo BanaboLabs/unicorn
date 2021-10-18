@@ -1,6 +1,7 @@
 import React from "react";
 
 import styled from "styled-components";
+import Footer from "../individual/Prod/footer";
 import Section1 from "../individual/Prod/section1";
 import Section2 from "../individual/Prod/section2";
 import Section3 from "../individual/Prod/section3";
@@ -21,6 +22,7 @@ export default function FullIndexPage() {
           <Section4 />
           <Section5 />
           <Section6 />
+          <Footer />
         </ContentWrapper>
       </Wrapper>
     </ParentWrapper>

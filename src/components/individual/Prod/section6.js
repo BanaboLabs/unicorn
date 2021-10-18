@@ -6,212 +6,124 @@ import contact from "../../../images/contactprod.svg";
 import buttonarrow from "../../../images/buttonarrow.svg";
 import { Link } from "gatsby";
 import useMediaQuery from "../../../hooks/useMediaQuery";
+import cuterarrowright from "../../../images/cuterarrowright.svg";
 
 export default function BottomSection() {
-  const isDesktop = useMediaQuery("(min-width: 900px)");
+  const isDesktop = useMediaQuery("(min-width: 1200px)");
 
   return (
     <Wrapper>
       <ContentWrapper>
-        {isDesktop ? <Title>Get started for free</Title> : null}
-        <RectangleWrapper>
-          <Rectangle>
-            <InsideContentWrapper>
-              <img src={heart} alt="free during beta" />
-              <Text>Free during beta</Text>
-              <SubText>
-                See for yourself what Banabo has to offer. No credit card
-                required
-              </SubText>
-              <StyledLink to="/signup">
-                <StyledButton1>
-                  <span>
-                    Sign Up <img src={buttonarrow} alt="sign up" />
-                  </span>
-                </StyledButton1>
-              </StyledLink>
-            </InsideContentWrapper>
-          </Rectangle>
-          <Rectangle>
-            <InsideContentWrapper>
-              <img src={gear} alt="channel growth" />
-              <Text>Simple to integrate</Text>
-              <SubText>
-                Add Banabo to your website within 5 minutes. It’s really that
-                easy
-              </SubText>
-              <StyledLink to="/docs">
-                <StyledButton2>
-                  <span>
-                    Read Docs <img src={buttonarrow} alt="read docs" />
-                  </span>
-                </StyledButton2>
-              </StyledLink>
-            </InsideContentWrapper>
-          </Rectangle>
-          <Rectangle>
-            <InsideContentWrapper>
-              <img src={contact} alt="channel growth" />
-              <Text>Always ready support</Text>
-              <SubText>
-                We’re here to answer all your questions within 24 hours
-              </SubText>
-              <StyledLink to="/contact">
-                <StyledButton3>
-                  <span>
-                    Contact Us <img src={buttonarrow} alt="contact us" />
-                  </span>
-                </StyledButton3>
-              </StyledLink>
-            </InsideContentWrapper>
-          </Rectangle>
-        </RectangleWrapper>
-        <BottomSpacer />
+        <VerticalWrapper1>
+          <VerticalWrapper>
+            <Title>Try Banabo Today</Title>
+            <SubTitle>Get started for free.</SubTitle>
+          </VerticalWrapper>
+          <HorizontalWrapper>
+            <StyledLink to="/signup">
+              <StyledButton>Try Banabo Free</StyledButton>
+            </StyledLink>
+            <StyledLink to="/contact">
+              <HorizontalWrapper2>
+                <SubText>Chat With Us</SubText>
+                <img src={cuterarrowright} />
+              </HorizontalWrapper2>
+            </StyledLink>
+          </HorizontalWrapper>
+        </VerticalWrapper1>
       </ContentWrapper>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
-  min-height: 100vh;
+  min-height: 60vh;
   min-width: 100%;
   position: relative;
   background-color: #ffffff;
+  @media (max-width: 1200px) {
+    min-height: 45vh;
+  }
+`;
+
+const HorizontalWrapper2 = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 `;
 
 const ContentWrapper = styled.div`
-  margin-top: 30px;
+  padding-top: 150px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 60px;
-  padding: 130px;
-`;
-
-const RectangleWrapper = styled.div`
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-
-  @media (max-width: 900px) {
-    flex-direction: column;
-  }
-`;
-
-const Title = styled.h1`
-  font-size: 80px;
-  font-family: Proxima Nova;
-  font-style: normal;
-  font-weight: 800;
-  text-align: center;
-  line-height: 100px;
-  color: #252531;
-  font-family: "ProximaNovaSemiBold";
-  @media (max-width: 700px) {
-    font-size: 55px;
-    line-height: 70px;
-  }
-`;
-
-const Rectangle = styled.div`
-  height: 360px;
-  width: 400px;
-  background: #ffffff;
-  box-shadow: 2px 5px 40px 0 rgb(0 0 0 / 8%);
-  border-radius: 20px;
-
-  @media (max-width: 900px) {
-    height: 288px;
-    width: 321px;
-  }
-`;
-
-const BottomSpacer = styled.div`
-  padding-bottom: 150px;
-`;
-
-const InsideContentWrapper = styled.div`
-  display: grid;
-  gap: 35px;
-  padding-left: 25px;
-  padding-top: 25px;
-  @media (max-width: 900px) {
-    gap: 20px;
-  }
-`;
-
-const Text = styled.div`
-  font-family: "ProximaNovaBold";
-  font-size: 24px;
-  color: #252531;
-`;
-
-const SubText = styled.div`
-  font-family: "ProximaNovaSemiBold";
-  font-size: 18px;
-  color: #8d8d8d;
-  width: 290px;
-  @media (max-width: 900px) {
-    width: 240px;
-  }
-`;
-
-const StyledButton1 = styled.button`
-  font-family: "ProximaNovaBold";
-  font-size: 16px;
-  color: #ffffff;
-  border: none;
-  width: 117px;
-  height: 46px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 16px;
-  background: linear-gradient(90deg, #265de3, #af71ff);
-
-  :hover {
-    background: linear-gradient(90deg, #104fe8 -10.37%, #9a4bff 108.53%);
-  }
-`;
-
-const StyledButton2 = styled.button`
-  font-family: "ProximaNovaBold";
-  font-size: 16px;
-  color: #ffffff;
-  border: none;
-  width: 138px;
-  height: 46px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 16px;
-  background: linear-gradient(90deg, #265de3, #af71ff);
-
-  :hover {
-    background: linear-gradient(90deg, #104fe8 -10.37%, #9a4bff 108.53%);
-  }
-`;
-
-const StyledButton3 = styled.button`
-  font-family: "ProximaNovaBold";
-  font-size: 16px;
-  color: #ffffff;
-  border: none;
-  width: 144px;
-  height: 46px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 16px;
-  background: linear-gradient(90deg, #265de3, #af71ff);
-
-  :hover {
-    background: linear-gradient(90deg, #104fe8 -10.37%, #9a4bff 108.53%);
-  }
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+`;
+
+const VerticalWrapper1 = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  @media (max-width: 1200px) {
+    gap: 20px;
+  }
+`;
+
+const VerticalWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
+
+const HorizontalWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Title = styled.div`
+  font-size: 50px;
+  text-align: center;
+  color: #252531;
+  font-family: "ProximaNovaBold";
+  @media (max-width: 1200px) {
+    font-size: 26px;
+  }
+`;
+
+const SubTitle = styled.div`
+  font-size: 20px;
+  text-align: center;
+  color: #252531;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const SubText = styled.div`
+  font-size: 17px;
+  text-align: center;
+  color: #252531;
+  font-family: "ProximaNovaSemiBold";
+`;
+
+const StyledButton = styled.button`
+  font-family: "ProximaNovaSemiBold";
+  font-size: 17px;
+  color: #ffffff;
+  border: none;
+  height: 45px;
+  width: 193px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 300px;
+  background: linear-gradient(90deg, #265de3, #af71ff);
+
+  :hover {
+    background: linear-gradient(90deg, #104fe8 -10.37%, #9a4bff 108.53%);
+  }
 `;
