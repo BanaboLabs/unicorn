@@ -96,7 +96,8 @@ const TopParent = styled.div`
 
 const TopParent2 = styled.div`
   display: inline-block;
-  vertical-align: top; /* here */
+  vertical-align: top;
+  margin-right: 20px; /* here */
 `;
 
 const LogoHStack = styled.div`

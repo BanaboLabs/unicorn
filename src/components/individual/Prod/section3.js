@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import step1 from "../../../images/step1.png";
-import step1small from "../../../images/step1small.svg";
+import step1test from "../../../images/step1.png";
+import step1small from "../../../images/step1small.png";
 import heart from "../../../images/heartgif.gif";
+import logogrid from "../../../images/logogrid.svg";
 import useMediaQuery from "../../../hooks/useMediaQuery";
 
 export default function Section3() {
@@ -37,7 +39,6 @@ export default function Section3() {
           ) : (
             <Container>
               <ShadowIMG src={step1small} />
-              <THEImg src={heart} />
             </Container>
           )}
         </HorizontalWrapper1>
@@ -45,6 +46,16 @@ export default function Section3() {
     </Wrapper>
   );
 }
+
+const RectangleWhite = styled.div`
+  width: 625px;
+  height: 561px;
+`;
+
+const RectangleYellow = styled.div`
+  width: 625px;
+  height: 561px;
+`;
 
 const Wrapper = styled.div`
   min-height: 50vh;
@@ -73,8 +84,10 @@ const SmallVertical = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
+  padding-top: 30px;
   @media (max-width: 1200px) {
     gap: 0px;
+    padding-top: 0px;
   }
 `;
 
@@ -140,21 +153,9 @@ const Step = styled.div`
 const THEImg = styled.img`
   position: absolute;
   top: 70px;
-  left: 70px;
+  left: 74px;
   height: 62px;
   width: 62px;
-  @media (max-width: 1200px) {
-    height: 39px;
-    width: 39px;
-    top: 25px;
-    left: 10vw;
-  }
-  @media (max-width: 400px) {
-    height: 39px;
-    width: 39px;
-    top: 25px;
-    left: 5vw;
-  }
 `;
 
 const SmallBlackText = styled.div`

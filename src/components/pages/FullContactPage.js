@@ -161,7 +161,7 @@ const Input1 = styled.input`
   transition: all 0.2s ease 0s;
   padding: 6px 20px;
   @media (max-width: 900px) {
-    width: 80vw;
+    width: 62vw;
   }
 
   :focus {
@@ -198,7 +198,7 @@ const TextArea = styled.textarea`
   padding: 14px 20px;
   resize: none;
   @media (max-width: 900px) {
-    width: 80vw;
+    width: 62vw;
   }
 
   :focus {
@@ -219,7 +219,7 @@ const StyledButton = styled.button`
   border-radius: 6px;
   background: linear-gradient(90deg, #265de3, #af71ff);
   @media (max-width: 900px) {
-    width: 90vw;
+    width: 70vw;
   }
 
   :hover {

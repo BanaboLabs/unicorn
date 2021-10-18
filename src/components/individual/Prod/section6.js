@@ -42,7 +42,7 @@ const Wrapper = styled.div`
   position: relative;
   background-color: #ffffff;
   @media (max-width: 1200px) {
-    min-height: 45vh;
+    min-height: 40vh;
   }
 `;
 
@@ -57,6 +57,9 @@ const ContentWrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  @media (max-width: 1200px) {
+    padding-top: 60px;
+  }
 `;
 
 const StyledLink = styled(Link)`

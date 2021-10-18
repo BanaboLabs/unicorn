@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import step3 from "../../../images/step3.svg";
-import step3small from "../../../images/step3small.svg";
+import step3small from "../../../images/step3small.png";
 import goldheart from "../../../images/goldheart.gif";
 import useMediaQuery from "../../../hooks/useMediaQuery";
 
@@ -31,7 +31,6 @@ export default function Section5() {
           ) : (
             <Container>
               <ShadowIMG src={step3small} />
-              <THEImg src={goldheart} />
             </Container>
           )}
         </HorizontalWrapper1>
@@ -66,9 +65,10 @@ const ShadowIMG = styled.img``;
 const SmallVertical = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  padding-top: 30px;
   @media (max-width: 1200px) {
     gap: 0px;
+    padding-top: 0px;
   }
 `;
 
@@ -125,22 +125,10 @@ const Step = styled.div`
 
 const THEImg = styled.img`
   position: absolute;
-  top: 70px;
+  top: 60px;
   left: 70px;
   height: 62px;
   width: 62px;
-  @media (max-width: 1200px) {
-    height: 39px;
-    width: 39px;
-    top: 25px;
-    left: 10vw;
-  }
-  @media (max-width: 400px) {
-    height: 39px;
-    width: 39px;
-    top: 25px;
-    left: 5vw;
-  }
 `;
 
 const SmallBlackText = styled.div`

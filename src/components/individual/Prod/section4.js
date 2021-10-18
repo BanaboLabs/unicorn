@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import step2 from "../../../images/step2.svg";
-import step2small from "../../../images/step2small.svg";
+import step2small from "../../../images/step2small.png";
 import horn from "../../../images/horn.gif";
 import useMediaQuery from "../../../hooks/useMediaQuery";
 
@@ -32,7 +32,6 @@ export default function Section4() {
           ) : (
             <Container>
               <ShadowIMG src={step2small} />
-              <THEImg src={horn} />
             </Container>
           )}
         </HorizontalWrapper1>
@@ -68,8 +67,10 @@ const SmallVertical = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
+  padding-top: 30px;
   @media (max-width: 1200px) {
     gap: 0px;
+    padding-top: 0px;
   }
 `;
 
@@ -126,22 +127,10 @@ const Step = styled.div`
 
 const THEImg = styled.img`
   position: absolute;
-  top: 70px;
+  top: 60px;
   left: 70px;
   height: 62px;
   width: 62px;
-  @media (max-width: 1200px) {
-    height: 39px;
-    width: 39px;
-    top: 25px;
-    left: 10vw;
-  }
-  @media (max-width: 400px) {
-    height: 39px;
-    width: 39px;
-    top: 25px;
-    left: 5vw;
-  }
 `;
 
 const SmallBlackText = styled.div`
