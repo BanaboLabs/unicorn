@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import step1 from "../../../images/step1.png";
 import step1test from "../../../images/step1.png";
-import step1small from "../../../images/step1small.png";
+import step1small from "../../../images/step1small.svg";
 import heart from "../../../images/heartgif.gif";
 import logogrid from "../../../images/logogrid.svg";
 import useMediaQuery from "../../../hooks/useMediaQuery";
@@ -78,7 +78,13 @@ const BiggerVertical = styled.div`
   }
 `;
 
-const ShadowIMG = styled.img``;
+const ShadowIMG = styled.img`
+  @media (max-width: 1200px) {
+    filter: drop-shadow(2px 5px 40px #eeeeee);
+    width: 80%;
+    height: 80%;
+  }
+`;
 
 const SmallVertical = styled.div`
   display: flex;
@@ -97,9 +103,10 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   text-align: left;
   padding: 60px;
+  padding-top: 200px;
   @media (max-width: 1200px) {
     padding: 0px;
-    padding-top: 60px;
+    padding-top: 120px;
   }
 `;
 
@@ -191,7 +198,7 @@ const HorizontalWrapper1 = styled.div`
   align-items: top;
   justify-content: top;
   @media (max-width: 1500px) {
-    gap: 20px;
+    gap: 40px;
   }
   @media (max-width: 1200px) {
     flex-direction: column;

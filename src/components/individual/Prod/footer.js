@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import logoblack from "../../../images/banabologoblack.svg";
-import logogrid from "../../../images/logogrid.png";
-import gdpr from "../../../images/gdpr.png";
-import ccpa from "../../../images/ccpa.png";
+import logogrid from "../../../images/logogridnew.svg";
+import gdpr from "../../../images/gdpr.svg";
+import useMediaQuery from "../../../hooks/useMediaQuery";
 
 export default function Footer() {
+  const isDesktop = useMediaQuery("(min-width: 1200px)");
   return (
     <Wrapper>
       <ContentWrapper>
@@ -14,24 +15,26 @@ export default function Footer() {
           <BelowWrapper>
             <LeftHStack>
               <TopParent>
-                <LogoHStack>
-                  <img src={logoblack} />
-                  <BanaboText>Banabo</BanaboText>
-                </LogoHStack>
+                <SmallVStack>
+                  <LogoHStack>
+                    <img src={logoblack} />
+                    <BanaboText>Banabo</BanaboText>
+                  </LogoHStack>
+                  <CopyrightText>
+                    Copyright Banabo Labs Inc. 2021. All rights reserved
+                  </CopyrightText>
+                </SmallVStack>
               </TopParent>
               <TopParent>
                 <VStack>
-                  <GrayText>
-                    Built by a team of designers and engineers from{" "}
-                  </GrayText>
+                  <GrayText>Built by engineers from</GrayText>
                   <SmallIMG src={logogrid} />
                 </VStack>
               </TopParent>
             </LeftHStack>
             <TopParent2>
               <BadgeHStack>
-                <ShadowIMG src={gdpr} />
-                <ShadowIMG src={ccpa} />
+                {isDesktop ? <ShadowIMG src={gdpr} /> : null}
               </BadgeHStack>
             </TopParent2>
           </BelowWrapper>
@@ -58,15 +61,37 @@ const Line = styled.div`
   background: #eaeaea;
   transform: matrix(1, 0, 0, -1, 0, 0);
   width: 80vw;
-  height: 3px;
+  height: 1px;
 `;
 
 const BelowWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 80vw;
+  width: 82.5vw;
+  margin-left: 40px;
   @media (max-width: 1200px) {
     flex-direction: column;
+    margin-left: 0px;
+    width: 80vw;
+  }
+`;
+
+const SmallVStack = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: left;
+  align-items: left;
+`;
+
+const CopyrightText = styled.div`
+  font-family: "ProximaNovaSemibold";
+  font-size: 12px;
+  color: #252531;
+  @media (max-width: 1200px) {
+    padding-right: 100px;
+    width: 400px;
+    text-align: left;
   }
 `;
 
@@ -97,14 +122,14 @@ const TopParent = styled.div`
 const TopParent2 = styled.div`
   display: inline-block;
   vertical-align: top;
-  margin-right: 20px; /* here */
+  padding-left: 20px; /* here */
+  margin-top: 8px;
 `;
 
 const LogoHStack = styled.div`
   display: flex;
   flex-direction: row;
   gap: 10px;
-  justify-content: center;
   align-items: center;
   @media (max-width: 1200px) {
     flex-direction: row;
@@ -116,7 +141,7 @@ const LogoHStack = styled.div`
 const VStack = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
   justify-content: center;
   align-items: left;
   text-align: left;
@@ -126,15 +151,15 @@ const BanaboText = styled.div`
   font-size: 26px;
   line-height: 32px;
   color: #252531;
-  font-family: "ProximaNovaSemiBold";
+  font-family: "ProximaNovaBold";
 `;
 
 const GrayText = styled.div`
-  font-size: 22px;
+  font-size: 20px;
   line-height: 27px;
   font-family: "ProximaNovaRegular";
   color: #7f7f7f;
-  width: 300px;
+  width: 340px;
 `;
 
 const BadgeHStack = styled.div`
@@ -146,7 +171,7 @@ const BadgeHStack = styled.div`
 `;
 
 const SmallIMG = styled.img`
-  width: 70%;
+  width: 55%;
   height: auto;
 
   @media (max-width: 1500px) {
@@ -165,4 +190,7 @@ const SmallIMG = styled.img`
   }
 `;
 
-const ShadowIMG = styled.img``;
+const ShadowIMG = styled.img`
+  width: 100%;
+  height: 100%;
+`;

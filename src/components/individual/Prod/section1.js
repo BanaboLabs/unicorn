@@ -1,19 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import HeaderBlack from "../HeaderBlack";
 import lightbulb from "../../../images/lightbulb.gif";
 import { Link } from "gatsby";
 import product from "../../../images/product.svg";
 import background1 from "../../../images/background.png";
-import background2 from "../../../images/background.png";
 import productsmall from "../../../images/productsmall.svg";
 import logostrip from "../../../images/logostrip.svg";
-import logostripsmall from "../../../images/logostripsmall.png";
+import logostripsmall from "../../../images/logostripsmall.svg";
 import useMediaQuery from "../../../hooks/useMediaQuery";
 import HeaderDropDownBlack from "../HeaderDropDownBlack";
+import { motion } from "framer-motion";
+import withbanabo from "../../../images/withbanabo.svg";
+import withoutbanabo from "../../../images/withoutbanabo.svg";
+import withbanabosmall from "../../../images/withbanabosmall.svg";
+import withoutbanabosmall from "../../../images/withoutbanabosmall.svg";
+import ToggleSwitch from "./toggleswitch";
 
 export default function Section1() {
+  const [isParentData, setIsParentData] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 1200px)");
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
 
   return (
     <Wrapper>
@@ -24,16 +34,40 @@ export default function Section1() {
             {isDesktop ? null : <Product src={product} />}
             <VerticalStack>
               <VerticalWrapper1>
-                <Title>Convert more website visitors</Title>
-                <SubHead>
+                <Title
+                  initial="hidden"
+                  animate="visible"
+                  variants={variants}
+                  transition={{ delay: 0.5 }}
+                >
+                  Convert more website visitors
+                </Title>
+                <SubHead
+                  initial="hidden"
+                  animate="visible"
+                  variants={variants}
+                  transition={{ delay: 0.6 }}
+                >
                   Know the exact impact of each marketing channel on a website
                   conversion with Banabo
                 </SubHead>
-                <StyledLink to="/signup">
-                  <StyledButton>Try Banabo Free</StyledButton>
-                </StyledLink>
+                <TransitionDiv1
+                  initial="hidden"
+                  animate="visible"
+                  variants={variants}
+                  transition={{ delay: 0.7 }}
+                >
+                  <StyledLink>
+                    <StyledButton>Try Banabo Free</StyledButton>
+                  </StyledLink>
+                </TransitionDiv1>
               </VerticalWrapper1>
-              <MiniVStack>
+              <MiniVStack
+                initial="hidden"
+                animate="visible"
+                variants={variants}
+                transition={{ delay: 0.8 }}
+              >
                 <GrayTitle>CONNECT TO EVERY CHANNEL</GrayTitle>
                 {isDesktop ? (
                   <Logos src={logostrip} />
@@ -42,9 +76,48 @@ export default function Section1() {
                 )}
               </MiniVStack>
             </VerticalStack>
-            {isDesktop ? <Product src={product} /> : null}
+            {isDesktop ? (
+              <Product
+                initial="hidden"
+                animate="visible"
+                variants={variants}
+                transition={{ delay: 0.5 }}
+                src={product}
+              />
+            ) : null}
           </HorizontalWrapper1>
         </VerticalWrapper11>
+        <Spacer />
+        <VerticalWrapper12>
+          <VerticalWrapper22>
+            <HorizontalWrapper222>
+              <BigBlackText2>
+                Uncover every channel that contributes to a purchase
+              </BigBlackText2>
+              {isDesktop ? (
+                <ToggleSwitch
+                  toChild={isParentData}
+                  sendToParent={setIsParentData}
+                />
+              ) : null}{" "}
+            </HorizontalWrapper222>
+            {isParentData == true && isDesktop == true ? (
+              <EditIMG2 src={withbanabo} />
+            ) : isParentData == false && isDesktop == true ? (
+              <EditIMG2 src={withoutbanabo} />
+            ) : isParentData == true && isDesktop == false ? (
+              <img src={withbanabosmall} />
+            ) : (
+              <img src={withoutbanabosmall} />
+            )}
+          </VerticalWrapper22>
+          {isDesktop ? null : (
+            <ToggleSwitch
+              toChild={isParentData}
+              sendToParent={setIsParentData}
+            />
+          )}
+        </VerticalWrapper12>
       </ContentWrapper>
     </Wrapper>
   );
@@ -57,10 +130,89 @@ const Wrapper = styled.div`
   background-image: url(${background1});
 `;
 
-const ContentWrapper = styled.div`
+const ContentWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
 `;
+
+const Spacer = styled.div`
+  padding-top: 280px;
+  @media (max-width: 1200px) {
+    padding-top: 0px;
+  }
+`;
+
+const EditIMG2 = styled.img`
+  width: 180%;
+  height: 180%;
+
+  @media (max-width: 1500px) {
+    width: 160%;
+    height: 160%;
+  }
+`;
+
+const BigBlackText2 = styled.div`
+  font-size: 44px;
+  line-height: 54px;
+  text-align: center;
+  width: 600px;
+  font-family: "ProximaNovaSemiBold";
+  color: #252531;
+  @media (max-width: 1500px) {
+    text-align: center;
+  }
+
+  @media (max-width: 1200px) {
+    padding-top: 40px;
+    text-align: center;
+    font-size: 22px;
+    width: 70vw;
+    line-height: 27px;
+  }
+`;
+
+const VerticalWrapper12 = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+
+  @media (max-width: 1200px) {
+    gap: 30px;
+  }
+`;
+
+const VerticalWrapper22 = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  @media (max-width: 1200px) {
+    gap: 30px;
+  }
+`;
+
+const HorizontalWrapper2 = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 1200px) {
+    width: 300px;
+  }
+`;
+
+const HorizontalWrapper222 = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+`;
+
+const TransitionDiv1 = styled(motion.div)``;
 
 const HorizontalWrapper1 = styled.div`
   display: flex;
@@ -106,9 +258,12 @@ const VerticalStack = styled.div`
   flex-direction: column;
   gap: 100px;
   padding-bottom: 90px;
+  @media (max-width: 1200px) {
+    gap: 50px;
+  }
 `;
 
-const MiniVStack = styled.div`
+const MiniVStack = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -140,7 +295,7 @@ const VerticalWrapper1 = styled.div`
   }
 `;
 
-const Title = styled.div`
+const Title = styled(motion.div)`
   font-family: "ProximaNovaBold";
   font-size: 74px;
   color: #252531;
@@ -160,7 +315,7 @@ const Title = styled.div`
   }
 `;
 
-const SubHead = styled.div`
+const SubHead = styled(motion.div)`
   font-size: 20px;
   line-height: 24px;
   font-family: "ProximaNovaSemibold";
@@ -171,7 +326,7 @@ const SubHead = styled.div`
   }
 `;
 
-const Product = styled.img`
+const Product = styled(motion.img)`
   width: 63%;
   height: 63%;
 

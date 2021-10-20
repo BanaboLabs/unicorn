@@ -40,8 +40,8 @@ const ContentWrapper = styled.div`
 `;
 
 const Container = styled.div`
-  width: 560px;
-  height: 66px;
+  width: 376px;
+  height: 49px;
   background: #ffffff;
   box-shadow: 2px 5px 40px 0 rgb(0 0 0 / 8%);
   border-radius: 60px;
@@ -51,7 +51,7 @@ const Container = styled.div`
   cursor: pointer;
 
   @media (max-width: 1500px) {
-    height: 60px;
+    height: 49px;
   }
 
   @media (max-width: 1200px) {
@@ -62,18 +62,18 @@ const Container = styled.div`
 `;
 
 const Button = styled.div`
-  width: ${(props) => (props.widthvalue ? 290 : 275)}px;
-  height: 66px;
+  width: ${(props) => (props.widthvalue ? 210 : 188)}px;
+  height: 49px;
   background: #379eff;
   border-radius: 60px;
   transition: all 0.25s linear;
   transition-timing-function: ease-in-out;
   transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
   position: absolute;
-  left: ${(props) => (props.widthvalue ? 0 : 285)}px;
+  left: ${(props) => (props.widthvalue ? 0 : 190)}px;
 
   @media (max-width: 1500px) {
-    height: 60px;
+    height: 49px;
   }
 
   @media (max-width: 1200px) {
@@ -88,9 +88,9 @@ const TextWrapper = styled.div`
   color: #252531;
   display: flex;
   flex-direction: row;
-  gap: 100px;
+  gap: 40px;
   position: absolute;
-  padding: 50px;
+  padding: 40px;
   @media (max-width: 1200px) {
     gap: 25px;
     padding: 30px;
@@ -99,8 +99,9 @@ const TextWrapper = styled.div`
 
 const Text1 = styled.div`
   font-family: "ProximaNovaSemiBold";
-  font-size: 26px;
+  font-size: 18px;
   color: "#252531";
+  width: 150px;
   @media (max-width: 1200px) {
     font-size: 16px;
     width: 150px;
@@ -109,8 +110,9 @@ const Text1 = styled.div`
 
 const Text2 = styled.div`
   font-family: "ProximaNovaSemiBold";
-  font-size: 26px;
+  font-size: 18px;
   color: "#252531";
+  width: 150px;
   @media (max-width: 1200px) {
     font-size: 16px;
     width: 150px;

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import step2 from "../../../images/step2.svg";
-import step2small from "../../../images/step2small.png";
+import step2small from "../../../images/step2small.svg";
 import horn from "../../../images/horn.gif";
 import useMediaQuery from "../../../hooks/useMediaQuery";
 
@@ -61,7 +61,13 @@ const BiggerVertical = styled.div`
   }
 `;
 
-const ShadowIMG = styled.img``;
+const ShadowIMG = styled.img`
+  @media (max-width: 1200px) {
+    filter: drop-shadow(2px 5px 40px #eeeeee);
+    width: 80%;
+    height: 80%;
+  }
+`;
 
 const SmallVertical = styled.div`
   display: flex;
@@ -166,7 +172,7 @@ const HorizontalWrapper1 = styled.div`
   align-items: top;
   justify-content: top;
   @media (max-width: 1500px) {
-    gap: 20px;
+    gap: 40px;
   }
   @media (max-width: 1200px) {
     flex-direction: column;

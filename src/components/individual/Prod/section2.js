@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import ToggleSwitch from "./toggleswitch";
 import bar from "../../../images/bar.png";
-import withbanabo from "../../../images/withbanaboprod.png";
-import withoutbanabo from "../../../images/withoutbanaboprod.png";
+import withbanabo from "../../../images/withbanabo.svg";
+import withoutbanabo from "../../../images/withoutbanabo.svg";
 import withbanabosmall from "../../../images/withbanabosmall.svg";
 import withoutbanabosmall from "../../../images/withoutbanabosmall.svg";
 import useMediaQuery from "../../../hooks/useMediaQuery";
-import background from "../../../images/background2.png";
+import background2 from "../../../images/background2.png";
 
 export default function Section2() {
   const [isParentData, setIsParentData] = useState(false);
@@ -55,7 +55,6 @@ const Wrapper = styled.div`
   min-height: 100vh;
   min-width: 100%;
   position: relative;
-  background-image: url(${background});
   @media (max-width: 1200px) {
     min-height: 60vh;
   }
@@ -64,18 +63,20 @@ const Wrapper = styled.div`
 const HorizontalWrapper = styled.div`
   display: flex;
   align-items: center;
-  flex-direction: row;
-  gap: 20px;
+  flex-direction: column;
+  gap: 50px;
   @media (max-width: 1500px) {
-    flex-direction: column;
     gap: 60px;
   }
 `;
 
 const EditIMG = styled.img`
+  width: 180%;
+  height: 180%;
+
   @media (max-width: 1500px) {
-    width: 80%;
-    height: 80%;
+    width: 160%;
+    height: 160%;
   }
 `;
 
@@ -94,7 +95,7 @@ const VerticalWrapper1 = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 80px;
+  gap: 50px;
 
   @media (max-width: 1200px) {
     gap: 40px;
@@ -105,7 +106,7 @@ const VerticalWrapper2 = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 60px;
+  gap: 50px;
 `;
 
 const HorizontalWrapper1 = styled.div`
@@ -152,7 +153,7 @@ const YellowRectangle = styled.div`
 const BigBlackText = styled.div`
   font-size: 44px;
   line-height: 54px;
-  text-align: left;
+  text-align: center;
   width: 600px;
   font-family: "ProximaNovaSemiBold";
   color: #252531;

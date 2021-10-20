@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import step3 from "../../../images/step3.svg";
-import step3small from "../../../images/step3small.png";
+import step3small from "../../../images/step3small.svg";
 import goldheart from "../../../images/goldheart.gif";
 import useMediaQuery from "../../../hooks/useMediaQuery";
 
@@ -60,7 +60,13 @@ const BiggerVertical = styled.div`
   }
 `;
 
-const ShadowIMG = styled.img``;
+const ShadowIMG = styled.img`
+  @media (max-width: 1200px) {
+    filter: drop-shadow(2px 5px 40px #eeeeee);
+    width: 80%;
+    height: 80%;
+  }
+`;
 
 const SmallVertical = styled.div`
   display: flex;
@@ -164,7 +170,7 @@ const HorizontalWrapper1 = styled.div`
   align-items: top;
   justify-content: top;
   @media (max-width: 1500px) {
-    gap: 20px;
+    gap: 40px;
   }
   @media (max-width: 1200px) {
     flex-direction: column;
