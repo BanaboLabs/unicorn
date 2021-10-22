@@ -267,7 +267,7 @@ const VerticalWrapper11 = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 60px;
   }
 `;
 

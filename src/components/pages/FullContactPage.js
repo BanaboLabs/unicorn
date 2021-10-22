@@ -99,9 +99,7 @@ export default function FullContactPage() {
                     <SubText>We’re always ready to answer questions</SubText>
                     <SubText>You’ll hear back within 24 hours</SubText>{" "}
                   </SubTextWrapper>
-                  <StyledButton>
-                    Thank you! Your message has been received!
-                  </StyledButton>
+                  <StyledButton>Thank you! Message received!</StyledButton>
                 </InputWrapper>
               </Form>
             )}

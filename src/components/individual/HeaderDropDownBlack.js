@@ -255,11 +255,11 @@ const DropDownWrapper = styled.div`
 
 const StyledButton = styled.button`
   font-family: "ProximaNovaBold";
-  font-size: 12px;
+  font-size: 16px;
   color: #ffffff;
   border: none;
-  width: 100px;
-  height: 32px;
+  width: 130px;
+  height: 40px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
