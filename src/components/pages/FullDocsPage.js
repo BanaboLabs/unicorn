@@ -105,7 +105,7 @@ const Adjustableimg = styled.img`
     height: auto;
   }
   @media (max-width: 1200px) {
-    width: 74vw;
+    width: 72vw;
     height: auto;
   }
 `;
@@ -138,6 +138,9 @@ const VStack1 = styled.div`
   justify-content: center;
   align-items: center;
   gap: 120px;
+  @media (max-width: 1200px) {
+    gap: 60px;
+  }
 `;
 
 const VStack2 = styled.div`
@@ -217,7 +220,7 @@ const Rectangle = styled.div`
     width: 500px;
   }
   @media (max-width: 1200px) {
-    width: 65vw;
+    width: 72vw;
   }
 `;
 
