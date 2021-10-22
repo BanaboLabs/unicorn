@@ -21,7 +21,7 @@ export default function Section5() {
                 <VerySmallBlackText>
                   Banabo analyzes each channel’s performance with our in-house
                   machine learning model telling you exactly what influenced a
-                  conversion.
+                  conversion
                 </VerySmallBlackText>
               ) : (
                 <VerySmallBlackText>
