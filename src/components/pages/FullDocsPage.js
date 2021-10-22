@@ -254,7 +254,7 @@ const InsideText = styled.div`
   font-size: 22px;
   max-width: 370px;
   @media (max-width: 1200px) {
-    font-size: 12px;
+    font-size: 14px;
     width: 160px;
   }
 `;
