@@ -89,7 +89,7 @@ export default function Section1() {
                 initial="hidden"
                 animate="visible"
                 variants={variants}
-                transition={{ delay: 0.5 }}
+                transition={{ delay: 0.6 }}
                 src={product}
               />
             ) : null}
@@ -143,7 +143,14 @@ const Wrapper = styled.div`
   }
 `;
 
-const TheAnimation = styled(motion.div)``;
+const TheAnimation = styled(motion.div)`
+  @media (max-width: 1500px) {
+    padding-left: 80px;
+  }
+  @media (max-width: 1200px) {
+    padding-left: 0px;
+  }
+`;
 
 const ContentWrapper = styled(motion.div)`
   display: flex;
@@ -241,7 +248,6 @@ const HorizontalWrapper1 = styled.div`
 
   @media (max-width: 1500px) {
     gap: 80px;
-    padding-right: 80px;
   }
 
   @media (max-width: 1200px) {
@@ -249,7 +255,6 @@ const HorizontalWrapper1 = styled.div`
     justify-content: center;
     align-items: center;
     gap: 30px;
-    padding-left: 80px;
   }
 `;
 
@@ -306,6 +311,7 @@ const VerticalWrapper1 = styled.div`
   justify-items: left;
   align-content: left;
   gap: 30px;
+
   @media (max-width: 1200px) {
     justify-content: center;
     align-items: center;
