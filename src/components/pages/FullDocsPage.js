@@ -34,14 +34,14 @@ export default function DocsPage() {
                 <InsideVStack>
                   <SubTitle2>The Basics</SubTitle2>
                   <InsideHStack>
-                    <img src={uno} />
+                    <IMGShrinker src={uno} />
                     <InsideText>
                       Add a clickable Banabo link to each channel to uniquely
                       identify visitors
                     </InsideText>
                   </InsideHStack>
                   <InsideHStack>
-                    <img src={dos} />
+                    <IMGShrinker src={dos} />
                     <InsideText>
                       Add the code snippet to your website
                     </InsideText>
@@ -106,6 +106,13 @@ const Adjustableimg = styled.img`
   }
   @media (max-width: 1200px) {
     width: 72vw;
+    height: auto;
+  }
+`;
+
+const IMGShrinker = styled.img`
+  @media (max-width: 1200px) {
+    width: 8%;
     height: auto;
   }
 `;
@@ -189,7 +196,7 @@ const Title = styled.div`
 `;
 
 const SubTitle1 = styled.div`
-  font-family: "ProximaNovaBold";
+  font-family: "ProximaNovaSemiBold";
   font-size: 30px;
   color: #252531;
   line-height: 45px;
@@ -203,6 +210,9 @@ const SubTitle2 = styled.div`
   font-size: 30px;
   color: #252531;
   line-height: 45px;
+  @media (max-width: 1200px) {
+    font-size: 26px;
+  }
 `;
 
 const Rectangle = styled.div`
@@ -245,7 +255,7 @@ const InsideText = styled.div`
   max-width: 370px;
   @media (max-width: 1200px) {
     font-size: 12px;
-    width: 200px;
+    width: 160px;
   }
 `;
 
