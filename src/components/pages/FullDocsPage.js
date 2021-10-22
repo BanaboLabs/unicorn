@@ -132,7 +132,7 @@ const HStack1 = styled.div`
   @media (max-width: 1200px) {
     flex-direction: column;
     gap: 40px;
-    padding-top: 60px;
+    padding-top: 40px;
     align-items: center;
     padding-right: 0px;
   }

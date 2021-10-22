@@ -3,7 +3,6 @@ import React from "react";
 import styled from "styled-components";
 import Footer from "../individual/Prod/footer";
 import Section1 from "../individual/Prod/section1";
-import Section2 from "../individual/Prod/section2";
 import Section3 from "../individual/Prod/section3";
 import Section4 from "../individual/Prod/section4";
 import Section5 from "../individual/Prod/section5";

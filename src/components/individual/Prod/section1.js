@@ -148,6 +148,9 @@ const TheAnimation = styled(motion.div)``;
 const ContentWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
+  @media (max-width: 1200px) {
+    padding-bottom: 60px;
+  }
 `;
 
 const Spacer = styled.div`

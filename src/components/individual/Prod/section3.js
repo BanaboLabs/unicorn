@@ -47,16 +47,6 @@ export default function Section3() {
   );
 }
 
-const RectangleWhite = styled.div`
-  width: 625px;
-  height: 561px;
-`;
-
-const RectangleYellow = styled.div`
-  width: 625px;
-  height: 561px;
-`;
-
 const Wrapper = styled.div`
   min-height: 50vh;
   min-width: 100%;
@@ -106,7 +96,8 @@ const ContentWrapper = styled.div`
   padding-top: 200px;
   @media (max-width: 1200px) {
     padding: 0px;
-    padding-top: 120px;
+    padding-top: 60px;
+    padding-bottom: 40px;
   }
 `;
 

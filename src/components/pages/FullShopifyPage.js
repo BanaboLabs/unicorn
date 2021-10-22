@@ -129,20 +129,27 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   padding-top: 95px;
   padding-bottom: 95px;
+  @media (max-width: 1500px) {
+    padding-left: 200px;
+  }
+  @media (max-width: 1200px) {
+    padding-left: 0px;
+    padding-top: 60px;
+  }
 `;
 
 const ShrunkIMG = styled.img`
   width: 69%;
   height: 69%;
 
-  @media (max-width: 900px) {
-    width: 40%;
-    height: 40%;
+  @media (max-width: 1200px) {
+    width: 60vw;
+    height: auto;
   }
 `;
 
 const CodeIMG = styled.img`
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     width: 80%;
     height: 80%;
   }
@@ -153,10 +160,11 @@ const HStack2 = styled.div`
   flex-direction: row;
   gap: 25px;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     justify-content: center;
     align-items: center;
     gap: 5px;
+    padding-right: 10px;
   }
 `;
 
@@ -164,7 +172,7 @@ const VStack2 = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,9 +181,9 @@ const VStack2 = styled.div`
 
 const Spacer = styled.div`
   display: none;
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     display: inline;
-    padding-top: 50px;
+    padding-top: 10px;
   }
 `;
 
@@ -190,7 +198,7 @@ const Title = styled.div`
   color: #252531;
   line-height: 85px;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     font-size: 35px;
     padding-left: 10px;
     line-height: 60px;
@@ -203,7 +211,7 @@ const SubTitle = styled.div`
   color: #252531;
   line-height: 45px;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     font-size: 26px;
     width: 300px;
     text-align: center;
@@ -214,10 +222,11 @@ const LargeVStack = styled.div`
   display: flex;
   flex-direction: column;
   gap: 108px;
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 60px;
   }
 `;
 
@@ -227,7 +236,7 @@ const SmallVStack = styled.div`
   gap: 36px;
   align-content: left;
   justify-items: left;
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     justify-content: center;
     align-items: center;
   }
@@ -237,7 +246,7 @@ const Line = styled.div`
   width: 1380px;
   height: 1px;
   background: #eaeaea;
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     width: 80%;
   }
 `;
@@ -255,7 +264,7 @@ const TextWrapper = styled.div`
   line-height: 24px;
   color: #7f7f7f;
   font-size: 20px;
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     font-size: 16px;
     width: 340px;
     text-align: center;
@@ -272,7 +281,7 @@ const Rectangle = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     width: 300px;
     height: 137px;
   }

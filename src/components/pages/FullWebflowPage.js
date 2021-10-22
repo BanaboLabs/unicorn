@@ -76,6 +76,13 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   padding-top: 95px;
   padding-bottom: 95px;
+  @media (max-width: 1500px) {
+    padding-left: 200px;
+  }
+  @media (max-width: 1200px) {
+    padding-left: 0px;
+    padding-top: 60px;
+  }
 `;
 
 const ShrunkIMG = styled.img`
@@ -108,6 +115,7 @@ const HStack2 = styled.div`
     justify-content: center;
     align-items: center;
     gap: 5px;
+    padding-right: 10px;
   }
 `;
 
@@ -126,7 +134,7 @@ const Spacer = styled.div`
   display: none;
   @media (max-width: 900px) {
     display: inline;
-    padding-top: 50px;
+    padding-top: 10px;
   }
 `;
 
@@ -169,6 +177,7 @@ const LargeVStack = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 60px;
   }
 `;
 

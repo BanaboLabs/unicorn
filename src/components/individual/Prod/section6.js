@@ -24,10 +24,12 @@ export default function BottomSection() {
               <StyledButton>Try Banabo Free</StyledButton>
             </StyledLink>
             <StyledLink to="/contact">
-              <HorizontalWrapper2>
-                <SubText>Chat With Us</SubText>
-                <img src={cuterarrowright} />
-              </HorizontalWrapper2>
+              {isDesktop ? (
+                <HorizontalWrapper2>
+                  <SubText>Chat With Us</SubText>
+                  <img src={cuterarrowright} />
+                </HorizontalWrapper2>
+              ) : null}
             </StyledLink>
           </HorizontalWrapper>
         </VerticalWrapper1>
@@ -58,7 +60,7 @@ const ContentWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   @media (max-width: 1200px) {
-    padding-top: 60px;
+    padding-top: 80px;
   }
 `;
 
@@ -87,6 +89,9 @@ const HorizontalWrapper = styled.div`
   gap: 20px;
   justify-content: center;
   align-items: center;
+  @media (max-width: 1200px) {
+    gap: 0px;
+  }
 `;
 
 const Title = styled.div`
