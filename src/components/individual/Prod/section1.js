@@ -27,7 +27,14 @@ export default function Section1() {
 
   return (
     <Wrapper>
-      {isDesktop ? <HeaderBlack /> : <HeaderDropDownBlack />}
+      <TheAnimation
+        initial="hidden"
+        animate="visible"
+        variants={variants}
+        transition={{ delay: 0.5 }}
+      >
+        {isDesktop ? <HeaderBlack /> : <HeaderDropDownBlack />}
+      </TheAnimation>
       <ContentWrapper>
         <VerticalWrapper11>
           <HorizontalWrapper1>
@@ -129,6 +136,8 @@ const Wrapper = styled.div`
   position: relative;
   background-image: url(${background1});
 `;
+
+const TheAnimation = styled(motion.div)``;
 
 const ContentWrapper = styled(motion.div)`
   display: flex;
