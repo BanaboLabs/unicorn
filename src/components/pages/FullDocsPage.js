@@ -6,10 +6,10 @@ import useMediaQuery from "../../hooks/useMediaQuery";
 import Boat from "../../images/boat.gif";
 import uno from "../../images/uno.svg";
 import dos from "../../images/dos.svg";
-import shopify from "../../images/shopifyimage.svg";
-import react from "../../images/reactimage.svg";
-import squarespace from "../../images/squarespaceimage.svg";
-import webflow from "../../images/webflowimage.svg";
+import shopify from "../../images/shopify.svg";
+import react from "../../images/react.svg";
+import squarespace from "../../images/squarespace.svg";
+import webflow from "../../images/webflow.svg";
 import { Link } from "gatsby";
 
 export default function DocsPage() {
@@ -27,12 +27,12 @@ export default function DocsPage() {
                   <TheBoat src={Boat} />
                   <Title>Documentation</Title>
                 </HStack2>
-                <SubTitle>A quick guide for Banabo</SubTitle>
+                <SubTitle1>A quick guide for Banabo</SubTitle1>
                 <Spacer />
               </VStack2>
               <Rectangle>
                 <InsideVStack>
-                  <SubTitle>The Basics</SubTitle>
+                  <SubTitle2>The Basics</SubTitle2>
                   <InsideHStack>
                     <img src={uno} />
                     <InsideText>
@@ -54,16 +54,16 @@ export default function DocsPage() {
                 <StyledLink to="/shopify">
                   <Adjustableimg src={shopify} />{" "}
                 </StyledLink>{" "}
-                <StyledLink to="/react">
-                  <Adjustableimg src={react} />
+                <StyledLink to="/webflow">
+                  <Adjustableimg src={webflow} />
                 </StyledLink>
-              </CardHStack>
-              <CardHStack>
                 <StyledLink to="/squarespace">
                   <Adjustableimg src={squarespace} />
                 </StyledLink>
-                <StyledLink to="/webflow">
-                  <Adjustableimg src={webflow} />
+              </CardHStack>
+              <CardHStack>
+                <StyledLink to="/react">
+                  <Adjustableimg src={react} />
                 </StyledLink>
               </CardHStack>
             </CardVStack>
@@ -96,37 +96,38 @@ const ContentWrapper = styled.div`
 
 const Spacer = styled.div`
   display: none;
-  @media (max-width: 900px) {
-    display: inline;
-    padding-top: 50px;
-  }
 `;
 
 const Adjustableimg = styled.img`
-  @media (max-width: 900px) {
+  filter: drop-shadow(2px 5px 40px #eeeeee);
+  @media (max-width: 1500px) {
     width: 80%;
-    height: 80%;
+    height: auto;
+  }
+  @media (max-width: 1200px) {
+    width: 74vw;
+    height: auto;
   }
 `;
 
 const HStack1 = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 180px;
+  gap: 170px;
   padding-top: 100px;
-  padding-left: 30px;
   display: flex;
   justify-content: center;
-  align-items: center;
 
-  @media (max-width: 900px) {
-    flex-direction: column;
+  @media (max-width: 1500px) {
+    gap: 100px;
+    padding-right: 80px;
   }
-
-  @media (max-width: 900px) {
-    gap: 0px;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    gap: 40px;
     padding-top: 60px;
-    padding-left: 0px;
+    align-items: center;
+    padding-right: 0px;
   }
 `;
 
@@ -137,19 +138,13 @@ const VStack1 = styled.div`
   justify-content: center;
   align-items: center;
   gap: 120px;
-
-  @media (max-width: 900px) {
-    gap: 40px;
-  }
 `;
 
 const VStack2 = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
-  @media (max-width: 900px) {
-    display: flex;
-    justify-content: center;
+  @media (max-width: 1200px) {
     align-items: center;
   }
 `;
@@ -159,10 +154,13 @@ const HStack2 = styled.div`
   flex-direction: row;
   gap: 25px;
 
-  @media (max-width: 900px) {
-    justify-content: center;
+  @media (max-width: 1500px) {
+    gap: 15px;
+  }
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
     align-items: center;
-    gap: 1px;
   }
 `;
 
@@ -173,26 +171,35 @@ const TheBoat = styled.img`
 
 const Title = styled.div`
   font-family: "ProximaNovaBold";
-  font-size: 70px;
+  font-size: 75px;
   color: #252531;
   line-height: 85px;
 
-  @media (max-width: 900px) {
-    font-size: 35px;
-    padding-left: 10px;
-    line-height: 60px;
+  @media (max-width: 1500px) {
+    font-size: 50px;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 38px;
+    line-height: 30px;
   }
 `;
 
-const SubTitle = styled.div`
-  font-family: "ProximaNovaSemibold";
+const SubTitle1 = styled.div`
+  font-family: "ProximaNovaBold";
   font-size: 30px;
   color: #252531;
   line-height: 45px;
-
-  @media (max-width: 900px) {
-    font-size: 24px;
+  @media (max-width: 1200px) {
+    font-size: 20px;
   }
+`;
+
+const SubTitle2 = styled.div`
+  font-family: "ProximaNovaBold";
+  font-size: 30px;
+  color: #252531;
+  line-height: 45px;
 `;
 
 const Rectangle = styled.div`
@@ -206,9 +213,11 @@ const Rectangle = styled.div`
   align-items: center;
   padding: 20px;
 
-  @media (max-width: 900px) {
-    width: 72vw;
-    height: 189px;
+  @media (max-width: 1500px) {
+    width: 500px;
+  }
+  @media (max-width: 1200px) {
+    width: 65vw;
   }
 `;
 
@@ -216,12 +225,8 @@ const InsideVStack = styled.div`
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding-left: 10px;
   padding-bottom: 10px;
   align-items: left;
-  @media (max-width: 900px) {
-    gap: 14px;
-  }
 `;
 
 const InsideHStack = styled.div`
@@ -235,8 +240,9 @@ const InsideText = styled.div`
   font-family: "ProximaNovaSemibold";
   font-size: 22px;
   max-width: 370px;
-  @media (max-width: 900px) {
-    font-size: 15px;
+  @media (max-width: 1200px) {
+    font-size: 12px;
+    width: 200px;
   }
 `;
 
@@ -244,31 +250,28 @@ const CardVStack = styled.div`
   display: flex;
   flex-direction: column;
   gap: 75px;
-  @media (max-width: 900px) {
-    gap: 30px;
+  @media (max-width: 1200px) {
+    gap: 50px;
   }
 `;
 
 const CardHStack = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 200px;
-  @media (max-width: 900px) {
-    gap: 30px;
-    display: flex;
-    align-items: center;
+  gap: 85px;
+
+  @media (max-width: 1500px) {
+    gap: 0px;
+  }
+
+  @media (max-width: 1200px) {
     flex-direction: column;
+    gap: 50px;
   }
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  @media (max-width: 900px) {
-    gap: 0px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
 `;
 
 //
