@@ -5,6 +5,7 @@ import chatIcon from "../../images/chaticon.svg";
 import HeaderWhite from "../individual/HeaderWhite";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import HeaderDropDownWhite from "../individual/HeaderDropDownWhite";
+import emailjs from "emailjs-com";
 
 export default function FullContactPage() {
   const isDesktop = useMediaQuery("(min-width: 800px)");
@@ -24,21 +25,27 @@ export default function FullContactPage() {
   useEffect(() => {
     if (submitted == true) {
       function postSignUp() {
-        const data = {
-          Email: yourName.value,
-          Name: emailAddress.value,
+        var templateParams = {
+          Email: emailAddress.value,
+          Name: yourName.value,
           Message: yourMessage.value,
         };
 
-        fetch("https://api.sheetmonkey.io/form/kwSXEApTeEbZy4XcYK4PnU", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }).then((result) => {
-          // Handle the result
-        });
+        emailjs
+          .send(
+            "service_08aea5o",
+            "template_2eqvm3a",
+            templateParams,
+            "user_m6r5vskSYkTsBvEoBHTxg"
+          )
+          .then(
+            function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+            },
+            function (error) {
+              console.log("FAILED...", error);
+            }
+          );
       }
 
       postSignUp();

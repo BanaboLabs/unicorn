@@ -5,6 +5,7 @@ import lightbulb from "../../../images/lightbulb.gif";
 import { Link } from "gatsby";
 import product from "../../../images/product.svg";
 import background1 from "../../../images/background.png";
+import background2 from "../../../images/background2.png";
 import productsmall from "../../../images/productsmall.svg";
 import logostrip from "../../../images/logostrip.svg";
 import logostripsmall from "../../../images/logostripsmall.svg";
@@ -64,7 +65,7 @@ export default function Section1() {
                   variants={variants}
                   transition={{ delay: 0.7 }}
                 >
-                  <StyledLink>
+                  <StyledLink to="/signup">
                     <StyledButton>Try Banabo Free</StyledButton>
                   </StyledLink>
                 </TransitionDiv1>
@@ -134,7 +135,12 @@ const Wrapper = styled.div`
   min-height: 100vh;
   min-width: 100%;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: url(${background1});
+  @media (max-width: 1500px) {
+    background-image: url(${background2});
+  }
 `;
 
 const TheAnimation = styled(motion.div)``;
@@ -253,7 +259,7 @@ const VerticalWrapper11 = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 40px;
   }
 `;
 
