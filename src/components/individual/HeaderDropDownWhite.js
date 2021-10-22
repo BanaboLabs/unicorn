@@ -78,7 +78,7 @@ export default function HeaderDropDownWhite() {
                       </StyledLink>
                       <VerticalWrapperNew>
                         <BlueRectangle>
-                          <StyledLink to="/signup">
+                          <StyledLink to="https://app.banabo.io/signup">
                             <StyledButton>
                               <span>Sign Up</span>
                             </StyledButton>
@@ -200,8 +200,13 @@ const NavWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 285px;
   @media (max-width: 900px) {
     gap: 34vw;
+  }
+
+  @media (max-width: 400px) {
+    gap: 22vw;
   }
 `;
 

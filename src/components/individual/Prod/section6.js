@@ -20,7 +20,7 @@ export default function BottomSection() {
             <SubTitle>Get started for free.</SubTitle>
           </VerticalWrapper>
           <HorizontalWrapper>
-            <StyledLink to="/signup">
+            <StyledLink to="https://app.banabo.io/signup">
               <StyledButton>Try Banabo Free</StyledButton>
             </StyledLink>
             <StyledLink to="/contact">

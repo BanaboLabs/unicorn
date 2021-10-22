@@ -120,7 +120,7 @@ const IMGShrinker = styled.img`
 const HStack1 = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 170px;
+  gap: 200px;
   padding-top: 100px;
   display: flex;
   justify-content: center;

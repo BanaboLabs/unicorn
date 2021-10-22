@@ -5,7 +5,7 @@ import HeaderDropDownWhite from "../individual/HeaderDropDownWhite";
 import useMediaQuery from "../../hooks/useMediaQuery";
 
 export default function FullPricingPage() {
-  const isDesktop = useMediaQuery("(min-width: 800px)");
+  const isDesktop = useMediaQuery("(min-width: 1200px)");
 
   return (
     <Wrapper>

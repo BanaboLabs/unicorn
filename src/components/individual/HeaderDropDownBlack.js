@@ -77,7 +77,7 @@ export default function HeaderDropDownBlack() {
                     </StyledLink>
                     <VerticalWrapperNew>
                       <BlueRectangle>
-                        <StyledLink to="/signup">
+                        <StyledLink to="https://app.banabo.io/signup">
                           <StyledButton>
                             <span>Sign Up</span>
                           </StyledButton>

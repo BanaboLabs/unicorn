@@ -65,7 +65,7 @@ export default function Section1() {
                   variants={variants}
                   transition={{ delay: 0.7 }}
                 >
-                  <StyledLink to="/signup">
+                  <StyledLink to="https://app.banabo.io/signup">
                     <StyledButton>Try Banabo Free</StyledButton>
                   </StyledLink>
                 </TransitionDiv1>

@@ -8,7 +8,7 @@ import HeaderDropDownWhite from "../individual/HeaderDropDownWhite";
 import emailjs from "emailjs-com";
 
 export default function FullContactPage() {
-  const isDesktop = useMediaQuery("(min-width: 800px)");
+  const isDesktop = useMediaQuery("(min-width: 1200px)");
 
   const yourName = useInput("");
   const emailAddress = useInput("");

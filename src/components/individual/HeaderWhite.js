@@ -41,7 +41,7 @@ export default function HeaderWhite() {
                 <TabItem>Login</TabItem>
               </StyledLink>
             </MobileHidden>
-            <StyledLink to="/signup">
+            <StyledLink to="https://app.banabo.io/signup">
               <Button>Sign Up</Button>
             </StyledLink>
           </SubGroup2>
@@ -65,6 +65,9 @@ const SubWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   padding: 20px;
+  @media (max-width: 1500px) {
+    padding-right: 100px;
+  }
 `;
 
 const NavWrapper = styled.div`
@@ -73,9 +76,8 @@ const NavWrapper = styled.div`
   align-items: center;
   gap: 620px;
 
-  @media (max-width: 700px) {
-    display: grid;
-    justify-content: center;
+  @media (max-width: 1500px) {
+    gap: 340px;
   }
 `;
 
@@ -107,7 +109,7 @@ const Button = styled.button`
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 300px;
   background-color: #ffffff;
 
   :hover {
