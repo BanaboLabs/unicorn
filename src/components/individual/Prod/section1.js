@@ -162,6 +162,9 @@ const ContentWrapper = styled(motion.div)`
 
 const Spacer = styled.div`
   padding-top: 280px;
+  @media (max-width: 1500px) {
+    padding-top: 180px;
+  }
   @media (max-width: 1200px) {
     padding-top: 0px;
   }

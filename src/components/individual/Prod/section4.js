@@ -16,12 +16,20 @@ export default function Section4() {
             <BiggerVertical>
               <SmallVertical>
                 <Step>STEP 2</Step>
-                <SmallBlackText>See conversion paths</SmallBlackText>
+                <SmallBlackText>See the top conversion paths</SmallBlackText>
               </SmallVertical>
-              <VerySmallBlackText>
-                Understand the exact combination of touch-points with your brand
-                that leads to a signup or purchase
-              </VerySmallBlackText>
+              {isDesktop ? (
+                <VerySmallBlackText>
+                  Visitors rarely convert the first time on your site.
+                  Understand the exact combination of channels that leads a
+                  website visitor to a signup or purchase
+                </VerySmallBlackText>
+              ) : (
+                <VerySmallBlackText>
+                  Understand the exact combination of channels that leads a
+                  website visitor to a signup or purchase
+                </VerySmallBlackText>
+              )}
             </BiggerVertical>
           </VerticalWrapper1>
           {isDesktop ? (
@@ -62,6 +70,7 @@ const BiggerVertical = styled.div`
 `;
 
 const ShadowIMG = styled.img`
+  filter: drop-shadow(2px 5px 40px #eeeeee);
   @media (max-width: 1200px) {
     filter: drop-shadow(2px 5px 40px #eeeeee);
     width: 80%;
@@ -134,8 +143,8 @@ const Step = styled.div`
 
 const THEImg = styled.img`
   position: absolute;
-  top: 60px;
-  left: 70px;
+  top: 25px;
+  left: 30px;
   height: 62px;
   width: 62px;
 `;
@@ -143,11 +152,15 @@ const THEImg = styled.img`
 const SmallBlackText = styled.div`
   font-size: 50px;
   line-height: 61px;
-  width: 450px;
+  width: 400px;
   font-family: "ProximaNovaSemiBold";
   color: #252531;
   @media (max-width: 1200px) {
     font-size: 26px;
+    width: 200px;
+    line-height: 35px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 `;
 
@@ -158,7 +171,7 @@ const VerySmallBlackText = styled.div`
   color: #3a3a3a;
   width: 550px;
   @media (max-width: 1500px) {
-    width: 380px;
+    width: 440px;
   }
   @media (max-width: 1200px) {
     font-size: 18px;

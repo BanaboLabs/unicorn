@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import step1 from "../../../images/step1.png";
+import step1 from "../../../images/step1.svg";
 import step1test from "../../../images/step1.png";
 import step1small from "../../../images/step1small.svg";
 import heart from "../../../images/heartgif.gif";
@@ -25,10 +25,19 @@ export default function Section3() {
                 <Step>STEP 1</Step>
                 <SmallBlackText>Connect your channels</SmallBlackText>
               </SmallVertical>
-              <VerySmallBlackText>
-                Banabo creates a clickable link for each channel that uniquely
-                identifies every website visitor
-              </VerySmallBlackText>
+
+              {isDesktop ? (
+                <VerySmallBlackText>
+                  Banabo gathers the traffic source for all unique visitors on
+                  your site. Know both the general source like Facebook or be
+                  precise with a campaign
+                </VerySmallBlackText>
+              ) : (
+                <VerySmallBlackText>
+                  Banabo gathers the traffic source for all unique visitors on
+                  your site.
+                </VerySmallBlackText>
+              )}
             </BiggerVertical>
           </VerticalWrapper1>
           {isDesktop ? (
@@ -69,6 +78,7 @@ const BiggerVertical = styled.div`
 `;
 
 const ShadowIMG = styled.img`
+  filter: drop-shadow(2px 5px 40px #eeeeee);
   @media (max-width: 1200px) {
     filter: drop-shadow(2px 5px 40px #eeeeee);
     width: 80%;
@@ -150,8 +160,8 @@ const Step = styled.div`
 
 const THEImg = styled.img`
   position: absolute;
-  top: 70px;
-  left: 74px;
+  top: 35px;
+  left: 40px;
   height: 62px;
   width: 62px;
 `;
@@ -159,11 +169,15 @@ const THEImg = styled.img`
 const SmallBlackText = styled.div`
   font-size: 50px;
   line-height: 61px;
-  width: 450px;
+  width: 410px;
   font-family: "ProximaNovaSemiBold";
   color: #252531;
   @media (max-width: 1200px) {
     font-size: 26px;
+    width: 200px;
+    line-height: 35px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 `;
 
@@ -174,7 +188,7 @@ const VerySmallBlackText = styled.div`
   color: #3a3a3a;
   width: 550px;
   @media (max-width: 1500px) {
-    width: 380px;
+    width: 440px;
   }
   @media (max-width: 1200px) {
     font-size: 18px;
