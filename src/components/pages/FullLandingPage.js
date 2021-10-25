@@ -3,6 +3,9 @@ import styled from "styled-components";
 import useInput from "../customhooks/useInput";
 import LeftSide from "../../images/leftside.svg";
 import SmallBanabo from "../../images/smallbanabo.svg";
+import beta from "../../images/betalandingpage.svg";
+import left from "../../images/leftlandingpage.svg";
+import emailjs from "emailjs-com";
 
 // Function to save the link info
 const noRefresh = (event) => {
@@ -11,8 +14,9 @@ const noRefresh = (event) => {
 
 export default function FullLandingPage() {
   // Information Captured
-  const yourName = useInput("");
+  const yourName = useInput("New Customer");
   const emailAddress = useInput("");
+  const yourMessage = useInput("Landing Page Conversion");
   // Tells us whether the user has submitted or not
   const [submitted, setSubmitted] = useState(false);
 
@@ -20,20 +24,27 @@ export default function FullLandingPage() {
   useEffect(() => {
     if (submitted == true) {
       function postSignUp() {
-        const data = {
-          Email: yourName.value,
-          Name: emailAddress.value,
+        var templateParams = {
+          Email: emailAddress.value,
+          Name: yourName.value,
+          Message: yourMessage.value,
         };
 
-        fetch("https://api.sheetmonkey.io/form/uRgMbCEDTTRYcGuiGbLyxv", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }).then((result) => {
-          // Handle the result
-        });
+        emailjs
+          .send(
+            "service_08aea5o",
+            "template_2eqvm3a",
+            templateParams,
+            "user_m6r5vskSYkTsBvEoBHTxg"
+          )
+          .then(
+            function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+            },
+            function (error) {
+              console.log("FAILED...", error);
+            }
+          );
       }
 
       postSignUp();
@@ -46,61 +57,48 @@ export default function FullLandingPage() {
       <Wrapper>
         <ContentWrapper>
           <Background1>
-            <StyledIMG1 src={LeftSide} />
+            <StyledIMG1 src={left} />
+            <AbsoluteIMG src={beta} />
           </Background1>
           <Background2>
-            <Div>
-              <StyledIMG2 src={SmallBanabo} />
-              <NewWrapper>
-                <StyledDiv>
-                  <Form onSubmit={noRefresh}>
-                    {submitted == false ? (
-                      <InputWrapper>
-                        <Text>Sign Up</Text>
-                        <SubTextWrapper>
-                          <SubText>
-                            Sign up to reserve your spot in our Beta Release.
-                          </SubText>
-                          <SubText>We’ll let you in as soon as we can</SubText>
-                        </SubTextWrapper>
-                        <Input1
-                          type="text"
-                          placeholder="Your Name"
-                          value={yourName.value}
-                          onChange={yourName.onChange}
-                        />
-                        <Input1
-                          type="email"
-                          placeholder="Email Address"
-                          value={emailAddress.value}
-                          onChange={emailAddress.onChange}
-                        />
-                        <StyledButton
-                          type="submit"
-                          onClick={() =>
-                            yourName.value.length >= 2 &&
-                            emailAddress.value.length >= 2
-                              ? setSubmitted(true)
-                              : null
-                          }
-                        >
-                          Sign Up
-                        </StyledButton>
-                      </InputWrapper>
-                    ) : (
-                      <InputWrapper>
-                        <Text>Thank You!</Text>
-                        <SubTextWrapper>
-                          <SubText>
-                            We’ll send an email when it’s ready for you
-                          </SubText>
-                        </SubTextWrapper>
-                      </InputWrapper>
-                    )}
-                  </Form>
-                </StyledDiv>
-              </NewWrapper>
-            </Div>
+            {submitted == false ? (
+              <VStack>
+                <Text>Sign up for free</Text>
+                <SubVStack>
+                  <SmallTextGray>Turn website traffic into sales</SmallTextGray>
+                  <SmallTextBlack>
+                    We’ll email you an access link
+                  </SmallTextBlack>
+                </SubVStack>
+                <Form onSubmit={noRefresh}>
+                  <Input1
+                    type="email"
+                    placeholder="email"
+                    value={emailAddress.value}
+                    onChange={emailAddress.onChange}
+                  />
+                  <StyledButton
+                    type="submit"
+                    onClick={() => setSubmitted(true)}
+                  >
+                    Get Started
+                  </StyledButton>
+                </Form>
+              </VStack>
+            ) : (
+              <VStack>
+                <Text>Sign up for free</Text>
+                <SubVStack>
+                  <SmallTextGray>Turn website traffic into sales</SmallTextGray>
+                  <SmallTextBlack>
+                    We’ll email you an access link
+                  </SmallTextBlack>
+                </SubVStack>
+                <Form onSubmit={noRefresh}>
+                  <StyledButton>Thank you!</StyledButton>
+                </Form>
+              </VStack>
+            )}
           </Background2>
         </ContentWrapper>
       </Wrapper>
@@ -121,39 +119,84 @@ const Wrapper = styled.div`
   background-color: #21212b;
 `;
 
-const Div = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`;
-
-const NewWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  gap: 35px;
-  padding-bottom: 20px;
-  @media (min-height: 1200px) {
-    padding-bottom: 200px;
-  }
-`;
-
 const ContentWrapper = styled.div`
   text-align: center;
   display: flex;
-  @media (max-width: 1400px) {
+  @media (max-width: 900px) {
     display: grid;
   }
+`;
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: left;
+`;
+
+const VStack = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+`;
+
+const SubVStack = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 6px;
+`;
+
+const Text = styled.div`
+  font-family: "ProximaNovaBold";
+  font-size: 40px;
+  color: #000000;
+`;
+
+const SmallTextGray = styled.div`
+  font-family: "ProximaNovaRegular";
+  font-size: 16px;
+  color: #8d8c8f;
+`;
+
+const StyledButton = styled.button`
+  font-family: "ProximaNovaSemibold";
+  font-size: 16px;
+  color: #ffffff;
+  border: none;
+  background: linear-gradient(88.63deg, #1bcdf4 6.03%, #1b8cf4 93.77%);
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  width: 281px;
+  height: 45px;
+  @media (max-width: 900px) {
+    width: 70vw;
+  }
+
+  :hover {
+    background: linear-gradient(88.63deg, #17b9dd 6.03%, #1980de 93.77%);
+  }
+`;
+
+const SmallTextBlack = styled.div`
+  font-family: "ProximaNovaRegular";
+  font-size: 16px;
+  color: #000000;
 `;
 
 const Background1 = styled.div`
   width: 50%;
   height: 100vh;
-  background: #192c66;
-  @media (max-width: 1400px) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(39.83deg, #1bcdf4 6.97%, #1b8cf4 94.52%);
+  @media (max-width: 900px) {
     display: none;
   }
 `;
@@ -161,86 +204,38 @@ const Background1 = styled.div`
 const Background2 = styled.div`
   width: 50%;
   height: 100vh;
-  background: #252531;
-  @media (max-width: 1400px) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  background: #ffffff;
+  @media (max-width: 900px) {
     width: 100%;
-  }
-`;
-
-const Text = styled.h1`
-  font-family: "ProximaNovaBold";
-  font-size: 60px;
-  color: #ffffff;
-  @media (max-width: 700px) {
-    font-size: 40px;
-  }
-`;
-
-const SubText = styled.div`
-  font-family: "ProximaNovaRegular";
-  font-size: 24px;
-  color: #ffffff;
-  @media (max-width: 700px) {
-    font-size: 16px;
   }
 `;
 
 const Input1 = styled.input`
   border: none;
   color: #7f848d;
-  width: 500px;
-  height: 50px;
+  width: 258px;
+  height: 30px;
   font-size: 18px;
   font-family: "ProximaNovaRegular";
-  background: rgba(74, 74, 86, 0.44);
+  background: #ffffff;
   border-radius: 5px;
-  outline: none;
-  transition: all 0.2s ease 0s;
-  padding: 6px 20px;
 
-  @media (max-width: 700px) {
-    width: 300px;
+  transition: all 0.2s ease 0s;
+  padding: 6px 10px;
+  outline: 2px solid #8d8c8f;
+  @media (max-width: 900px) {
+    width: 65.5vw;
   }
 
   :focus {
     box-shadow: 0 0 1pt 1pt #40a3ff;
   }
 `;
-
-const Form = styled.form`
-  display: flex;
-  margin-top: 0em;
-  align-items: center;
-`;
-
-const InputWrapper = styled.div`
-  display: grid;
-  gap: 25px;
-  justify-items: center;
-`;
-
-const StyledButton = styled.button`
-  font-family: "ProximaNovaBold";
-  font-size: 19px;
-  color: #ffffff;
-  border: none;
-  width: 542px;
-  height: 50px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 6px;
-  background: linear-gradient(90deg, #265de3, #af71ff);
-
-  @media (max-width: 700px) {
-    width: 340px;
-  }
-
-  :hover {
-    background: linear-gradient(90deg, #104fe8 -10.37%, #9a4bff 108.53%);
-  }
-`;
-
 const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
@@ -252,11 +247,13 @@ const SubTextWrapper = styled.div`
   text-align: center;
 `;
 
-const StyledIMG1 = styled.img`
-  padding-top: 180px;
-  width: 100%;
-  height: 100%;
+const AbsoluteIMG = styled.img`
+  position: absolute;
+  top: -10px;
+  left: 0px;
 `;
+
+const StyledIMG1 = styled.img``;
 
 const StyledIMG2 = styled.img`
   padding-top: 40px;
