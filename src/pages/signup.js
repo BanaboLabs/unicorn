@@ -4,6 +4,8 @@ import Layout from "../components/layout/layout";
 import SEO from "../components/layout/seo";
 import { Helmet } from "react-helmet";
 
+// CURRENTLY DEPRECATED OCT 24th
+
 function SignupPage() {
   return (
     <Layout>
