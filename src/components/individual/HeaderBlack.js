@@ -41,7 +41,7 @@ export default function HeaderBlack() {
                 <TabItem>Login</TabItem>
               </StyledLink>
             </MobileHidden>
-            <StyledLink to="https://app.banabo.io/signup">
+            <StyledLink to="/landing">
               <Button>Sign Up</Button>
             </StyledLink>
           </SubGroup2>
