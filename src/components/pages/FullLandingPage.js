@@ -79,7 +79,9 @@ export default function FullLandingPage() {
                   />
                   <StyledButton
                     type="submit"
-                    onClick={() => setSubmitted(true)}
+                    onClick={() =>
+                      emailAddress.value >= 1 ? setSubmitted(true) : null
+                    }
                   >
                     Get Started
                   </StyledButton>
