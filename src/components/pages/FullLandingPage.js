@@ -97,7 +97,7 @@ export default function FullLandingPage() {
                   </SmallTextBlack>
                 </SubVStack>
                 <Form onSubmit={noRefresh}>
-                  <StyledButton>Thank you!</StyledButton>
+                  <StyledButton>We'll add you soon!</StyledButton>
                 </Form>
               </VStack>
             )}
