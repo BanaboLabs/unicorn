@@ -15,9 +15,6 @@ useEffect(() => {
   console.log("referrer url", referrer);
 }, []);
 
-var referrer = document.referrer;
-console.log("referrer url", referrer);
-
 export default function FullIndexPage() {
   return (
     <ParentWrapper>
