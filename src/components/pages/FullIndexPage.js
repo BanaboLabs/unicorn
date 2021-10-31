@@ -8,6 +8,8 @@ import Section4 from "../individual/Prod/section4";
 import Section5 from "../individual/Prod/section5";
 import Section6 from "../individual/Prod/section6";
 
+useEffect(() => {}, []);
+
 export default function FullIndexPage() {
   return (
     <ParentWrapper>
