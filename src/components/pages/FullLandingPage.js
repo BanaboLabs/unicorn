@@ -6,6 +6,8 @@ import SmallBanabo from "../../images/smallbanabo.svg";
 import beta from "../../images/betalandingpage.svg";
 import left from "../../images/leftlandingpage.svg";
 import emailjs from "emailjs-com";
+import blackleft from "../../images/blackleft.svg";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 // Function to save the link info
 const noRefresh = (event) => {
@@ -13,6 +15,8 @@ const noRefresh = (event) => {
 };
 
 export default function FullLandingPage() {
+  const isDesktop = useMediaQuery("(max-width: 800px)");
+
   // Information Captured
   const yourName = useInput("New Customer");
   const emailAddress = useInput("");
@@ -54,56 +58,114 @@ export default function FullLandingPage() {
   // UI Code
   return (
     <ParentWrapper>
-      <Wrapper>
-        <ContentWrapper>
-          <Background1>
-            <StyledIMG1 src={left} />
-            <AbsoluteIMG src={beta} />
-          </Background1>
-          <Background2>
-            {submitted == false ? (
-              <VStack>
-                <Text>Sign up for free</Text>
-                <SubVStack>
-                  <SmallTextGray>Turn website traffic into sales</SmallTextGray>
-                  <SmallTextBlack>
-                    We’ll email you an access link
-                  </SmallTextBlack>
-                </SubVStack>
-                <Form onSubmit={noRefresh}>
-                  <Input1
-                    type="email"
-                    placeholder="email"
-                    value={emailAddress.value}
-                    onChange={emailAddress.onChange}
-                  />
-                  <StyledButton
-                    type="submit"
-                    onClick={() =>
-                      emailAddress.value <= 1 ? null : setSubmitted(true)
-                    }
-                  >
-                    Get Started
-                  </StyledButton>
-                </Form>
-              </VStack>
-            ) : (
-              <VStack>
-                <Text>Sign up for free</Text>
-                <SubVStack>
-                  <SmallTextGray>Turn website traffic into sales</SmallTextGray>
-                  <SmallTextBlack>
-                    We’ll email you an access link
-                  </SmallTextBlack>
-                </SubVStack>
-                <Form onSubmit={noRefresh}>
-                  <StyledButton>We'll add you soon!</StyledButton>
-                </Form>
-              </VStack>
-            )}
-          </Background2>
-        </ContentWrapper>
-      </Wrapper>
+      {isDesktop ? (
+        <Wrapper>
+          <ContentWrapper>
+            <Background2>
+              {submitted == false ? (
+                <VStack2>
+                  <Text>Sign up for free</Text>
+                  <SubVStack>
+                    <SmallTextGray>
+                      Turn website traffic into sales
+                    </SmallTextGray>
+                    <SmallTextBlack>
+                      We’ll email you an access link
+                    </SmallTextBlack>
+                  </SubVStack>
+                  <Form onSubmit={noRefresh}>
+                    <Input11
+                      type="email"
+                      placeholder="email"
+                      value={emailAddress.value}
+                      onChange={emailAddress.onChange}
+                    />
+                    <StyledButton
+                      type="submit"
+                      onClick={() =>
+                        emailAddress.value <= 1 ? null : setSubmitted(true)
+                      }
+                    >
+                      Get Started
+                    </StyledButton>
+                  </Form>
+                  <Fixedimg src={blackleft} />
+                </VStack2>
+              ) : (
+                <VStack2>
+                  <Text>Sign up for free</Text>
+                  <SubVStack>
+                    <SmallTextGray>
+                      Turn website traffic into sales
+                    </SmallTextGray>
+                    <SmallTextBlack>
+                      We’ll email you an access link
+                    </SmallTextBlack>
+                  </SubVStack>
+                  <Form onSubmit={noRefresh}>
+                    <StyledButton>We'll add you soon!</StyledButton>
+                  </Form>
+                </VStack2>
+              )}
+            </Background2>
+          </ContentWrapper>
+        </Wrapper>
+      ) : (
+        <Wrapper>
+          <ContentWrapper>
+            <Background1>
+              <StyledIMG1 src={left} />
+              <AbsoluteIMG src={beta} />
+            </Background1>
+            <Background2>
+              {submitted == false ? (
+                <VStack>
+                  <Text>Sign up for free</Text>
+                  <SubVStack>
+                    <SmallTextGray>
+                      Turn website traffic into sales
+                    </SmallTextGray>
+                    <SmallTextBlack>
+                      We’ll email you an access link
+                    </SmallTextBlack>
+                  </SubVStack>
+                  <Form onSubmit={noRefresh}>
+                    <Input1
+                      type="email"
+                      placeholder="email"
+                      value={emailAddress.value}
+                      onChange={emailAddress.onChange}
+                    />
+                    <StyledButton
+                      type="submit"
+                      onClick={() =>
+                        emailAddress.value <= 1 ? null : setSubmitted(true)
+                      }
+                    >
+                      Get Started
+                    </StyledButton>
+                  </Form>
+                </VStack>
+              ) : (
+                <VStack>
+                  <Text>Sign up for free</Text>
+                  <SubVStack>
+                    <SmallTextGray>
+                      Turn website traffic into sales
+                    </SmallTextGray>
+                    <SmallTextBlack>
+                      We’ll email you an access link
+                    </SmallTextBlack>
+                  </SubVStack>
+                  <Form onSubmit={noRefresh}>
+                    <StyledButton>We'll add you soon!</StyledButton>
+                  </Form>
+                </VStack>
+              )}
+            </Background2>
+          </ContentWrapper>
+        </Wrapper>
+      )}
     </ParentWrapper>
   );
 }
@@ -121,6 +183,8 @@ const Wrapper = styled.div`
   background-color: #21212b;
 `;
 
+const Fixedimg = styled.img``;
+
 const ContentWrapper = styled.div`
   text-align: center;
   display: flex;
@@ -137,6 +201,15 @@ const Form = styled.form`
 `;
 
 const VStack = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+`;
+
+const VStack2 = styled.div`
   display: flex;
   flex-direction: column;
   gap: 22px;
@@ -238,6 +311,29 @@ const Input1 = styled.input`
     box-shadow: 0 0 1pt 1pt #40a3ff;
   }
 `;
+
+const Input11 = styled.input`
+  border: none;
+  color: #7f848d;
+  width: 258px;
+  height: 30px;
+  font-size: 18px;
+  font-family: "ProximaNovaRegular";
+  background: #ffffff;
+  border-radius: 5px;
+
+  transition: all 0.2s ease 0s;
+  padding: 6px 10px;
+  outline: 2px solid #8d8c8f;
+  @media (max-width: 900px) {
+    width: 64.5vw;
+  }
+
+  :focus {
+    box-shadow: 0 0 1pt 1pt #40a3ff;
+  }
+`;
+
 const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
