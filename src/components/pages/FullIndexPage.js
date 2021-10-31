@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-
 import styled from "styled-components";
 import Footer from "../individual/Prod/footer";
 import Section1 from "../individual/Prod/section1";
@@ -8,7 +7,9 @@ import Section4 from "../individual/Prod/section4";
 import Section5 from "../individual/Prod/section5";
 import Section6 from "../individual/Prod/section6";
 
-useEffect(() => {}, []);
+useEffect(() => {
+  console.log("hi");
+}, []);
 
 export default function FullIndexPage() {
   return (
