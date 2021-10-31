@@ -9,12 +9,6 @@ import Section5 from "../individual/Prod/section5";
 import Section6 from "../individual/Prod/section6";
 
 export default function FullIndexPage() {
-  useEffect(() => {
-    var referrer = document.referrer;
-    var url = new URL(referrer);
-    console.log(url.hostname);
-  }, []);
-
   return (
     <ParentWrapper>
       <Wrapper>
