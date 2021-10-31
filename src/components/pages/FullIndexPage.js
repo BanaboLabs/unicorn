@@ -8,8 +8,6 @@ import Section4 from "../individual/Prod/section4";
 import Section5 from "../individual/Prod/section5";
 import Section6 from "../individual/Prod/section6";
 
-// Alter drop shadows to match website
-
 useEffect(() => {
   var referrer = document.referrer;
   console.log("referrer url", referrer);
