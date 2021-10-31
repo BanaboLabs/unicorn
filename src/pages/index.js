@@ -5,11 +5,6 @@ import SEO from "../components/layout/seo";
 import GlobalFonts from "../fonts/fonts";
 import { Helmet } from "react-helmet";
 
-useEffect(() => {
-  var referrer = document.referrer;
-  console.log("referrer url", referrer);
-}, []);
-
 function IndexPage() {
   return (
     <Layout>
