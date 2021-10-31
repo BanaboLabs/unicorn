@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+
 import styled from "styled-components";
 import Footer from "../individual/Prod/footer";
 import Section1 from "../individual/Prod/section1";
@@ -7,11 +8,12 @@ import Section4 from "../individual/Prod/section4";
 import Section5 from "../individual/Prod/section5";
 import Section6 from "../individual/Prod/section6";
 
-useEffect(() => {
-  console.log("hi");
-}, []);
-
 export default function FullIndexPage() {
+  useEffect(() => {
+    var referrer = document.referrer;
+    console.log("referrer url", referrer);
+  }, []);
+
   return (
     <ParentWrapper>
       <Wrapper>
