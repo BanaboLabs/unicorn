@@ -99,11 +99,11 @@ export default function FullLandingPage() {
                       Turn website traffic into sales
                     </SmallTextGray>
                     <SmallTextBlack>
-                      We’ll email you an access link
+                      You've been added to the list!
                     </SmallTextBlack>
                   </SubVStack>
                   <Form onSubmit={noRefresh}>
-                    <StyledButton>We'll add you soon!</StyledButton>
+                    <StyledButton>Expect an email soon!</StyledButton>
                   </Form>
                 </VStack2>
               )}
@@ -154,11 +154,11 @@ export default function FullLandingPage() {
                       Turn website traffic into sales
                     </SmallTextGray>
                     <SmallTextBlack>
-                      We’ll email you an access link
+                      You've been added to the list
                     </SmallTextBlack>
                   </SubVStack>
                   <Form onSubmit={noRefresh}>
-                    <StyledButton>We'll add you soon!</StyledButton>
+                    <StyledButton>Expect an email soon!</StyledButton>
                   </Form>
                 </VStack>
               )}
