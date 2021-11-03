@@ -56,7 +56,7 @@ export default function Section1() {
                   variants={variants}
                   transition={{ delay: 0.6 }}
                 >
-                  Know the exact impact of each marketing channel on a website
+                  Know the exact impact of each traffic channel on a website
                   conversion with Banabo
                 </SubHead>
                 <TransitionDiv1
