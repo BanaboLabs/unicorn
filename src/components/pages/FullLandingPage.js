@@ -123,7 +123,7 @@ export default function FullLandingPage() {
               />
               <AbsoluteIMG
                 src={beta}
-                alt="Discover the true impact of traffic channels of website conversions"
+                alt="website marketing, website traffic, website traffic analysis, website conversion"
               />
             </Background1>
             <Background2>
