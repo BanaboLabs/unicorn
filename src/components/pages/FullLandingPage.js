@@ -89,7 +89,10 @@ export default function FullLandingPage() {
                       Get Started
                     </StyledButton>
                   </Form>
-                  <Fixedimg src={blackleft} />
+                  <Fixedimg
+                    src={blackleft}
+                    alt="Discover the true impact of traffic channels of website conversions"
+                  />
                 </VStack2>
               ) : (
                 <VStack2>
@@ -114,8 +117,14 @@ export default function FullLandingPage() {
         <Wrapper>
           <ContentWrapper>
             <Background1>
-              <StyledIMG1 src={left} />
-              <AbsoluteIMG src={beta} />
+              <StyledIMG1
+                src={left}
+                alt="Discover the true impact of traffic channels of website conversions"
+              />
+              <AbsoluteIMG
+                src={beta}
+                alt="Discover the true impact of traffic channels of website conversions"
+              />
             </Background1>
             <Background2>
               {submitted == false ? (
