@@ -8,6 +8,7 @@ import left from "../../images/leftlandingpage.svg";
 import emailjs from "emailjs-com";
 import blackleft from "../../images/blackleft.svg";
 import useMediaQuery from "../../hooks/useMediaQuery";
+var moment = require("moment");
 
 // Function to save the link info
 const noRefresh = (event) => {
@@ -30,25 +31,18 @@ export default function FullLandingPage() {
       function postSignUp() {
         var templateParams = {
           Email: emailAddress.value,
-          Name: yourName.value,
-          Message: yourMessage.value,
+          Time: moment().format("YYYY-MM-DD HH:mm:ss"),
         };
 
-        emailjs
-          .send(
-            "service_08aea5o",
-            "template_2eqvm3a",
-            templateParams,
-            "user_m6r5vskSYkTsBvEoBHTxg"
-          )
-          .then(
-            function (response) {
-              console.log("SUCCESS!", response.status, response.text);
-            },
-            function (error) {
-              console.log("FAILED...", error);
-            }
-          );
+        fetch("https://api.sheetmonkey.io/form/vpjvvZhxWdj891qo5GDgvc", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(templateParams),
+        }).then((result) => {
+          // Handle the result
+        });
       }
 
       postSignUp();
