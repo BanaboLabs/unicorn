@@ -70,7 +70,7 @@ export default function FullLandingPage() {
                   <Form onSubmit={noRefresh}>
                     <Input11
                       type="email"
-                      placeholder="email"
+                      placeholder="Primary email"
                       value={emailAddress.value}
                       onChange={emailAddress.onChange}
                     />
@@ -83,10 +83,6 @@ export default function FullLandingPage() {
                       Get Started
                     </StyledButton>
                   </Form>
-                  <Fixedimg
-                    src={blackleft}
-                    alt="Discover the true impact of traffic channels of website conversions"
-                  />
                 </VStack2>
               ) : (
                 <VStack2>
@@ -96,11 +92,11 @@ export default function FullLandingPage() {
                       Turn website traffic into sales
                     </SmallTextGray>
                     <SmallTextBlack>
-                      You've been added to the list!
+                      You've been added to our waitlist
                     </SmallTextBlack>
                   </SubVStack>
                   <Form onSubmit={noRefresh}>
-                    <StyledButton>Expect an email soon!</StyledButton>
+                    <StyledButton>We'll get you setup soon!</StyledButton>
                   </Form>
                 </VStack2>
               )}
@@ -135,7 +131,7 @@ export default function FullLandingPage() {
                   <Form onSubmit={noRefresh}>
                     <Input1
                       type="email"
-                      placeholder="email"
+                      placeholder="Primary email"
                       value={emailAddress.value}
                       onChange={emailAddress.onChange}
                     />
@@ -157,11 +153,11 @@ export default function FullLandingPage() {
                       Turn website traffic into sales
                     </SmallTextGray>
                     <SmallTextBlack>
-                      You've been added to the list
+                      You've been added to our waitlist
                     </SmallTextBlack>
                   </SubVStack>
                   <Form onSubmit={noRefresh}>
-                    <StyledButton>Expect an email soon!</StyledButton>
+                    <StyledButton>We'll get you setup soon!</StyledButton>
                   </Form>
                 </VStack>
               )}
