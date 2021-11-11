@@ -92,7 +92,10 @@ export default function FullLandingPage() {
                       Turn website traffic into sales
                     </SmallTextGray>
                     <SmallTextBlack>
-                      You've been added to our waitlist
+                      We're slightly backed up at the moment.
+                    </SmallTextBlack>
+                    <SmallTextBlack>
+                      So you've been added to a short waitlist
                     </SmallTextBlack>
                   </SubVStack>
                   <Form onSubmit={noRefresh}>
@@ -153,7 +156,10 @@ export default function FullLandingPage() {
                       Turn website traffic into sales
                     </SmallTextGray>
                     <SmallTextBlack>
-                      You've been added to our waitlist
+                      We're slightly backed up at the moment.
+                    </SmallTextBlack>
+                    <SmallTextBlack>
+                      So you've been added to a short waitlist
                     </SmallTextBlack>
                   </SubVStack>
                   <Form onSubmit={noRefresh}>
