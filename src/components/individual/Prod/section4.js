@@ -20,7 +20,7 @@ export default function Section4() {
               </SmallVertical>
               {isDesktop ? (
                 <VerySmallBlackText>
-                  Visitors rarely convert the first time on your site.
+                  Visitors often don't convert the first time on your site.
                   Understand the exact combination of channels that leads a
                   website visitor to a signup or purchase
                 </VerySmallBlackText>
