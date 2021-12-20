@@ -10,6 +10,11 @@ function IndexPage() {
     <Layout>
       <Helmet>
         <script src="https://engine.banabo.io/embeddable/index.js"></script>
+        <script
+          defer
+          data-domain="banabo.io"
+          src="https://plausible.io/js/plausible.js"
+        ></script>
       </Helmet>
       <GlobalFonts />
       <SEO title="Attribute every growth channel" />
