@@ -11,6 +11,7 @@ function IndexPage() {
       <Helmet>
         <script src="https://engine.banabo.io/embeddable/index.js"></script>
         <script
+          type="text/javascript"
           dangerouslySetInnerHTML={{
             __html: !(function (w, d, t) {
               w.TiktokAnalyticsObject = t;
@@ -70,7 +71,6 @@ function IndexPage() {
             })(window, document, "ttq"),
           }}
         />
-        ;
       </Helmet>
       <GlobalFonts />
       <SEO title="Attribute every growth channel" />
