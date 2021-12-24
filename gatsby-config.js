@@ -22,12 +22,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-fullstory`,
-      options: {
-        fs_org: "12ZTK0",
-      },
-    },
-    {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {
         threshold: 1, // Percentage of an element's area that needs to be visible to launch animation
@@ -41,6 +35,17 @@ module.exports = {
         rootMargin: "0% 50%", // Corresponds to root's bounding box margin
         enterEventName: "sal:in", // Enter event name
         exitEventName: "sal:out", // Exit event name
+      },
+    },
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        tikTokPixel: {
+          pixelId: "C730RL9LLTKSATKB4TL0", // leave empty if you want to disable the tracker
+          cookieName: "gatsby-gdpr-tiktok-pixel", // default
+        },
+        // defines the environments where the tracking should be available  - default is ["production"]
+        environments: ["production", "development"],
       },
     },
   ],
