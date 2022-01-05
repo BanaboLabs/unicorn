@@ -35,6 +35,14 @@
 }
 
 @font-face {
+  font-family: "ProximaNovaMedium";
+  src: url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-medium.otf")
+      format("otf"),
+    url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-medium.ttf")
+      format("truetype");
+}
+
+@font-face {
   font-family: "ProximaNovaRegular";
   src: url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-regular.eot")
       format("eot"),
