@@ -445,8 +445,8 @@ const LogoIMG1 = styled(motion.img)`
   margin-top: 6vh;
   margin-left: 7vw;
   margin-right: 7vw;
-  width: 15%;
-  height: 15%;
+  width: 11%;
+  height: 11%;
   @media (min-width: 1700px) {
     margin-top: 9vh;
     margin-left: 15vw;
