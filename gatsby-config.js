@@ -8,17 +8,5 @@ module.exports = {
     siteUrl: "https://banabo.io",
     // Need to add image metadata
   },
-  plugins: [
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-robots-txt`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby starter default`,
-        short_name: `starter`,
-        start_url: `/`,
-        icon: `./src/images/banabologowhite.svg`,
-      },
-    },
-  ],
+  plugins: [`gatsby-plugin-styled-components`],
 };

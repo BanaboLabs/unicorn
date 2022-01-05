@@ -421,7 +421,7 @@ const InsideBigGrayBoxTextWrapper = styled.div`
   width: 136px;
   height: 36px;
   background: none;
-  border-radius: 8px;
+  border-radius: 4px;
   :hover {
     background: #413b65;
   }
