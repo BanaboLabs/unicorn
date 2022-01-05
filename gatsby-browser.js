@@ -1,4 +1,5 @@
 const React = require("react");
+import React from "react";
 const Layout = require("./src/components/layout/layout").default;
 
 exports.wrapPageElement = ({ element, props }) => {
