@@ -276,7 +276,7 @@ const MobileH3Text2 = styled.div`
   font-size: 22px;
   color: #ffffff;
   padding-top: 45px;
-  width: 75vw;
+  width: 82vw;
   line-height: 32px;
 `;
 
@@ -300,7 +300,7 @@ const MobileCreatedByText = styled.div`
 `;
 
 const MobileLogo = styled.img`
-  margin-top: 60px;
+  margin-top: 55px;
   margin-left: 45px;
   width: 35%;
   height: 35%;
@@ -310,16 +310,16 @@ const MobileContentVStack = styled(motion.div)`
   display: flex;
   align-items: left;
   flex-direction: column;
-  gap: 15px;
+  gap: 13px;
   margin-top: 50px;
   margin-left: 45px;
 `;
 
 const MobileH1Text = styled.div`
   font-family: "ProximaNovaBold";
-  font-size: 31.5px;
+  font-size: 31px;
   color: #ffffff;
-  line-height: 39px;
+  line-height: 37px;
 `;
 
 const MobileH2Text = styled.div`
@@ -335,7 +335,7 @@ const MobileH22Text = styled.div`
   font-size: 20px;
   color: #ffffff;
   line-height: 26px;
-  width: 75vw;
+  width: 85vw;
 `;
 
 const MobileH3Text = styled.div`
