@@ -9,10 +9,19 @@ module.exports = {
     // Need to add image metadata
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-web-font-loader`,
+    `babel-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-styled-components`,
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        // Add any options here
+        name: `gatsby starter default`,
+        short_name: `starter`,
+        start_url: `/`,
+        icon: `./src/images/banabologowhite.svg`,
       },
     },
   ],

@@ -22,6 +22,12 @@
           }
         },
         {
+          "name": "/Users/colinsnyder/Desktop/www/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
+          "options": {
+            "cacheDir": "/Users/colinsnyder/Desktop/www/.cache/caches/gatsby-plugin-image"
+          }
+        },
+        {
           "name": "/Users/colinsnyder/Desktop/www/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
@@ -55,6 +61,12 @@
         {
           "name": "babel-plugin-lodash",
           "options": {}
+        },
+        {
+          "name": "/Users/colinsnyder/Desktop/www/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
+          "options": {
+            "cacheDir": "/Users/colinsnyder/Desktop/www/.cache/caches/gatsby-plugin-image"
+          }
         },
         {
           "name": "/Users/colinsnyder/Desktop/www/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
@@ -107,6 +119,12 @@
           "options": {}
         },
         {
+          "name": "/Users/colinsnyder/Desktop/www/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
+          "options": {
+            "cacheDir": "/Users/colinsnyder/Desktop/www/.cache/caches/gatsby-plugin-image"
+          }
+        },
+        {
           "name": "/Users/colinsnyder/Desktop/www/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
@@ -155,6 +173,12 @@
         {
           "name": "babel-plugin-lodash",
           "options": {}
+        },
+        {
+          "name": "/Users/colinsnyder/Desktop/www/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
+          "options": {
+            "cacheDir": "/Users/colinsnyder/Desktop/www/.cache/caches/gatsby-plugin-image"
+          }
         },
         {
           "name": "/Users/colinsnyder/Desktop/www/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
