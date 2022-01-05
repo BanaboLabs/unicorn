@@ -289,13 +289,13 @@ const MobileCompanyVStack = styled.div`
 `;
 
 const MobileLogoIMG2 = styled.img`
-  width: 30%;
-  height: 30%;
+  width: 34%;
+  height: 34%;
 `;
 
 const MobileCreatedByText = styled.div`
   font-family: "ProximaNovaSemibold";
-  font-size: 16px;
+  font-size: 17px;
   color: #ffffff;
 `;
 
@@ -360,7 +360,7 @@ const MobileInput = styled.input`
   width: 70vw;
   height: 44px;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 14px;
   background: rgba(40, 21, 45, 0.4);
   border-radius: 10px;
   transition: all 0.2s ease 0s;
@@ -375,7 +375,7 @@ const MobileInput = styled.input`
 
 const MobileStyledButton = styled.button`
   font-family: "ProximaNovaBold";
-  font-size: 12px;
+  font-size: 16px;
   color: #ffffff;
   border: none;
   background: #0097ec;
