@@ -7,9 +7,6 @@ import { Helmet } from "react-helmet";
 function SquarespacePage() {
   return (
     <Layout>
-      <Helmet>
-        <script src="https://engine.banabo.io/embeddable/index.js"></script>
-      </Helmet>
       <SEO title="Squarespace Docs" />
       <FullSquarespacePage />
     </Layout>
