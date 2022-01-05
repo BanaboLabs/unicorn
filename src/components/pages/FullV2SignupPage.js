@@ -420,29 +420,44 @@ const ParentVStack = styled.div`
 `;
 
 const HStack = styled.div`
-  margin-left: 90px;
-  margin-top: 70px;
+  margin-top: 6vh;
+  margin-left: 6vw;
+  margin-right: 6vw;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  gap: 190px;
+  gap: 60px;
   @media (min-width: 1700px) {
-    gap: 380px;
-    margin-left: 220px;
-    margin-top: 90px;
+    margin-top: 9vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
+  @media (min-width: 2300px) {
+    margin-top: 9vh;
+    margin-left: 23vw;
+    margin-right: 23vw;
+    gap: 80px;
   }
 `;
 
 const LogoIMG1 = styled(motion.img)`
-  margin-top: 50px;
-  margin-left: 90px;
+  margin-top: 6vh;
+  margin-left: 6vw;
+  margin-right: 6vw;
   width: 15%;
   height: 15%;
   @media (min-width: 1700px) {
-    margin-top: 90px;
-    margin-left: 220px;
+    margin-top: 9vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
     width: 10%;
     height: 10%;
+  }
+  @media (min-width: 2300px) {
+    margin-top: 9vh;
+    margin-left: 23vw;
+    margin-right: 23vw;
   }
 `;
 
