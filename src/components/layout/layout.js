@@ -1,12 +1,13 @@
 import React from "react";
-import "./layout.css";
+import styled from "styled-components";
 
-function Layout({ children }) {
-  return (
-    <>
-      <main>{children}</main>
-    </>
-  );
-}
+const Section = styled.section`
+  margin: 3rem auto;
+  max-width: 600px;
+  background: red;
+  margin-top: 500px;
+`;
 
-export default Layout;
+export default ({ site, frontmatter = {}, children }) => {
+  return <Section>{children}</Section>;
+};
