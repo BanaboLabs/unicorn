@@ -427,8 +427,8 @@ const HStack = styled.div`
   flex-direction: row;
   gap: 190px;
   @media (min-width: 1700px) {
-    gap: 420px;
-    margin-left: 200px;
+    gap: 380px;
+    margin-left: 220px;
     margin-top: 90px;
   }
 `;
@@ -440,7 +440,7 @@ const LogoIMG1 = styled(motion.img)`
   height: 15%;
   @media (min-width: 1700px) {
     margin-top: 90px;
-    margin-left: 200px;
+    margin-left: 220px;
     width: 10%;
     height: 10%;
   }
