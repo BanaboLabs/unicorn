@@ -289,21 +289,21 @@ const MobileCompanyVStack = styled.div`
 `;
 
 const MobileLogoIMG2 = styled.img`
-  width: 27%;
-  height: 27%;
+  width: 30%;
+  height: 30%;
 `;
 
 const MobileCreatedByText = styled.div`
   font-family: "ProximaNovaSemibold";
-  font-size: 14px;
+  font-size: 16px;
   color: #ffffff;
 `;
 
 const MobileLogo = styled.img`
   margin-top: 90px;
   margin-left: 45px;
-  width: 25%;
-  height: 25%;
+  width: 35%;
+  height: 35%;
 `;
 
 const MobileContentVStack = styled(motion.div)`
@@ -311,20 +311,20 @@ const MobileContentVStack = styled(motion.div)`
   align-items: left;
   flex-direction: column;
   gap: 17px;
-  margin-top: 60px;
+  margin-top: 50px;
   margin-left: 45px;
 `;
 
 const MobileH1Text = styled.div`
   font-family: "ProximaNovaBold";
-  font-size: 30px;
+  font-size: 32px;
   color: #ffffff;
   line-height: 39px;
 `;
 
 const MobileH2Text = styled.div`
   font-family: "ProximaNovaMedium";
-  font-size: 21px;
+  font-size: 22px;
   color: #ffffff;
   line-height: 26px;
   width: 70vw;
@@ -340,16 +340,16 @@ const MobileH22Text = styled.div`
 
 const MobileH3Text = styled.div`
   font-family: "ProximaNovaRegular";
-  font-size: 14px;
+  font-size: 15px;
   color: #ffffff;
-  width: 66vw;
+  width: 72vw;
 `;
 
 const MobileForm = styled.form`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 8px;
-  margin-top: 90px;
+  margin-top: 60px;
   margin-left: 45px;
 `;
 
@@ -357,7 +357,7 @@ const MobileInput = styled.input`
   font-family: "ProximaNovaSemibold";
   border: none;
   color: #ffffff;
-  width: 165px;
+  width: 70vw;
   height: 44px;
   text-decoration: none;
   font-size: 12px;
@@ -382,7 +382,7 @@ const MobileStyledButton = styled.button`
   border-radius: 10px;
   text-decoration: none;
   cursor: pointer;
-  width: 110px;
+  width: 76vw;
   height: 44px;
 
   :hover {
