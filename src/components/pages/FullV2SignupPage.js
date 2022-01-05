@@ -177,8 +177,11 @@ export default function FullV2SignupPage() {
               <MobileH22Text>We have added your email address</MobileH22Text>
               <MobileH3Text2>
                 We'll be launching our early access soon and we're ecstatic to
-                have you be a part of it. One of our team members will reach out
-                to you via email when your account is ready
+                have you be a part of it.
+              </MobileH3Text2>
+              <MobileH3Text2>
+                One of our team members will reach out to you via email when
+                your account is ready
               </MobileH3Text2>
             </MobileVStackAlt>
           ) : (
@@ -275,8 +278,8 @@ const MobileH3Text2 = styled.div`
   font-family: "ProximaNovaRegular";
   font-size: 22px;
   color: #ffffff;
-  padding-top: 45px;
   width: 82vw;
+  margin-top: 20px;
   line-height: 32px;
 `;
 
