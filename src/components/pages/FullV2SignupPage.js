@@ -253,6 +253,7 @@ export default function FullV2SignupPage() {
     </div>
   );
 }
+
 const MobileVStackAlt = styled.div`
   margin-top: 60px;
   display: flex;
@@ -313,7 +314,7 @@ const MobileContentVStack = styled(motion.div)`
   display: flex;
   align-items: left;
   flex-direction: column;
-  gap: 13px;
+  gap: 10px;
   margin-top: 50px;
   margin-left: 45px;
 `;
@@ -345,6 +346,7 @@ const MobileH3Text = styled.div`
   font-family: "ProximaNovaRegular";
   font-size: 15px;
   color: #ffffff;
+  margin-top: 4px;
   width: 72vw;
 `;
 
@@ -364,7 +366,7 @@ const MobileInput = styled.input`
   height: 44px;
   text-decoration: none;
   font-size: 14px;
-  background: rgba(40, 21, 45, 0.4);
+  background: rgba(40, 21, 45, 0.45);
   border-radius: 10px;
   transition: all 0.2s ease 0s;
   padding-left: 20px;
@@ -410,12 +412,16 @@ const ParentVStack = styled.div`
   display: flex;
   align-items: left;
   flex-direction: column;
-  gap: 100px;
+  gap: 90px;
+
+  @media (min-width: 1700px) {
+    gap: 100px;
+  }
 `;
 
 const HStack = styled.div`
   margin-left: 90px;
-  margin-top: 90px;
+  margin-top: 70px;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -428,7 +434,7 @@ const HStack = styled.div`
 `;
 
 const LogoIMG1 = styled(motion.img)`
-  margin-top: 90px;
+  margin-top: 50px;
   margin-left: 90px;
   width: 15%;
   height: 15%;
@@ -495,6 +501,10 @@ const LowerVStack = styled(motion.div)`
   align-items: left;
   flex-direction: column;
   gap: 27px;
+  margin-bottom: 45px;
+  @media (min-width: 1700px) {
+    margin-bottom: 0px;
+  }
 `;
 
 const Form = styled.form`
@@ -511,7 +521,7 @@ const Input = styled.input`
   height: 62px;
   text-decoration: none;
   font-size: 18px;
-  background: rgba(40, 21, 45, 0.4);
+  background: rgba(40, 21, 45, 0.45);
   border-radius: 10px;
   transition: all 0.2s ease 0s;
   padding-left: 20px;
