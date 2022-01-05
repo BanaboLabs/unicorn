@@ -1,6 +1,5 @@
-const React = require("react");
 import React from "react";
-const Layout = require("./src/components/layout/layout").default;
+import Layout from "./src/components/layout/layout";
 
 exports.wrapPageElement = ({ element, props }) => {
   // props provide same data to Layout as Page element will get
