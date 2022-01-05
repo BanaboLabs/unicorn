@@ -117,7 +117,7 @@ export default function Illustration() {
                     setDropdown(!dropdown);
                   }}
                 >
-                  ML Model
+                  ML
                 </InsideBigGrayBoxText1>
               </InsideBigGrayBoxTextWrapper>
               <InsideBigGrayBoxTextWrapper>
@@ -128,7 +128,7 @@ export default function Illustration() {
                     setDropdown(!dropdown);
                   }}
                 >
-                  First Touch Model
+                  First Touch
                 </InsideBigGrayBoxText2>
               </InsideBigGrayBoxTextWrapper>
               <InsideBigGrayBoxTextWrapper>
@@ -139,7 +139,7 @@ export default function Illustration() {
                     setDropdown(!dropdown);
                   }}
                 >
-                  Last Touch Model
+                  Last Touch
                 </InsideBigGrayBoxText3>
               </InsideBigGrayBoxTextWrapper>
               <InsideBigGrayBoxTextWrapper>
@@ -150,7 +150,7 @@ export default function Illustration() {
                     setDropdown(!dropdown);
                   }}
                 >
-                  U Shape Model
+                  U Shape
                 </InsideBigGrayBoxText4>
               </InsideBigGrayBoxTextWrapper>
               <InsideBigGrayBoxTextWrapper>
@@ -161,7 +161,7 @@ export default function Illustration() {
                     setDropdown(!dropdown);
                   }}
                 >
-                  Linear Model
+                  Linear
                 </InsideBigGrayBoxText5>
               </InsideBigGrayBoxTextWrapper>
             </InsideBigGrayBoxVStack>
@@ -399,7 +399,7 @@ const BigGrayBox = styled.div`
   justify-content: center;
   align-items: center;
   opacity: ${(props) => (props.isDropdown ? "100%" : "0%")};
-  width: 212px;
+  width: 149px;
   height: 243px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -418,10 +418,10 @@ const InsideBigGrayBoxTextWrapper = styled.div`
   display: flex;
   align-items: center;
   text-align: center;
-  width: 202px;
+  width: 136px;
   height: 36px;
   background: none;
-  border-radius: 2px;
+  border-radius: 8px;
   :hover {
     background: #413b65;
   }
