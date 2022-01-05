@@ -1,5 +1,7 @@
 import "./static/fonts.css";
+import CustomLayout from "./wrapPageElement";
 
+export const wrapPageElement = CustomLayout;
 /**
  * Implement Gatsby's Browser APIs in this file.
  *
