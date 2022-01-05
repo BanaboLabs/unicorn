@@ -1,9 +1,4 @@
 import "./static/fonts.css";
-import React from "react";
-import Layout from "./src/components/layout/layout";
 
-exports.wrapPageElement = ({ element, props }) => {
-  // props provide same data to Layout as Page element will get
-  // including location, data, etc - you don't need to pass it
-  return <Layout {...props}>{element}</Layout>;
-};
+import CustomLayout from "./wrapPageElement";
+export const wrapPageElement = CustomLayout;
