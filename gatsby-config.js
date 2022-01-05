@@ -14,6 +14,7 @@ module.exports = {
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-image`,
     `gatsby-plugin-web-font-loader`,
+    `babel-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
