@@ -1,4 +1,10 @@
 import "./static/fonts.css";
+import React from "react";
+import Layout from "./src/components/layout/layout";
+import LandingPage from "./src/pages";
 
-import CustomLayout from "./wrapPageElement";
-export const wrapPageElement = CustomLayout;
+export const wrapPageElement = ({ element }) => (
+  <>
+    <Layout>{element}</Layout>
+  </>
+);
