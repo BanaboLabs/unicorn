@@ -421,8 +421,8 @@ const ParentVStack = styled.div`
 
 const HStack = styled.div`
   margin-top: 6vh;
-  margin-left: 6vw;
-  margin-right: 6vw;
+  margin-left: 7vw;
+  margin-right: 7vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -443,8 +443,8 @@ const HStack = styled.div`
 
 const LogoIMG1 = styled(motion.img)`
   margin-top: 6vh;
-  margin-left: 6vw;
-  margin-right: 6vw;
+  margin-left: 7vw;
+  margin-right: 7vw;
   width: 15%;
   height: 15%;
   @media (min-width: 1700px) {
