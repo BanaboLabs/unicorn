@@ -310,14 +310,14 @@ const MobileContentVStack = styled(motion.div)`
   display: flex;
   align-items: left;
   flex-direction: column;
-  gap: 17px;
+  gap: 15px;
   margin-top: 50px;
   margin-left: 45px;
 `;
 
 const MobileH1Text = styled.div`
   font-family: "ProximaNovaBold";
-  font-size: 32px;
+  font-size: 31.5px;
   color: #ffffff;
   line-height: 39px;
 `;
