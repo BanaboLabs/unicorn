@@ -57,7 +57,7 @@ export default function FullV2SignupPage() {
       {isDesktop ? (
         <Wrapper>
           <MovementAnimationWrapper
-            initial={{ y: 100 }}
+            initial={{ y: 60 }}
             animate={{ y: 0 }}
             transition={{ ease: "easeOut", duration: 0.5 }}
           >
@@ -82,7 +82,7 @@ export default function FullV2SignupPage() {
             <HStack>
               <ParentVStack>
                 <MovementAnimationWrapper
-                  initial={{ y: 100 }}
+                  initial={{ y: 60 }}
                   animate={{ y: 0 }}
                   transition={{ ease: "easeOut", duration: 0.6, delay: 0.1 }}
                 >
@@ -105,7 +105,7 @@ export default function FullV2SignupPage() {
                   </ContentVStack>
                 </MovementAnimationWrapper>
                 <MovementAnimationWrapper
-                  initial={{ y: 100 }}
+                  initial={{ y: 60 }}
                   animate={{ y: 0 }}
                   transition={{ ease: "easeOut", duration: 0.62, delay: 0.16 }}
                 >
@@ -142,7 +142,7 @@ export default function FullV2SignupPage() {
               </ParentVStack>
               <ParentVStack>
                 <MovementAnimationWrapper
-                  initial={{ y: 100 }}
+                  initial={{ y: 60 }}
                   animate={{ y: 0 }}
                   transition={{ ease: "easeOut", duration: 0.5, delay: 0.15 }}
                 >
@@ -160,7 +160,7 @@ export default function FullV2SignupPage() {
       ) : (
         <MobileWrapper>
           <MovementAnimationWrapper
-            initial={{ y: 100 }}
+            initial={{ y: 60 }}
             animate={{ y: 0 }}
             transition={{ ease: "easeOut", duration: 0.5 }}
           >
@@ -184,7 +184,7 @@ export default function FullV2SignupPage() {
           ) : (
             <div>
               <MovementAnimationWrapper
-                initial={{ y: 100 }}
+                initial={{ y: 60 }}
                 animate={{ y: 0 }}
                 transition={{ ease: "easeOut", duration: 0.6, delay: 0.1 }}
               >
@@ -208,7 +208,7 @@ export default function FullV2SignupPage() {
               </MovementAnimationWrapper>
 
               <MovementAnimationWrapper
-                initial={{ y: 100 }}
+                initial={{ y: 60 }}
                 animate={{ y: 0 }}
                 transition={{ ease: "easeOut", duration: 0.62, delay: 0.16 }}
               >
@@ -300,7 +300,7 @@ const MobileCreatedByText = styled.div`
 `;
 
 const MobileLogo = styled.img`
-  margin-top: 90px;
+  margin-top: 60px;
   margin-left: 45px;
   width: 35%;
   height: 35%;
