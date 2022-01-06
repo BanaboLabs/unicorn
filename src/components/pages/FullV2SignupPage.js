@@ -172,7 +172,7 @@ const Wrapper = styled.div`
 const MovementAnimationWrapper = styled(motion.div)``;
 
 const ParentVStack = styled.div`
-  @media (max-width: 1200px) {
+  @media (max-width: 1000px) {
     gap: 40px;
   }
 
@@ -228,10 +228,17 @@ const LogoIMG1 = styled(motion.img)`
     width: 35%;
     height: 35%;
   }
-  @media (min-width: 900px) and (max-width: 1200px) {
+  @media (min-width: 900px) and (max-width: 1000px) {
     width: 10%;
     height: 10%;
   }
+
+  @media (max-height: 800px) and (min-width: 1000px) {
+    margin-top: 3vh;
+    width: 10%;
+    height: 10%;
+  }
+
   margin-top: 6vh;
   margin-left: 7vw;
   margin-right: 7vw;
@@ -258,7 +265,7 @@ const LogoIMG2 = styled.img`
     width: 40%;
     height: 40%;
   }
-  @media (min-width: 900px) and (max-width: 1200px) {
+  @media (min-width: 900px) and (max-width: 1000px) {
     width: 20%;
     height: 20%;
   }
@@ -269,13 +276,13 @@ const ContentVStack = styled(motion.div)`
   align-items: left;
   flex-direction: column;
   gap: 20px;
-  @media (max-width: 1200px) {
+  @media (max-width: 1000px) {
     gap: 15px;
   }
 `;
 
 const H1Text = styled.div`
-  @media (max-width: 1200px) {
+  @media (max-width: 1000px) {
     font-size: 31px;
     width: 90vw;
   }
@@ -285,7 +292,7 @@ const H1Text = styled.div`
 `;
 
 const H2Text = styled.div`
-  @media (max-width: 1200px) {
+  @media (max-width: 1000px) {
     font-size: 22px;
     width: 72vw;
   }
@@ -295,7 +302,7 @@ const H2Text = styled.div`
 `;
 
 const H3Text = styled.div`
-  @media (max-width: 1200px) {
+  @media (max-width: 1000px) {
     font-size: 16px;
     width: 80vw;
   }
@@ -306,7 +313,7 @@ const H3Text = styled.div`
 `;
 
 const H3Text2 = styled.div`
-  @media (max-width: 1200px) {
+  @media (max-width: 1000px) {
     font-size: 14px;
     width: 80vw;
   }
@@ -340,7 +347,7 @@ const LowerVStack = styled(motion.div)`
 `;
 
 const Form = styled.form`
-  @media (max-width: 1200px) {
+  @media (max-width: 1000px) {
     flex-direction: column;
   }
   display: flex;
@@ -349,7 +356,7 @@ const Form = styled.form`
 `;
 
 const Input = styled.input`
-  @media (max-width: 1200px) {
+  @media (max-width: 1000px) {
     width: 70vw;
     height: 44px;
     text-decoration: none;
@@ -376,7 +383,7 @@ const Input = styled.input`
 `;
 
 const StyledButton = styled.button`
-  @media (max-width: 1200px) {
+  @media (max-width: 1000px) {
     width: 78vw;
     height: 44px;
     font-size: 16px;
@@ -408,7 +415,7 @@ const CreatedByText = styled.div`
   font-family: "ProximaNovaSemibold";
   font-size: 22px;
   color: #ffffff;
-  @media (max-width: 1200px) {
+  @media (max-width: 1000px) {
     font-size: 16px;
   }
 `;
