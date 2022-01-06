@@ -208,7 +208,7 @@ const HStack = styled.div`
   flex-direction: row;
   gap: 60px;
   @media (min-width: 900px) and (max-width: 1600px) {
-    margin-top: 8vh;
+    margin-top: 9vh;
   }
   @media (min-width: 1700px) {
     margin-top: 9vh;
