@@ -135,11 +135,11 @@ export default function FullV2SignupPage() {
               animate={{ y: 0 }}
               transition={{ ease: "easeOut", duration: 0.5, delay: 0.15 }}
             >
-              <Illustration
+              <Illustration2
                 initial="hidden"
                 animate="visible"
                 variants={variants}
-                transition={{ delay: 0.15 }}
+                transition={{ delay: 0.3 }}
               />
             </MovementAnimationWrapper>
           </ParentVStack5>
@@ -162,6 +162,8 @@ const Wrapper = styled.div`
     background-image: url(${mobilebackgroundv2});
   }
 `;
+
+const Illustration2 = styled(motion.Illustration)``;
 
 const MovementAnimationWrapper = styled(motion.div)``;
 
