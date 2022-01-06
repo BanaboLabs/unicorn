@@ -5,7 +5,7 @@ import backgroundv2 from "../../images/backgroundv2.svg";
 import mobilebackgroundv2 from "../../images/mobilebackgroundv2.svg";
 import banabologo from "../../images/banabologo.svg";
 import companylogos from "../../images/companylogos.svg";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Illustration from "../individual/V2Signup/illustration";
 var moment = require("moment");
 
@@ -154,147 +154,6 @@ export default function FullV2SignupPage() {
   );
 }
 
-const MobileVStackAlt = styled.div`
-  margin-top: 60px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-`;
-
-const MobileWrapper = styled.div`
-  overflow-y: hidden;
-  overflow-x: hidden;
-  min-height: 100vh;
-  min-width: 100vw;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  background-image: url(${mobilebackgroundv2});
-`;
-
-const MobileH3Text2 = styled.div`
-  font-family: "ProximaNovaRegular";
-  font-size: 22px;
-  color: #ffffff;
-  width: 82vw;
-  margin-top: 20px;
-  line-height: 32px;
-`;
-
-const MobileCompanyVStack = styled.div`
-  margin-top: 24px;
-  margin-left: 45px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-`;
-
-const MobileLogoIMG2 = styled.img`
-  width: 34%;
-  height: 34%;
-`;
-
-const MobileCreatedByText = styled.div`
-  font-family: "ProximaNovaSemibold";
-  font-size: 17px;
-  color: #ffffff;
-`;
-
-const MobileLogo = styled.img`
-  margin-top: 55px;
-  margin-left: 45px;
-  width: 35%;
-  height: 35%;
-`;
-
-const MobileContentVStack = styled(motion.div)`
-  display: flex;
-  align-items: left;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 50px;
-  margin-left: 45px;
-`;
-
-const MobileH1Text = styled.div`
-  font-family: "ProximaNovaBold";
-  font-size: 31px;
-  color: #ffffff;
-  line-height: 37px;
-`;
-
-const MobileH2Text = styled.div`
-  font-family: "ProximaNovaMedium";
-  font-size: 22px;
-  color: #ffffff;
-  line-height: 26px;
-  width: 70vw;
-`;
-
-const MobileH22Text = styled.div`
-  font-family: "ProximaNovaMedium";
-  font-size: 20px;
-  color: #ffffff;
-  line-height: 26px;
-  width: 85vw;
-`;
-
-const MobileH3Text = styled.div`
-  font-family: "ProximaNovaRegular";
-  font-size: 15px;
-  color: #ffffff;
-  margin-top: 4px;
-  width: 72vw;
-`;
-
-const MobileForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 60px;
-  margin-left: 45px;
-`;
-
-const MobileInput = styled.input`
-  font-family: "ProximaNovaSemibold";
-  border: none;
-  color: #ffffff;
-  width: 70vw;
-  height: 44px;
-  text-decoration: none;
-  font-size: 14px;
-  background: rgba(40, 21, 45, 0.45);
-  border-radius: 10px;
-  transition: all 0.2s ease 0s;
-  padding-left: 20px;
-  ::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-  }
-  :focus {
-    outline: none;
-  }
-`;
-
-const MobileStyledButton = styled.button`
-  font-family: "ProximaNovaBold";
-  font-size: 16px;
-  color: #ffffff;
-  border: none;
-  background: #0097ec;
-  border-radius: 10px;
-  text-decoration: none;
-  cursor: pointer;
-  width: 76vw;
-  height: 44px;
-
-  :hover {
-    background: #0087d3;
-  }
-`;
-
 const Wrapper = styled(motion.div)`
   overflow-y: hidden;
   overflow-x: hidden;
@@ -309,6 +168,10 @@ const Wrapper = styled(motion.div)`
 const MovementAnimationWrapper = styled(motion.div)``;
 
 const ParentVStack = styled.div`
+  @media (max-width: 1200px) {
+    gap: 50px;
+  }
+
   display: flex;
   align-items: left;
   flex-direction: column;
