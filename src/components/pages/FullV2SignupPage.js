@@ -164,7 +164,7 @@ const Wrapper = styled.div`
   background-position: center;
   position: relative;
   background-image: url(${backgroundv2});
-  @media (max-width: 1200px) {
+  @media (max-width: 1000px) {
     background-image: url(${mobilebackgroundv2});
   }
 `;
@@ -172,7 +172,7 @@ const Wrapper = styled.div`
 const MovementAnimationWrapper = styled(motion.div)``;
 
 const ParentVStack = styled.div`
-  @media (max-width: 1000px) {
+  @media (max-width: 9000px) {
     gap: 40px;
   }
 
@@ -276,13 +276,13 @@ const ContentVStack = styled(motion.div)`
   align-items: left;
   flex-direction: column;
   gap: 20px;
-  @media (max-width: 1000px) {
+  @media (max-width: 900px) {
     gap: 15px;
   }
 `;
 
 const H1Text = styled.div`
-  @media (max-width: 1000px) {
+  @media (max-width: 900px) {
     font-size: 31px;
     width: 90vw;
   }
@@ -292,9 +292,10 @@ const H1Text = styled.div`
 `;
 
 const H2Text = styled.div`
-  @media (max-width: 1000px) {
+  @media (max-width: 900px) {
     font-size: 22px;
     width: 72vw;
+    line-height: 26px;
   }
   font-family: "ProximaNovaMedium";
   font-size: 31px;
@@ -302,7 +303,7 @@ const H2Text = styled.div`
 `;
 
 const H3Text = styled.div`
-  @media (max-width: 1000px) {
+  @media (max-width: 900px) {
     font-size: 16px;
     width: 80vw;
   }
@@ -313,7 +314,7 @@ const H3Text = styled.div`
 `;
 
 const H3Text2 = styled.div`
-  @media (max-width: 1000px) {
+  @media (max-width: 900px) {
     font-size: 14px;
     width: 80vw;
   }
@@ -347,7 +348,7 @@ const LowerVStack = styled(motion.div)`
 `;
 
 const Form = styled.form`
-  @media (max-width: 1000px) {
+  @media (max-width: 900px) {
     flex-direction: column;
   }
   display: flex;
@@ -356,7 +357,7 @@ const Form = styled.form`
 `;
 
 const Input = styled.input`
-  @media (max-width: 1000px) {
+  @media (max-width: 900px) {
     width: 70vw;
     height: 44px;
     text-decoration: none;
@@ -383,7 +384,7 @@ const Input = styled.input`
 `;
 
 const StyledButton = styled.button`
-  @media (max-width: 1000px) {
+  @media (max-width: 900px) {
     width: 78vw;
     height: 44px;
     font-size: 16px;
@@ -415,7 +416,7 @@ const CreatedByText = styled.div`
   font-family: "ProximaNovaSemibold";
   font-size: 22px;
   color: #ffffff;
-  @media (max-width: 1000px) {
+  @media (max-width: 900px) {
     font-size: 16px;
   }
 `;
