@@ -7,14 +7,12 @@ import banabologo from "../../images/banabologo.svg";
 import companylogos from "../../images/companylogos.svg";
 import { motion, AnimatePresence } from "framer-motion";
 import Illustration from "../individual/V2Signup/illustration";
-import useMediaQuery from "../../hooks/useMediaQuery";
 var moment = require("moment");
 
 export default function FullV2SignupPage() {
   const emailAddress = useInput("");
   const [submitted, setSubmitted] = useState(false);
   const [showNext, setShowNext] = useState(false);
-  const isDesktop = useMediaQuery("(min-width: 1200px)");
 
   const variants = {
     hidden: { opacity: 0 },
@@ -53,9 +51,106 @@ export default function FullV2SignupPage() {
   }, [submitted]);
 
   return (
-    <div>
-      <Wrapper></Wrapper>
-    </div>
+    <Wrapper>
+      <MovementAnimationWrapper
+        initial={{ y: 60 }}
+        animate={{ y: 0 }}
+        transition={{ ease: "easeOut", duration: 0.5 }}
+      >
+        <LogoIMG1
+          src={banabologo}
+          initial="hidden"
+          animate="visible"
+          variants={variants}
+        />
+      </MovementAnimationWrapper>
+      {showNext ? (
+        <VStackAlt>
+          <H1Text>Thank you!</H1Text>
+          <H2Text>We have added your email address</H2Text>
+          <H3Text2>
+            We'll be launching our early access soon and we're ecstatic to have
+            you be a part of it. One of our team members will reach out to you
+            via email when your account is ready
+          </H3Text2>
+        </VStackAlt>
+      ) : (
+        <HStack>
+          <ParentVStack>
+            <MovementAnimationWrapper
+              initial={{ y: 60 }}
+              animate={{ y: 0 }}
+              transition={{ ease: "easeOut", duration: 0.6, delay: 0.1 }}
+            >
+              <ContentVStack
+                initial="hidden"
+                animate="visible"
+                variants={variants}
+                transition={{ delay: 0.2 }}
+              >
+                <H1Text>
+                  Cookieless <br /> Marketing Attribution
+                </H1Text>
+                <H2Text>Capture every touchpoint with perfect accuracy</H2Text>
+                <H3Text>
+                  Built on top of anonymous identification. No need to collect,
+                  process, or store a visitor’s personal data
+                </H3Text>
+              </ContentVStack>
+            </MovementAnimationWrapper>
+            <MovementAnimationWrapper
+              initial={{ y: 60 }}
+              animate={{ y: 0 }}
+              transition={{ ease: "easeOut", duration: 0.62, delay: 0.16 }}
+            >
+              <LowerVStack
+                initial="hidden"
+                animate="visible"
+                variants={variants}
+                transition={{ delay: 0.4 }}
+              >
+                <Form onSubmit={noRefresh}>
+                  <Input
+                    type="email"
+                    placeholder="Enter email address"
+                    placeholderTextColor={"red"}
+                    value={emailAddress.value}
+                    onChange={emailAddress.onChange}
+                  />
+                  <StyledButton
+                    type="submit"
+                    onClick={() =>
+                      emailAddress.value <= 5 ? null : setSubmitted(true)
+                    }
+                  >
+                    Get Early Access
+                  </StyledButton>
+                </Form>
+
+                <CompanyVStack>
+                  <CreatedByText>Created by Engineers from</CreatedByText>
+                  <LogoIMG2 src={companylogos} />
+                </CompanyVStack>
+              </LowerVStack>
+            </MovementAnimationWrapper>
+          </ParentVStack>
+          <ParentVStack5>
+            <MovementAnimationWrapper
+              initial={{ y: 60 }}
+              animate={{ y: 0 }}
+              transition={{ ease: "easeOut", duration: 0.5, delay: 0.15 }}
+            >
+              <Illustration
+                initial="hidden"
+                animate="visible"
+                variants={variants}
+                transition={{ delay: 0.15 }}
+              />
+            </MovementAnimationWrapper>
+          </ParentVStack5>
+        </HStack>
+      )}
+    </Wrapper>
   );
 }
 
@@ -200,7 +295,7 @@ const MobileStyledButton = styled.button`
   }
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   overflow-y: hidden;
   overflow-x: hidden;
   min-height: 100vh;
@@ -221,6 +316,18 @@ const ParentVStack = styled.div`
 
   @media (min-width: 1700px) {
     gap: 100px;
+  }
+`;
+
+const ParentVStack5 = styled.div`
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  gap: 90px;
+
+  @media (max-width: 1200px) {
+    gap: 100px;
+    display: none;
   }
 `;
 
@@ -247,11 +354,15 @@ const HStack = styled.div`
 `;
 
 const LogoIMG1 = styled(motion.img)`
+  @media (max-width: 1200px) {
+    width: 35%;
+    height: 35%;
+  }
   margin-top: 6vh;
   margin-left: 7vw;
   margin-right: 7vw;
-  width: 11%;
-  height: 11%;
+  width: 15%;
+  height: 15%;
   @media (min-width: 1700px) {
     margin-top: 9vh;
     margin-left: 15vw;
@@ -269,6 +380,10 @@ const LogoIMG1 = styled(motion.img)`
 const LogoIMG2 = styled.img`
   width: 27%;
   height: 27%;
+  @media (max-width: 1200px) {
+    width: 40%;
+    height: 40%;
+  }
 `;
 
 const ContentVStack = styled(motion.div)`
@@ -279,18 +394,30 @@ const ContentVStack = styled(motion.div)`
 `;
 
 const H1Text = styled.div`
+  @media (max-width: 1200px) {
+    font-size: 31px;
+    width: 90vw;
+  }
   font-family: "ProximaNovaBold";
   font-size: 60px;
   color: #ffffff;
 `;
 
 const H2Text = styled.div`
+  @media (max-width: 1200px) {
+    font-size: 22px;
+    width: 72vw;
+  }
   font-family: "ProximaNovaMedium";
   font-size: 31px;
   color: #ffffff;
 `;
 
 const H3Text = styled.div`
+  @media (max-width: 1200px) {
+    font-size: 16px;
+    width: 80vw;
+  }
   font-family: "ProximaNovaRegular";
   font-size: 22px;
   color: #ffffff;
@@ -298,6 +425,10 @@ const H3Text = styled.div`
 `;
 
 const H3Text2 = styled.div`
+  @media (max-width: 1200px) {
+    font-size: 14px;
+    width: 80vw;
+  }
   font-family: "ProximaNovaRegular";
   font-size: 22px;
   color: #ffffff;
@@ -328,12 +459,22 @@ const LowerVStack = styled(motion.div)`
 `;
 
 const Form = styled.form`
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
   display: flex;
   flex-direction: row;
   gap: 12px;
 `;
 
 const Input = styled.input`
+  @media (max-width: 1200px) {
+    width: 70vw;
+    height: 44px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
   font-family: "ProximaNovaSemibold";
   border: none;
   color: #ffffff;
@@ -354,6 +495,12 @@ const Input = styled.input`
 `;
 
 const StyledButton = styled.button`
+  @media (max-width: 1200px) {
+    width: 76vw;
+    height: 44px;
+    font-size: 16px;
+  }
+
   font-family: "ProximaNovaBold";
   font-size: 20px;
   color: #ffffff;

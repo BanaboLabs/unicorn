@@ -14,10 +14,6 @@ var plugins = [{
       name: 'gatsby-plugin-manifest',
       plugin: require('/Users/colinsnyder/Desktop/www/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"gatsby starter default","short_name":"starter","start_url":"/","icon":"./src/images/banabologowhite.svg","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"774b087f751eb9f9f936ef0e036b601e"},
-    },{
-      name: 'default-site-plugin',
-      plugin: require('/Users/colinsnyder/Desktop/www/gatsby-ssr'),
-      options: {"plugins":[]},
     }]
 /* global plugins */
 // During bootstrap, we write requires at top of this file which looks like:
