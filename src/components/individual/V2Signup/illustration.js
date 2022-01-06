@@ -6,7 +6,6 @@ import v2facebooklogo from "../../../images/v2facebooklogo.svg";
 import v2googlelogo from "../../../images/v2googlelogo.svg";
 import v2linkedinlogo from "../../../images/v2linkedinlogo.svg";
 import v2dollarlogo from "../../../images/v2dollarlogo.svg";
-import v2hoverbackground from "../../../images/v2hoverbackground.svg";
 
 export default function Illustration() {
   const [model, setModel] = useState("ML Model");

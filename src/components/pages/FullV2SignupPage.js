@@ -50,7 +50,11 @@ export default function FullV2SignupPage() {
     }
   }, [submitted]);
 
-  return <div></div>;
+  return (
+    <div>
+      <Wrapper></Wrapper>
+    </div>
+  );
 }
 
 const Wrapper = styled.div`
