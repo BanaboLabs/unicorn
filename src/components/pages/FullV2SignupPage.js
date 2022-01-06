@@ -52,17 +52,8 @@ export default function FullV2SignupPage() {
 
   return (
     <Wrapper>
-      <MovementAnimationWrapper
-        initial={{ y: 60 }}
-        animate={{ y: 0 }}
-        transition={{ ease: "easeOut", duration: 0.5 }}
-      >
-        <LogoIMG1
-          src={banabologo}
-          initial="hidden"
-          animate="visible"
-          variants={variants}
-        />
+      <MovementAnimationWrapper>
+        <LogoIMG1 src={banabologo} />
       </MovementAnimationWrapper>
       {showNext ? (
         <VStackAlt>
@@ -77,17 +68,8 @@ export default function FullV2SignupPage() {
       ) : (
         <HStack>
           <ParentVStack>
-            <MovementAnimationWrapper
-              initial={{ y: 60 }}
-              animate={{ y: 0 }}
-              transition={{ ease: "easeOut", duration: 0.6, delay: 0.1 }}
-            >
-              <ContentVStack
-                initial="hidden"
-                animate="visible"
-                variants={variants}
-                transition={{ delay: 0.2 }}
-              >
+            <MovementAnimationWrapper>
+              <ContentVStack>
                 <H1Text>
                   Cookieless <br /> Marketing Attribution
                 </H1Text>
@@ -98,17 +80,8 @@ export default function FullV2SignupPage() {
                 </H3Text>
               </ContentVStack>
             </MovementAnimationWrapper>
-            <MovementAnimationWrapper
-              initial={{ y: 60 }}
-              animate={{ y: 0 }}
-              transition={{ ease: "easeOut", duration: 0.62, delay: 0.16 }}
-            >
-              <LowerVStack
-                initial="hidden"
-                animate="visible"
-                variants={variants}
-                transition={{ delay: 0.4 }}
-              >
+            <MovementAnimationWrapper>
+              <LowerVStack>
                 <Form onSubmit={noRefresh}>
                   <Input
                     type="email"
@@ -134,17 +107,8 @@ export default function FullV2SignupPage() {
             </MovementAnimationWrapper>
           </ParentVStack>
           <ParentVStack5>
-            <MovementAnimationWrapper
-              initial={{ y: 60 }}
-              animate={{ y: 0 }}
-              transition={{ ease: "easeOut", duration: 0.5, delay: 0.15 }}
-            >
-              <Illustration
-                initial="hidden"
-                animate="visible"
-                variants={variants}
-                transition={{ delay: 0.15 }}
-              />
+            <MovementAnimationWrapper>
+              <Illustration />
             </MovementAnimationWrapper>
           </ParentVStack5>
         </HStack>
