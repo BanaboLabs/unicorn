@@ -55,13 +55,14 @@ export default function FullV2SignupPage() {
       <MovementAnimationWrapper
         initial={{ y: 60 }}
         animate={{ y: 0 }}
-        transition={{ ease: "easeOut", duration: 0.5 }}
+        transition={{ ease: "easeOut", duration: 0.3 }}
       >
         <LogoIMG1
           src={banabologo}
           initial="hidden"
           animate="visible"
           variants={variants}
+          transition={{ duration: 0.3 }}
         />
       </MovementAnimationWrapper>
       {showNext ? (
@@ -77,37 +78,61 @@ export default function FullV2SignupPage() {
       ) : (
         <HStack>
           <ParentVStack>
-            <MovementAnimationWrapper
-              initial={{ y: 60 }}
-              animate={{ y: 0 }}
-              transition={{ ease: "easeOut", duration: 0.5, delay: 0.1 }}
-            >
-              <ContentVStack
-                initial="hidden"
-                animate="visible"
-                variants={variants}
-                transition={{ delay: 0.1 }}
+            <ContentVStack>
+              <MovementAnimationWrapper
+                initial={{ y: 60 }}
+                animate={{ y: 0 }}
+                transition={{ ease: "easeOut", duration: 0.3, delay: 0.05 }}
               >
-                <H1Text>
+                <H1Text
+                  initial="hidden"
+                  animate="visible"
+                  variants={variants}
+                  transition={{ delay: 0.1, duration: 0.3 }}
+                >
                   Cookieless <br /> Marketing Attribution
                 </H1Text>
-                <H2Text>Capture every touchpoint with perfect accuracy</H2Text>
-                <H3Text>
+              </MovementAnimationWrapper>
+              <MovementAnimationWrapper
+                initial={{ y: 60 }}
+                animate={{ y: 0 }}
+                transition={{ ease: "easeOut", duration: 0.3, delay: 0.1 }}
+              >
+                <H2Text
+                  initial="hidden"
+                  animate="visible"
+                  variants={variants}
+                  transition={{ delay: 0.2, duration: 0.3 }}
+                >
+                  Capture every touchpoint with perfect accuracy
+                </H2Text>
+              </MovementAnimationWrapper>
+              <MovementAnimationWrapper
+                initial={{ y: 60 }}
+                animate={{ y: 0 }}
+                transition={{ ease: "easeOut", duration: 0.3, delay: 0.15 }}
+              >
+                <H3Text
+                  initial="hidden"
+                  animate="visible"
+                  variants={variants}
+                  transition={{ delay: 0.3, duration: 0.3 }}
+                >
                   Built on top of anonymous identification. No need to collect,
                   process, or store a visitor’s personal data
                 </H3Text>
-              </ContentVStack>
-            </MovementAnimationWrapper>
+              </MovementAnimationWrapper>
+            </ContentVStack>
             <MovementAnimationWrapper
               initial={{ y: 60 }}
               animate={{ y: 0 }}
-              transition={{ ease: "easeOut", duration: 0.36, delay: 0.24 }}
+              transition={{ ease: "easeOut", delay: 0.38, duration: 0.3 }}
             >
               <LowerVStack
                 initial="hidden"
                 animate="visible"
                 variants={variants}
-                transition={{ delay: 0.2 }}
+                transition={{ delay: 0.34, duration: 0.3 }}
               >
                 <Form onSubmit={noRefresh}>
                   <Input
@@ -135,15 +160,15 @@ export default function FullV2SignupPage() {
           </ParentVStack>
           <ParentVStack5>
             <MovementAnimationWrapper
-              initial={{ y: 60 }}
+              initial={{ y: 50 }}
               animate={{ y: 0 }}
-              transition={{ ease: "easeOut", duration: 0.5, delay: 0.1 }}
+              transition={{ ease: "easeOut", duration: 0.32, delay: 0.1 }}
             >
               <MovementAnimationWrapper
                 initial="hidden"
                 animate="visible"
                 variants={variants}
-                transition={{ delay: 0.14 }}
+                transition={{ delay: 0.1, duration: 0.3 }}
               >
                 <Illustration />
               </MovementAnimationWrapper>
@@ -283,7 +308,7 @@ const ContentVStack = styled(motion.div)`
   }
 `;
 
-const H1Text = styled.div`
+const H1Text = styled(motion.div)`
   @media (max-width: 900px) {
     font-size: 31px;
     width: 90vw;
@@ -293,7 +318,7 @@ const H1Text = styled.div`
   color: #ffffff;
 `;
 
-const H2Text = styled.div`
+const H2Text = styled(motion.div)`
   @media (max-width: 900px) {
     font-size: 22px;
     width: 72vw;
@@ -304,7 +329,7 @@ const H2Text = styled.div`
   color: #ffffff;
 `;
 
-const H3Text = styled.div`
+const H3Text = styled(motion.div)`
   @media (max-width: 900px) {
     font-size: 16px;
     width: 80vw;
