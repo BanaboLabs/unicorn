@@ -172,10 +172,6 @@ const Wrapper = styled.div`
 const MovementAnimationWrapper = styled(motion.div)``;
 
 const ParentVStack = styled.div`
-  @media (max-width: 9000px) {
-    gap: 40px;
-  }
-
   display: flex;
   align-items: left;
   flex-direction: column;
@@ -207,9 +203,15 @@ const HStack = styled.div`
   align-items: center;
   flex-direction: row;
   gap: 60px;
-  @media (min-width: 900px) and (max-width: 1600px) {
+
+  @media (min-width: 900px) and (max-width: 1600px) and (min-height: 720px) {
     margin-top: 9vh;
   }
+
+  @media (min-width: 900px) and (max-width: 1600px) and (max-height: 700px) {
+    margin-top: 3vh;
+  }
+
   @media (min-width: 1700px) {
     margin-top: 9vh;
     margin-left: 15vw;
@@ -233,7 +235,7 @@ const LogoIMG1 = styled(motion.img)`
     height: 10%;
   }
 
-  @media (max-height: 800px) and (min-width: 1000px) {
+  @media (max-height: 800px) and (min-width: 1200px) {
     margin-top: 3vh;
     width: 10%;
     height: 10%;
