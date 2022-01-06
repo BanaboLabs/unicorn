@@ -52,7 +52,11 @@ export default function FullV2SignupPage() {
 
   return (
     <Wrapper>
-      <MovementAnimationWrapper>
+      <MovementAnimationWrapper
+        initial={{ y: 60 }}
+        animate={{ y: 0 }}
+        transition={{ ease: "easeOut", duration: 0.5 }}
+      >
         <LogoIMG1
           src={banabologo}
           initial="hidden"
@@ -76,7 +80,7 @@ export default function FullV2SignupPage() {
             <MovementAnimationWrapper
               initial={{ y: 60 }}
               animate={{ y: 0 }}
-              transition={{ ease: "easeOut", duration: 0.6, delay: 0.1 }}
+              transition={{ ease: "easeOut", duration: 0.5, delay: 0.01 }}
             >
               <ContentVStack
                 initial="hidden"
@@ -203,6 +207,9 @@ const HStack = styled.div`
   align-items: center;
   flex-direction: row;
   gap: 60px;
+  @media (min-width: 900px) and (max-width: 1600px) {
+    margin-top: 8vh;
+  }
   @media (min-width: 1700px) {
     margin-top: 9vh;
     margin-left: 15vw;
@@ -217,21 +224,25 @@ const HStack = styled.div`
 `;
 
 const LogoIMG1 = styled(motion.img)`
-  @media (max-width: 1200px) {
+  @media (max-width: 900px) {
     width: 35%;
     height: 35%;
+  }
+  @media (min-width: 900px) and (max-width: 1200px) {
+    width: 10%;
+    height: 10%;
   }
   margin-top: 6vh;
   margin-left: 7vw;
   margin-right: 7vw;
-  width: 15%;
-  height: 15%;
+  width: 12%;
+  height: 12%;
   @media (min-width: 1700px) {
     margin-top: 9vh;
     margin-left: 15vw;
     margin-right: 15vw;
-    width: 10%;
-    height: 10%;
+    width: 9%;
+    height: 9%;
   }
   @media (min-width: 2300px) {
     margin-top: 9vh;
@@ -243,9 +254,13 @@ const LogoIMG1 = styled(motion.img)`
 const LogoIMG2 = styled.img`
   width: 27%;
   height: 27%;
-  @media (max-width: 1200px) {
+  @media (max-width: 900px) {
     width: 40%;
     height: 40%;
+  }
+  @media (min-width: 900px) and (max-width: 1200px) {
+    width: 20%;
+    height: 20%;
   }
 `;
 
