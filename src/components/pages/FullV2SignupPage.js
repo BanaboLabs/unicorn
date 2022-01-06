@@ -67,7 +67,7 @@ export default function FullV2SignupPage() {
       {showNext ? (
         <VStackAlt>
           <H1Text>Thank you!</H1Text>
-          <H2Text>We have added your email address</H2Text>
+          <H2Text2>We have added your email address</H2Text2>
           <H3Text2>
             We'll be launching our early access soon and we're ecstatic to have
             you be a part of it. One of our team members will reach out to you
@@ -315,10 +315,23 @@ const H3Text = styled.div`
   width: 540px;
 `;
 
+const H2Text2 = styled.div`
+  @media (max-width: 900px) {
+    font-size: 22px;
+    width: 66vw;
+    line-height: 26px;
+    padding-top: 5px;
+  }
+  font-family: "ProximaNovaMedium";
+  font-size: 31px;
+  color: #ffffff;
+`;
+
 const H3Text2 = styled.div`
   @media (max-width: 900px) {
-    font-size: 14px;
+    font-size: 18px;
     width: 80vw;
+    padding-top: 20px;
   }
   font-family: "ProximaNovaRegular";
   font-size: 22px;
@@ -387,7 +400,7 @@ const Input = styled.input`
 
 const StyledButton = styled.button`
   @media (max-width: 900px) {
-    width: 78vw;
+    width: 77.5vw;
     height: 44px;
     font-size: 16px;
   }
