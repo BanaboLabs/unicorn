@@ -173,7 +173,7 @@ const MovementAnimationWrapper = styled(motion.div)``;
 
 const ParentVStack = styled.div`
   @media (max-width: 1200px) {
-    gap: 50px;
+    gap: 40px;
   }
 
   display: flex;
@@ -269,6 +269,9 @@ const ContentVStack = styled(motion.div)`
   align-items: left;
   flex-direction: column;
   gap: 20px;
+  @media (max-width: 1200px) {
+    gap: 15px;
+  }
 `;
 
 const H1Text = styled.div`
@@ -374,7 +377,7 @@ const Input = styled.input`
 
 const StyledButton = styled.button`
   @media (max-width: 1200px) {
-    width: 76vw;
+    width: 78vw;
     height: 44px;
     font-size: 16px;
   }
