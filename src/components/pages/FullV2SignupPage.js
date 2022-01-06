@@ -80,13 +80,13 @@ export default function FullV2SignupPage() {
             <MovementAnimationWrapper
               initial={{ y: 60 }}
               animate={{ y: 0 }}
-              transition={{ ease: "easeOut", duration: 0.5, delay: 0.01 }}
+              transition={{ ease: "easeOut", duration: 0.5, delay: 0.1 }}
             >
               <ContentVStack
                 initial="hidden"
                 animate="visible"
                 variants={variants}
-                transition={{ delay: 0.2 }}
+                transition={{ delay: 0.1 }}
               >
                 <H1Text>
                   Cookieless <br /> Marketing Attribution
@@ -101,13 +101,13 @@ export default function FullV2SignupPage() {
             <MovementAnimationWrapper
               initial={{ y: 60 }}
               animate={{ y: 0 }}
-              transition={{ ease: "easeOut", duration: 0.62, delay: 0.16 }}
+              transition={{ ease: "easeOut", duration: 0.36, delay: 0.24 }}
             >
               <LowerVStack
                 initial="hidden"
                 animate="visible"
                 variants={variants}
-                transition={{ delay: 0.4 }}
+                transition={{ delay: 0.2 }}
               >
                 <Form onSubmit={noRefresh}>
                   <Input
@@ -137,13 +137,13 @@ export default function FullV2SignupPage() {
             <MovementAnimationWrapper
               initial={{ y: 60 }}
               animate={{ y: 0 }}
-              transition={{ ease: "easeOut", duration: 0.5, delay: 0.15 }}
+              transition={{ ease: "easeOut", duration: 0.5, delay: 0.1 }}
             >
               <MovementAnimationWrapper
                 initial="hidden"
                 animate="visible"
                 variants={variants}
-                transition={{ delay: 0.3 }}
+                transition={{ delay: 0.14 }}
               >
                 <Illustration />
               </MovementAnimationWrapper>
