@@ -401,11 +401,14 @@ const StyledButton = styled.button`
 const CompanyVStack = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 `;
 
 const CreatedByText = styled.div`
   font-family: "ProximaNovaSemibold";
   font-size: 22px;
   color: #ffffff;
+  @media (max-width: 1200px) {
+    font-size: 16px;
+  }
 `;
