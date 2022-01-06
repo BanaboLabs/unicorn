@@ -126,7 +126,6 @@ export default function FullV2SignupPage() {
                     Get Early Access
                   </StyledButton>
                 </Form>
-
                 <CompanyVStack>
                   <CreatedByText>Created by Engineers from</CreatedByText>
                   <LogoIMG2 src={companylogos} />
@@ -154,7 +153,7 @@ export default function FullV2SignupPage() {
   );
 }
 
-const Wrapper = styled(motion.div)`
+const Wrapper = styled.div`
   overflow-y: hidden;
   overflow-x: hidden;
   min-height: 100vh;
@@ -163,6 +162,9 @@ const Wrapper = styled(motion.div)`
   background-position: center;
   position: relative;
   background-image: url(${backgroundv2});
+  @media (max-width: 1200px) {
+    background-image: url(${mobilebackgroundv2});
+  }
 `;
 
 const MovementAnimationWrapper = styled(motion.div)``;
