@@ -126,13 +126,13 @@ export default function FullV2SignupPage() {
             <MovementAnimationWrapper
               initial={{ y: 60 }}
               animate={{ y: 0 }}
-              transition={{ ease: "easeOut", delay: 0.32, duration: 0.3 }}
+              transition={{ ease: "easeOut", delay: 0.32, duration: 0.2 }}
             >
               <LowerVStack
                 initial="hidden"
                 animate="visible"
                 variants={variants}
-                transition={{ delay: 0.28, duration: 0.3 }}
+                transition={{ delay: 0.28, duration: 0.2 }}
               >
                 <Form onSubmit={noRefresh}>
                   <Input
