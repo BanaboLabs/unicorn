@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import logowhite from "../../images/banabologowhite.svg";
+import logowhite from "../../images/banabologocolor.svg";
 import { Link } from "gatsby";
 
 export default function HeaderWhite() {
