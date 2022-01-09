@@ -6,7 +6,7 @@ import SEO from "../components/layout/seo";
 function LandingPage() {
   return (
     <Layout>
-      <SEO />
+      <SEO title="Banabo" />
       <FullV2SignupPage />
     </Layout>
   );
