@@ -1,7 +1,6 @@
 //
 module.exports = {
   siteMetadata: {
-    title: `Banabo`,
     description: `With Banabo, you can completely map every unique visitor's journey with your brand through conversion.`,
     author: `@Colin & Ben`,
     keywords: `marketing attribution, multi-touch attribution, cross-channel attribution, attribution model`,
