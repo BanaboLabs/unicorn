@@ -20,7 +20,7 @@ module.exports = {
         name: `gatsby starter default`,
         short_name: `starter`,
         start_url: `/`,
-        icon: `./src/images/banabologocolor.svg`,
+        icon: `./src/images/banabologowhite.svg`,
       },
     },
   ],
