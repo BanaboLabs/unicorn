@@ -113,6 +113,7 @@ const BigVStack = styled.div`
   gap: 120px;
   align-items: center;
   justify-content: center;
+  text-align: center;
   padding-top: 95px;
 `;
 
@@ -122,6 +123,7 @@ const LittleVStack = styled.div`
   gap: 27px;
   align-items: center;
   justify-content: center;
+  text-align: center;
 `;
 
 const BigHStack = styled.div`
@@ -130,6 +132,7 @@ const BigHStack = styled.div`
   gap: 350px;
   align-items: center;
   justify-content: center;
+  text-align: center;
 `;
 
 const MainText = styled.div`

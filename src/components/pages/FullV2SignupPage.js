@@ -7,6 +7,7 @@ import banabologo from "../../images/banabologo.svg";
 import companylogos from "../../images/companylogos.svg";
 import { motion } from "framer-motion";
 import Illustration from "../individual/V2Signup/illustration";
+import { Link } from "gatsby";
 var moment = require("moment");
 
 export default function FullV2SignupPage() {
@@ -92,6 +93,7 @@ export default function FullV2SignupPage() {
                 >
                   Cookieless <br /> Marketing Attribution
                 </H1Text>
+                <Link to="/careers">Go to careers</Link>
               </MovementAnimationWrapper>
               <MovementAnimationWrapper
                 initial={{ y: 60 }}
