@@ -1,5 +1,5 @@
 # GATSBY WEBSITE
 
-### Static site is deployed on Amplify
+### Multi-Page Static site for testing purposes, deployed on Amplify
 
-### Can be found at banabo.io
+### Can be found at banabolabs.com
