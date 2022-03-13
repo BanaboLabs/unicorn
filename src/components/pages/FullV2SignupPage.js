@@ -93,7 +93,6 @@ export default function FullV2SignupPage() {
                 >
                   Cookieless <br /> Marketing Attribution
                 </H1Text>
-                <Link to="/careers">Go to careers</Link>
               </MovementAnimationWrapper>
               <MovementAnimationWrapper
                 initial={{ y: 60 }}
