@@ -1,16 +1,16 @@
 import React from "react";
-import FullSquarespacePage from "../components/pages/FullSquarespacePage";
 import Layout from "../components/layout/layout";
 import SEO from "../components/layout/seo";
 import { Helmet } from "react-helmet";
+import FullCareersPage from "../components/pages/FullV2CareersPage";
 
-function SquarespacePage() {
+function WebflowPage() {
   return (
     <Layout>
-      <SEO title="Squarespace Docs" />
-      <FullSquarespacePage />
+      <SEO title="Careers" />
+      <FullCareersPage />
     </Layout>
   );
 }
 
-export default SquarespacePage;
+export default WebflowPage;
