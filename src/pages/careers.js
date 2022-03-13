@@ -4,13 +4,16 @@ import SEO from "../components/layout/seo";
 import { Helmet } from "react-helmet";
 import FullCareersPage from "../components/pages/FullV2CareersPage";
 
-function WebflowPage() {
+function CareersPage() {
   return (
     <Layout>
+      <Helmet>
+        <script src="https://engine.banabo.io/embeddable/index.js"></script>
+      </Helmet>
       <SEO title="Careers" />
       <FullCareersPage />
     </Layout>
   );
 }
 
-export default WebflowPage;
+export default CareersPage;
