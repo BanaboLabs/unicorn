@@ -49,7 +49,7 @@ export default function Illustration() {
           <InsideWhiteText>Visitor 1342</InsideWhiteText>
         </TopLeftRectangle>
         <TopRightRectangle onClick={() => setDropdown(!dropdown)}>
-          <InsideHStack>
+          <InsideHStack id="banabo1242">
             <InsideWhiteText>{model}</InsideWhiteText>
             <WhiteArrow isDropdown={dropdown} src={v2whitearrow} />
           </InsideHStack>

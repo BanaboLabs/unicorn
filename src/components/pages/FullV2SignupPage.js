@@ -145,6 +145,7 @@ export default function FullV2SignupPage() {
                   />
                   <StyledButton
                     type="submit"
+                    id="banabo8918"
                     onClick={() =>
                       emailAddress.value <= 5 ? null : setSubmitted(true)
                     }

@@ -61,13 +61,13 @@ export default function FullV2SCareersPage() {
         <BigHStack>
           <LittleVStack>
             <MainText>Product Designer</MainText>
-            <BlueRectangle>
+            <BlueRectangle id="banabo5981">
               <LittleText>See Role</LittleText>
             </BlueRectangle>
           </LittleVStack>
           <LittleVStack>
             <MainText>Customer Success</MainText>
-            <BlueRectangle>
+            <BlueRectangle id="banabo2172">
               <LittleText>See Role</LittleText>
             </BlueRectangle>
           </LittleVStack>
@@ -75,13 +75,13 @@ export default function FullV2SCareersPage() {
         <BigHStack>
           <LittleVStack>
             <MainText>Front-End Engineer</MainText>
-            <BlueRectangle>
+            <BlueRectangle id="banabo5213">
               <LittleText>See Role</LittleText>
             </BlueRectangle>
           </LittleVStack>
           <LittleVStack>
             <MainText>Back-End Engineer</MainText>
-            <BlueRectangle>
+            <BlueRectangle id="banabo1828">
               <LittleText>See Role</LittleText>
             </BlueRectangle>
           </LittleVStack>
