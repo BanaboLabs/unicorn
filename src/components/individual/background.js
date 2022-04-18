@@ -6,16 +6,6 @@ export default function BackgroundMain() {
   return (
     <ParentWrapper>
       <Background src={unicorn} />
-      <Background src={unicorn} />
-      <Background src={unicorn} />
-      <Background src={unicorn} />
-      <Background src={unicorn} />
-      <Background src={unicorn} />
-      <Background src={unicorn} />
-      <Background src={unicorn} />
-      <Background src={unicorn} />
-      <Background src={unicorn} />
-      <Background src={unicorn} />
     </ParentWrapper>
   );
 }
