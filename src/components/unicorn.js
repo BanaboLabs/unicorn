@@ -13,6 +13,7 @@ import asset8 from "../images/asset8.svg";
 import asset9 from "../images/asset9.svg";
 import asset1alt from "../images/asset1alt.svg";
 import asset8alt from "../images/asset8alt.svg";
+import asset9alt from "../images/asset9alt.png";
 import applynowbutton from "../images/applynowbutton.svg";
 import buynowbutton from "../images/buynowbutton.svg";
 import blackdragger1 from "../images/blackdragger1.svg";
@@ -76,7 +77,7 @@ export default function Unicorn() {
                 )
               }
             />
-            <AdjustedIMG src={asset9} />
+            <AdjustedIMG src={asset9alt} />
           </VStack>
         </Background>
       ) : (
