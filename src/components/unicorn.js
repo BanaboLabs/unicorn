@@ -11,6 +11,8 @@ import asset6 from "../images/asset6.svg";
 import asset7 from "../images/asset7.svg";
 import asset8 from "../images/asset8.svg";
 import asset9 from "../images/asset9.svg";
+import asset1alt from "../images/asset1alt.svg";
+import asset8alt from "../images/asset8alt.svg";
 import applynowbutton from "../images/applynowbutton.svg";
 import buynowbutton from "../images/buynowbutton.svg";
 import blackdragger1 from "../images/blackdragger1.svg";
@@ -23,11 +25,14 @@ import goldenegg from "../images/goldenegg.png";
 import eastereggfound from "../images/eastereggfound.svg";
 import useSound from "use-sound";
 import theMusic from "./music.mp3";
+import useMediaQuery from "../components/customhooks/useMediaQuery";
+import unicorn from "../images/unicornbackground.svg";
 
 export default function Unicorn() {
   const [eggClicked, setEggClicked] = useState(false);
   const [showEgg, setShowEgg] = useState(false);
   const [play] = useSound(theMusic);
+  const isMobile = useMediaQuery("(max-width: 1200px)");
 
   useEffect(() => {
     var delayInMilliseconds = 20000; //20 seconds
@@ -47,98 +52,151 @@ export default function Unicorn() {
   // Mobile - Need to disable x axis scroll
 
   return (
-    <RelativeDiv>
-      <Draggable handle=".handle">
-        <AbsoluteDiv1>
-          <Asset1 src={asset1} />
-          <ApplyNowButton1
-            onClick={() =>
-              window.open("https://k973mw5hw1q.typeform.com/to/oYqu9JgN")
-            }
-            src={applynowbutton}
-          ></ApplyNowButton1>
-          <BlackDragger1 className="handle" src={blackdragger1} />
-        </AbsoluteDiv1>
-      </Draggable>
-      <Draggable handle=".handle">
-        <AbsoluteDiv2>
-          <Asset2 src={asset2} />
-          <BlackDragger2 className="handle" src={blackdragger1} />
-        </AbsoluteDiv2>
-      </Draggable>
-      <Draggable handle=".handle">
-        <AbsoluteDiv3>
-          <Asset3 src={asset3} />
-          <GreenDragger3 className="handle" src={greendragger3} />
-        </AbsoluteDiv3>
-      </Draggable>
-      <Draggable handle=".handle">
-        <AbsoluteDiv4>
-          <Asset4 src={asset4} />
-          <BlackDragger4 className="handle" src={blackdragger1} />
-        </AbsoluteDiv4>
-      </Draggable>
-      <Draggable handle=".handle">
-        <AbsoluteDiv5>
-          <Asset5 src={asset5} />
-          <RedDragger5 className="handle" src={reddragger5} />
-        </AbsoluteDiv5>
-      </Draggable>
-      <Draggable handle=".handle">
-        <AbsoluteDiv6>
-          <Asset6 src={asset6} />
-          <WhiteDragger6 className="handle" src={whitedragger6} />
-        </AbsoluteDiv6>
-      </Draggable>
-      <Draggable handle=".handle">
-        <AbsoluteDiv7>
-          <Asset7 src={asset7} />
-          <BlackDragger7 className="handle" src={blackdragger1} />
-        </AbsoluteDiv7>
-      </Draggable>
-      <Draggable handle=".handle">
-        <AbsoluteDiv8>
-          <Asset8 src={asset8} />
-          <BuyNowButton1
-            onClick={() =>
-              window.open(
-                "https://mirror.xyz/0x4Fe030cb7b79474531D6343a206795e1aAC072c2/4sTaw-CrvNl9yDHA8nNLGuEgQuqjKfcPlZSuik_uz6I"
-              )
-            }
-            src={buynowbutton}
-          ></BuyNowButton1>
-          <WhiteDragger8 className="handle" src={whitedragger6} />
-        </AbsoluteDiv8>
-      </Draggable>
-      <Draggable handle=".handle">
-        <AbsoluteDiv9>
-          <Asset9 src={asset9} />
-          <WhiteDragger9 className="handle" src={whitedragger6} />
-        </AbsoluteDiv9>
-      </Draggable>
-      {showEgg ? (
-        <AbsoluteDiv10>
-          {eggClicked ? <EggFound src={eastereggfound} /> : null}
-          {eggClicked ? (
-            <Asset11 onClick={() => setEggClicked(true)} src={goldenegg} />
-          ) : (
-            <Asset10
-              onClick={() => {
-                var delayInMilliseconds = 1000; //1 second
-                setTimeout(function () {
-                  setEggClicked(true);
-                }, delayInMilliseconds);
-                play();
-              }}
-              src={goldenegg}
+    <div>
+      {isMobile ? (
+        <Background>
+          <VStack>
+            <AdjustedIMG
+              src={asset1alt}
+              onClick={() =>
+                window.open("https://k973mw5hw1q.typeform.com/to/oYqu9JgN")
+              }
             />
-          )}
-        </AbsoluteDiv10>
-      ) : null}
-      <BackgroundMain />
-    </RelativeDiv>
+            <AdjustedIMG src={asset2} />
+            <AdjustedIMG src={asset3} />
+            <AdjustedIMG src={asset4} />
+            <AdjustedIMG src={asset5} />
+            <AdjustedIMG src={asset6} />
+            <AdjustedIMG src={asset7} />
+            <AdjustedIMG
+              src={asset8alt}
+              onClick={() =>
+                window.open(
+                  "https://mirror.xyz/0x4Fe030cb7b79474531D6343a206795e1aAC072c2/4sTaw-CrvNl9yDHA8nNLGuEgQuqjKfcPlZSuik_uz6I"
+                )
+              }
+            />
+            <AdjustedIMG src={asset9} />
+          </VStack>
+        </Background>
+      ) : (
+        <RelativeDiv>
+          <Draggable handle=".handle">
+            <AbsoluteDiv1>
+              <Asset1 src={asset1} />
+              <ApplyNowButton1
+                onClick={() =>
+                  window.open("https://k973mw5hw1q.typeform.com/to/oYqu9JgN")
+                }
+                src={applynowbutton}
+              ></ApplyNowButton1>
+              <BlackDragger1 className="handle" src={blackdragger1} />
+            </AbsoluteDiv1>
+          </Draggable>
+          <Draggable handle=".handle">
+            <AbsoluteDiv2>
+              <Asset2 src={asset2} />
+              <BlackDragger2 className="handle" src={blackdragger1} />
+            </AbsoluteDiv2>
+          </Draggable>
+          <Draggable handle=".handle">
+            <AbsoluteDiv3>
+              <Asset3 src={asset3} />
+              <GreenDragger3 className="handle" src={greendragger3} />
+            </AbsoluteDiv3>
+          </Draggable>
+          <Draggable handle=".handle">
+            <AbsoluteDiv4>
+              <Asset4 src={asset4} />
+              <BlackDragger4 className="handle" src={blackdragger1} />
+            </AbsoluteDiv4>
+          </Draggable>
+          <Draggable handle=".handle">
+            <AbsoluteDiv5>
+              <Asset5 src={asset5} />
+              <RedDragger5 className="handle" src={reddragger5} />
+            </AbsoluteDiv5>
+          </Draggable>
+          <Draggable handle=".handle">
+            <AbsoluteDiv6>
+              <Asset6 src={asset6} />
+              <WhiteDragger6 className="handle" src={whitedragger6} />
+            </AbsoluteDiv6>
+          </Draggable>
+          <Draggable handle=".handle">
+            <AbsoluteDiv7>
+              <Asset7 src={asset7} />
+              <BlackDragger7 className="handle" src={blackdragger1} />
+            </AbsoluteDiv7>
+          </Draggable>
+          <Draggable handle=".handle">
+            <AbsoluteDiv8>
+              <Asset8 src={asset8} />
+              <BuyNowButton1
+                onClick={() =>
+                  window.open(
+                    "https://mirror.xyz/0x4Fe030cb7b79474531D6343a206795e1aAC072c2/4sTaw-CrvNl9yDHA8nNLGuEgQuqjKfcPlZSuik_uz6I"
+                  )
+                }
+                src={buynowbutton}
+              ></BuyNowButton1>
+              <WhiteDragger8 className="handle" src={whitedragger6} />
+            </AbsoluteDiv8>
+          </Draggable>
+          <Draggable handle=".handle">
+            <AbsoluteDiv9>
+              <Asset9 src={asset9} />
+              <WhiteDragger9 className="handle" src={whitedragger6} />
+            </AbsoluteDiv9>
+          </Draggable>
+          {showEgg ? (
+            <AbsoluteDiv10>
+              {eggClicked ? <EggFound src={eastereggfound} /> : null}
+              {eggClicked ? (
+                <Asset11 onClick={() => setEggClicked(true)} src={goldenegg} />
+              ) : (
+                <Asset10
+                  onClick={() => {
+                    var delayInMilliseconds = 1000; //1 second
+                    setTimeout(function () {
+                      setEggClicked(true);
+                    }, delayInMilliseconds);
+                    play();
+                  }}
+                  src={goldenegg}
+                />
+              )}
+            </AbsoluteDiv10>
+          ) : null}
+          <BackgroundMain />
+        </RelativeDiv>
+      )}
+    </div>
   );
 }
+
+// MOBILE // -----------------
+
+const VStack = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+`;
+
+const Background = styled.div`
+  background-image: url(${unicorn});
+`;
+
+const AdjustedIMG = styled.img`
+  max-width: 80vw;
+`;
+
+// DESKTOP // -----------------
 
 const RelativeDiv = styled.div`
   position: relative;
@@ -162,12 +220,6 @@ const Asset1 = styled.img`
   -webkit-user-select: none;
   -ms-user-select: none;
   height: auto;
-  @media (max-width: 800px) {
-    top: 40px;
-    left: 60px;
-    width: 80vw;
-    height: auto;
-  }
 `;
 
 const ApplyNowButton1 = styled.img`
@@ -175,12 +227,6 @@ const ApplyNowButton1 = styled.img`
   top: 330px;
   left: 85px;
   cursor: url(${clickme}), auto;
-  @media (max-width: 800px) {
-    top: 320px;
-    left: 85px;
-    width: 70vw;
-    height: auto;
-  }
 `;
 
 const BlackDragger1 = styled.img`
@@ -193,10 +239,6 @@ const BlackDragger1 = styled.img`
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  @media (max-width: 800px) {
-    top: 60px;
-    left: 428px;
-  }
 `;
 
 const AbsoluteDiv2 = styled.div`
@@ -215,12 +257,6 @@ const Asset2 = styled.img`
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  @media (max-width: 800px) {
-    top: 570px;
-    left: 60px;
-    width: 80vw;
-    height: auto;
-  }
 `;
 
 const BlackDragger2 = styled.img`
@@ -233,10 +269,6 @@ const BlackDragger2 = styled.img`
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  @media (max-width: 800px) {
-    top: 590px;
-    left: 425px;
-  }
 `;
 
 const AbsoluteDiv3 = styled.div`
@@ -255,12 +287,6 @@ const Asset3 = styled.img`
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  @media (max-width: 800px) {
-    top: 970px;
-    left: 60px;
-    width: 80vw;
-    height: auto;
-  }
 `;
 
 const GreenDragger3 = styled.img`
@@ -273,10 +299,6 @@ const GreenDragger3 = styled.img`
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  @media (max-width: 800px) {
-    top: 985px;
-    left: 420px;
-  }
 `;
 
 const AbsoluteDiv4 = styled.div`
@@ -295,12 +317,6 @@ const Asset4 = styled.img`
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  @media (max-width: 800px) {
-    top: 1440px;
-    left: 60px;
-    width: 80vw;
-    height: auto;
-  }
 `;
 
 const BlackDragger4 = styled.img`
@@ -313,10 +329,6 @@ const BlackDragger4 = styled.img`
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  @media (max-width: 800px) {
-    top: 1460px;
-    left: 420px;
-  }
 `;
 
 const AbsoluteDiv5 = styled.div`
@@ -335,12 +347,6 @@ const Asset5 = styled.img`
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  @media (max-width: 800px) {
-    top: 2190px;
-    left: 60px;
-    width: 80vw;
-    height: auto;
-  }
 `;
 
 const RedDragger5 = styled.img`
@@ -353,10 +359,6 @@ const RedDragger5 = styled.img`
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  @media (max-width: 800px) {
-    top: 2215px;
-    left: 420px;
-  }
 `;
 
 const AbsoluteDiv6 = styled.div`
@@ -375,12 +377,6 @@ const Asset6 = styled.img`
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  @media (max-width: 800px) {
-    top: 2790px;
-    left: 60px;
-    width: 80vw;
-    height: auto;
-  }
 `;
 
 const WhiteDragger6 = styled.img`
@@ -393,10 +389,6 @@ const WhiteDragger6 = styled.img`
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  @media (max-width: 800px) {
-    top: 2800px;
-    left: 420px;
-  }
 `;
 
 const AbsoluteDiv7 = styled.div`
@@ -415,9 +407,6 @@ const Asset7 = styled.img`
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  @media (max-width: 800px) {
-    display: none;
-  }
 `;
 
 const BlackDragger7 = styled.img`
@@ -430,9 +419,6 @@ const BlackDragger7 = styled.img`
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  @media (max-width: 800px) {
-    display: none;
-  }
 `;
 
 const AbsoluteDiv8 = styled.div`
@@ -461,12 +447,6 @@ const Asset8 = styled.img`
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  @media (max-width: 800px) {
-    top: 2980px;
-    left: 60px;
-    width: 80vw;
-    height: auto;
-  }
 `;
 
 const BuyNowButton1 = styled.img`
@@ -474,10 +454,6 @@ const BuyNowButton1 = styled.img`
   top: 492px;
   left: 1500px;
   cursor: url(${clickme}), auto;
-  @media (max-width: 800px) {
-    top: 3398px;
-    left: 245px;
-  }
 `;
 
 const WhiteDragger8 = styled.img`
@@ -490,10 +466,6 @@ const WhiteDragger8 = styled.img`
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  @media (max-width: 800px) {
-    top: 3000px;
-    left: 410px;
-  }
 `;
 
 const AbsoluteDiv9 = styled.div`
@@ -512,13 +484,6 @@ const Asset9 = styled.img`
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  @media (max-width: 800px) {
-    top: 2980px;
-    left: 60px;
-    width: 80vw;
-    height: auto;
-    display: none;
-  }
 `;
 
 const WhiteDragger9 = styled.img`
@@ -531,11 +496,6 @@ const WhiteDragger9 = styled.img`
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  @media (max-width: 800px) {
-    top: 3000px;
-    left: 370px;
-    display: none;
-  }
 `;
 
 const AbsoluteDiv10 = styled.div`
@@ -555,9 +515,6 @@ const Asset10 = styled.img`
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  @media (max-width: 800px) {
-    display: none;
-  }
 `;
 
 const Asset11 = styled.img`
