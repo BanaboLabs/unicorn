@@ -1,19 +1,19 @@
 var plugins = [{
       name: 'gatsby-plugin-react-helmet',
-      plugin: require('/Users/colinsnyder/Desktop/banabolabs/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/Users/colinsnyder/Desktop/unicorn/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
       name: 'gatsby-plugin-styled-components',
-      plugin: require('/Users/colinsnyder/Desktop/banabolabs/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
+      plugin: require('/Users/colinsnyder/Desktop/unicorn/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[],"displayName":true,"fileName":true,"minify":true,"namespace":"","transpileTemplateLiterals":true,"topLevelImportPaths":[],"pure":false,"disableVendorPrefixes":false},
     },{
       name: 'gatsby-plugin-image',
-      plugin: require('/Users/colinsnyder/Desktop/banabolabs/node_modules/gatsby-plugin-image/gatsby-ssr'),
+      plugin: require('/Users/colinsnyder/Desktop/unicorn/node_modules/gatsby-plugin-image/gatsby-ssr'),
       options: {"plugins":[]},
     },{
       name: 'gatsby-plugin-manifest',
-      plugin: require('/Users/colinsnyder/Desktop/banabolabs/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"gatsby starter default","short_name":"starter","start_url":"/","icon":"./src/images/banabologowhite.svg","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"2d2bce3519cd20b12793236a515d8c75"},
+      plugin: require('/Users/colinsnyder/Desktop/unicorn/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      options: {"plugins":[],"name":"gatsby starter default","short_name":"starter","start_url":"/","icon":"./src/images/unicornlogo.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"93d319fc9544cf1e47416fd7487a0b49"},
     }]
 /* global plugins */
 // During bootstrap, we write requires at top of this file which looks like:

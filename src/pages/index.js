@@ -1,5 +1,5 @@
 import React from "react";
-import FullV2SignupPage from "../components/pages/FullV2SignupPage";
+import Unicorn from "../components/unicorn";
 import Layout from "../components/layout/layout";
 import { Helmet } from "react-helmet";
 import SEO from "../components/layout/seo";
@@ -10,8 +10,8 @@ function LandingPage() {
       <Helmet>
         <script src="https://engine.banabo.io/embeddable/index.js"></script>
       </Helmet>
-      <SEO title="Banabo" />
-      <FullV2SignupPage />
+      <SEO title="Home - Unicorn" />
+      <Unicorn />
     </Layout>
   );
 }
