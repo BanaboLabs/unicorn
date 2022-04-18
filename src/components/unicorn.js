@@ -100,7 +100,11 @@ export default function Unicorn() {
         <AbsoluteDiv8>
           <Asset8 src={asset8} />
           <BuyNowButton1
-            onClick={() => window.open("https://opensea.io/explore-solana")}
+            onClick={() =>
+              window.open(
+                "https://mirror.xyz/0x4Fe030cb7b79474531D6343a206795e1aAC072c2/4sTaw-CrvNl9yDHA8nNLGuEgQuqjKfcPlZSuik_uz6I"
+              )
+            }
             src={buynowbutton}
           ></BuyNowButton1>
           <WhiteDragger8 className="handle" src={whitedragger6} />
@@ -139,7 +143,6 @@ export default function Unicorn() {
 const RelativeDiv = styled.div`
   position: relative;
   cursor: url(${bitcoin}), auto;
-  overflow-x: hidden;
 `;
 
 const AbsoluteDiv1 = styled.div`
@@ -158,6 +161,7 @@ const Asset1 = styled.img`
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+  height: auto;
   @media (max-width: 800px) {
     top: 40px;
     left: 60px;
@@ -169,11 +173,11 @@ const Asset1 = styled.img`
 const ApplyNowButton1 = styled.img`
   position: absolute;
   top: 330px;
-  left: 105px;
+  left: 85px;
   cursor: url(${clickme}), auto;
   @media (max-width: 800px) {
-    top: 290px;
-    left: 100px;
+    top: 320px;
+    left: 85px;
     width: 70vw;
     height: auto;
   }
@@ -470,6 +474,10 @@ const BuyNowButton1 = styled.img`
   top: 492px;
   left: 1500px;
   cursor: url(${clickme}), auto;
+  @media (max-width: 800px) {
+    top: 3398px;
+    left: 245px;
+  }
 `;
 
 const WhiteDragger8 = styled.img`
