@@ -1,10 +1,10 @@
 //
 module.exports = {
   siteMetadata: {
-    description: `With Banabo, you can completely map every unique visitor's journey with your brand through conversion.`,
-    author: `@Colin & Ben`,
-    keywords: `marketing attribution, multi-touch attribution, cross-channel attribution, attribution model`,
-    siteUrl: "https://banabo.io",
+    description: `Unicorn Haus`,
+    author: `Unicorn Haus`,
+    keywords: `Unicorn Haus`,
+    siteUrl: "https://unicornhaus.xyz",
     // Need to add image metadata
   },
   plugins: [

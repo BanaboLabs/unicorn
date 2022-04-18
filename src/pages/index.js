@@ -7,9 +7,7 @@ import SEO from "../components/layout/seo";
 function LandingPage() {
   return (
     <Layout>
-      <Helmet>
-        <script src="https://engine.banabo.io/embeddable/index.js"></script>
-      </Helmet>
+      <Helmet></Helmet>
       <SEO title="Home - Unicorn" />
       <Unicorn />
     </Layout>
