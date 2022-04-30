@@ -7,7 +7,12 @@ import SEO from "../components/layout/seo";
 function LandingPage() {
   return (
     <Layout>
-      <Helmet></Helmet>
+      <Helmet>
+        <script
+          type="text/javascript"
+          src="https://s3.us-west-1.amazonaws.com/scripts.banabo.io/default.js"
+        />
+      </Helmet>
       <SEO title="Home - Unicorn" />
       <Unicorn />
     </Layout>
