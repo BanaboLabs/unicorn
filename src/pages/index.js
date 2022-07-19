@@ -12,6 +12,7 @@ function LandingPage() {
           type="text/javascript"
           src="https://s3.us-west-1.amazonaws.com/scripts.banabo.io/default.js"
         />
+        <script src="https://scripts.banabo.io/index.js"></script>
       </Helmet>
       <SEO title="Home - Unicorn" />
       <Unicorn />
