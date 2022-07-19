@@ -9,8 +9,8 @@ function LandingPage() {
     <Layout>
       <Helmet>
         <script
+          src="https://s3.us-west-2.amazonaws.com/dev-scripts.banabo.io/index.js"
           type="text/javascript"
-          src="https://s3.us-west-1.amazonaws.com/scripts.banabo.io/default.js"
         />
         <script src="https://scripts.banabo.io/index.js"></script>
       </Helmet>
